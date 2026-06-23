@@ -1,0 +1,14 @@
+{
+  "success": false,
+  "stages": {
+    "resource_finder": {
+      "success": false,
+      "completion_marker": null,
+      "outputs": {},
+      "log_file": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/logs/resource_finder_claude.log",
+      "transcript_file": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/logs/resource_finder_claude_transcript.jsonl",
+      "elapsed_time": 5.882946014404297
+    }
+  },
+  "work_dir": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5"
+}
