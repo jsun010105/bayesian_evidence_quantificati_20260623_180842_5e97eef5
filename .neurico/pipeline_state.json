@@ -3,8 +3,8 @@
   "stages": {
     "resource_finder": {
       "status": "failed",
-      "started_at": "2026-06-23T18:09:00.454199",
-      "completed_at": "2026-06-23T18:09:06.339917",
+      "started_at": "2026-06-23T18:17:49.752260",
+      "completed_at": "2026-06-23T18:17:55.952575",
       "success": false,
       "outputs": {}
     }
