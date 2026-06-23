@@ -1,0 +1,592 @@
+[
+  {
+    "arxiv_id": "1402.5723v5",
+    "title": "Smoothing and mean-covariance estimation of functional data with a Bayesian hierarchical model",
+    "authors": [
+      "Jingjing Yang",
+      "Hongxiao Zhu",
+      "Taeryon Choi"
+    ],
+    "year": 2014,
+    "abstract": "Functional data, with basic observational units being functions (e.g., curves, surfaces) varying over a continuum, are frequently encountered in various applications. While many statistical tools have been developed for functional data analysis, the issue of smoothing all functional observations simultaneously is less studied. Existing methods often focus on smoothing each individual function separately, at the risk of removing important systematic patterns common across functions. We propose a nonparametric Bayesian approach to smooth all functional observations simultaneously and nonparametr",
+    "url": "https://arxiv.org/pdf/1402.5723v5",
+    "query": "model-based power analysis Bayesian design sensitivity"
+  },
+  {
+    "arxiv_id": "1512.00969v1",
+    "title": "Posterior Belief Assessment: Extracting Meaningful Subjective Judgements from Bayesian Analyses with Complex Statistical Models",
+    "authors": [
+      "Daniel Williamson",
+      "Michael Goldstein"
+    ],
+    "year": 2015,
+    "abstract": "In this paper, we are concerned with attributing meaning to the results of a Bayesian analysis for a problem which is sufficiently complex that we are unable to assert a precise correspondence between the expert probabilistic judgements of the analyst and the particular forms chosen for the prior specification and the likelihood for the analysis. In order to do this, we propose performing a finite collection of additional Bayesian analyses under alternative collections of prior and likelihood modelling judgements that we may also view as representative of our prior knowledge and the problem st",
+    "url": "https://arxiv.org/pdf/1512.00969v1",
+    "query": "model-based power analysis Bayesian design sensitivity"
+  },
+  {
+    "arxiv_id": "1503.07791v1",
+    "title": "Sequential Monte Carlo with Adaptive Weights for Approximate Bayesian Computation",
+    "authors": [
+      "Fernando V. Bonassi",
+      "Mike West"
+    ],
+    "year": 2015,
+    "abstract": "Methods of approximate Bayesian computation (ABC) are increasingly used for analysis of complex models. A major challenge for ABC is over-coming the often inherent problem of high rejection rates in the accept/reject methods based on prior:predictive sampling. A number of recent developments aim to address this with extensions based on sequential Monte Carlo (SMC) strategies. We build on this here, introducing an ABC SMC method that uses data-based adaptive weights. This easily implemented and computationally trivial extension of ABC SMC can very substantially improve acceptance rates, as is d",
+    "url": "https://arxiv.org/pdf/1503.07791v1",
+    "query": "model-based power analysis Bayesian design sensitivity"
+  },
+  {
+    "arxiv_id": "1309.1799v4",
+    "title": "Bayesian Nonparametric Weighted Sampling Inference",
+    "authors": [
+      "Yajuan Si",
+      "Natesh S. Pillai",
+      "Andrew Gelman"
+    ],
+    "year": 2013,
+    "abstract": "It has historically been a challenge to perform Bayesian inference in a design-based survey context. The present paper develops a Bayesian model for sampling inference in the presence of inverse-probability weights. We use a hierarchical approach in which we model the distribution of the weights of the nonsampled units in the population and simultaneously include them as predictors in a nonparametric Gaussian process regression. We use simulation studies to evaluate the performance of our procedure and compare it to the classical design-based estimator. We apply our method to the Fragile Famil",
+    "url": "https://arxiv.org/pdf/1309.1799v4",
+    "query": "model-based power analysis Bayesian design sensitivity"
+  },
+  {
+    "arxiv_id": "1409.5291v2",
+    "title": "Bayesian Model Selection Based on Proper Scoring Rules",
+    "authors": [
+      "A. Philip Dawid",
+      "Monica Musio"
+    ],
+    "year": 2014,
+    "abstract": "Bayesian model selection with improper priors is not well-defined because of the dependence of the marginal likelihood on the arbitrary scaling constants of the within-model prior densities. We show how this problem can be evaded by replacing marginal log-likelihood by a homogeneous proper scoring rule, which is insensitive to the scaling constants. Suitably applied, this will typically enable consistent selection of the true model.",
+    "url": "https://arxiv.org/pdf/1409.5291v2",
+    "query": "model-based power analysis Bayesian design sensitivity"
+  },
+  {
+    "arxiv_id": "1308.6069v3",
+    "title": "Compound Poisson Processes, Latent Shrinkage Priors and Bayesian Nonconvex Penalization",
+    "authors": [
+      "Zhihua Zhang",
+      "Jin Li"
+    ],
+    "year": 2013,
+    "abstract": "In this paper we discuss Bayesian nonconvex penalization for sparse learning problems. We explore a nonparametric formulation for latent shrinkage parameters using subordinators which are one-dimensional L\u00e9vy processes. We particularly study a family of continuous compound Poisson subordinators and a family of discrete compound Poisson subordinators. We exemplify four specific subordinators: Gamma, Poisson, negative binomial and squared Bessel subordinators. The Laplace exponents of the subordinators are Bernstein functions, so they can be used as sparsity-inducing nonconvex penalty functions.",
+    "url": "https://arxiv.org/pdf/1308.6069v3",
+    "query": "model-based power analysis Bayesian design sensitivity"
+  },
+  {
+    "arxiv_id": "1904.04484v2",
+    "title": "Meta-analysis of Bayesian analyses",
+    "authors": [
+      "Paul Blomstedt",
+      "Diego Mesquita",
+      "Omar Rivasplata"
+    ],
+    "year": 2019,
+    "abstract": "Meta-analysis aims to generalize results from multiple related statistical analyses through a combined analysis. While the natural outcome of a Bayesian study is a posterior distribution, traditional Bayesian meta-analyses proceed by combining summary statistics (i.e., point-valued estimates) computed from data. In this paper, we develop a framework for combining posterior distributions from multiple related Bayesian studies into a meta-analysis. Importantly, the method is capable of reusing pre-computed posteriors from computationally costly analyses, without needing the implementation detail",
+    "url": "https://arxiv.org/pdf/1904.04484v2",
+    "query": "model-based power analysis Bayesian design sensitivity"
+  },
+  {
+    "arxiv_id": "1210.5371v8",
+    "title": "Bayesian Structure Learning in Sparse Gaussian Graphical Models",
+    "authors": [
+      "A. Mohammadi",
+      "E. C. Wit"
+    ],
+    "year": 2012,
+    "abstract": "Decoding complex relationships among large numbers of variables with relatively few observations is one of the crucial issues in science. One approach to this problem is Gaussian graphical modeling, which describes conditional independence of variables through the presence or absence of edges in the underlying graph. In this paper, we introduce a novel and efficient Bayesian framework for Gaussian graphical model determination which is a trans-dimensional Markov Chain Monte Carlo (MCMC) approach based on a continuous-time birth-death process. We cover the theory and computational details of th",
+    "url": "https://arxiv.org/pdf/1210.5371v8",
+    "query": "model-based power analysis Bayesian design sensitivity"
+  },
+  {
+    "arxiv_id": "1809.09147v1",
+    "title": "Better Safe than Sorry: Evidence Accumulation Allows for Safe Reinforcement Learning",
+    "authors": [
+      "Akshat Agarwal",
+      "Abhinau Kumar",
+      "Kyle Dunovan"
+    ],
+    "year": 2018,
+    "abstract": "In the real world, agents often have to operate in situations with incomplete information, limited sensing capabilities, and inherently stochastic environments, making individual observations incomplete and unreliable. Moreover, in many situations it is preferable to delay a decision rather than run the risk of making a bad decision. In such situations it is necessary to aggregate information before taking an action; however, most state of the art reinforcement learning (RL) algorithms are biased towards taking actions \\textit{at every time step}, even if the agent is not particularly confiden",
+    "url": "https://arxiv.org/pdf/1809.09147v1",
+    "query": "Bayesian sequential testing evidence accumulation stopping rule"
+  },
+  {
+    "arxiv_id": "1409.5291v2",
+    "title": "Bayesian Model Selection Based on Proper Scoring Rules",
+    "authors": [
+      "A. Philip Dawid",
+      "Monica Musio"
+    ],
+    "year": 2014,
+    "abstract": "Bayesian model selection with improper priors is not well-defined because of the dependence of the marginal likelihood on the arbitrary scaling constants of the within-model prior densities. We show how this problem can be evaded by replacing marginal log-likelihood by a homogeneous proper scoring rule, which is insensitive to the scaling constants. Suitably applied, this will typically enable consistent selection of the true model.",
+    "url": "https://arxiv.org/pdf/1409.5291v2",
+    "query": "Bayesian sequential testing evidence accumulation stopping rule"
+  },
+  {
+    "arxiv_id": "1503.07791v1",
+    "title": "Sequential Monte Carlo with Adaptive Weights for Approximate Bayesian Computation",
+    "authors": [
+      "Fernando V. Bonassi",
+      "Mike West"
+    ],
+    "year": 2015,
+    "abstract": "Methods of approximate Bayesian computation (ABC) are increasingly used for analysis of complex models. A major challenge for ABC is over-coming the often inherent problem of high rejection rates in the accept/reject methods based on prior:predictive sampling. A number of recent developments aim to address this with extensions based on sequential Monte Carlo (SMC) strategies. We build on this here, introducing an ABC SMC method that uses data-based adaptive weights. This easily implemented and computationally trivial extension of ABC SMC can very substantially improve acceptance rates, as is d",
+    "url": "https://arxiv.org/pdf/1503.07791v1",
+    "query": "Bayesian sequential testing evidence accumulation stopping rule"
+  },
+  {
+    "arxiv_id": "0910.5060v3",
+    "title": "Two-sample Bayesian Nonparametric Hypothesis Testing",
+    "authors": [
+      "Chris C. Holmes",
+      "Fran\u00e7ois Caron",
+      "Jim E. Griffin"
+    ],
+    "year": 2009,
+    "abstract": "In this article we describe Bayesian nonparametric procedures for two-sample hypothesis testing. Namely, given two sets of samples $\\mathbf{y}^{\\scriptscriptstyle(1)}\\;$\\stackrel{\\scriptscriptstyle{iid}}{\\s im}$\\;F^{\\scriptscriptstyle(1)}$ and $\\mathbf{y}^{\\scriptscriptstyle(2 )}\\;$\\stackrel{\\scriptscriptstyle{iid}}{\\sim}$\\;F^{\\scriptscriptstyle( 2)}$, with $F^{\\scriptscriptstyle(1)},F^{\\scriptscriptstyle(2)}$ unknown, we wish to evaluate the evidence for the null hypothesis $H_0:F^{\\scriptscriptstyle(1)}\\equiv F^{\\scriptscriptstyle(2)}$ versus the alternative $H_1:F^{\\scriptscriptstyle(1)}\\ne",
+    "url": "https://arxiv.org/pdf/0910.5060v3",
+    "query": "Bayesian sequential testing evidence accumulation stopping rule"
+  },
+  {
+    "arxiv_id": "1403.5536v1",
+    "title": "A practical sequential stopping rule for high-dimensional MCMC and its application to spatial-temporal Bayesian models",
+    "authors": [
+      "Lei Gong",
+      "James M. Flegal"
+    ],
+    "year": 2014,
+    "abstract": "A current challenge for many Bayesian analyses is determining when to terminate high-dimensional Markov chain Monte Carlo simulations. To this end, we propose using an automated sequential stopping procedure that terminates the simulation when the computational uncertainty is small relative to the posterior uncertainty. Such a stopping rule has previously been shown to work well in settings with posteriors of moderate dimension. In this paper, we illustrate its utility in high-dimensional simulations while overcoming some current computational issues. Further, we investigate the relationship b",
+    "url": "https://arxiv.org/pdf/1403.5536v1",
+    "query": "Bayesian sequential testing evidence accumulation stopping rule"
+  },
+  {
+    "arxiv_id": "2301.13783v1",
+    "title": "An analytical approach to Bayesian evidence computation",
+    "authors": [
+      "Juan Garcia-Bellido"
+    ],
+    "year": 2023,
+    "abstract": "The Bayesian evidence is a key tool in model selection, allowing a comparison of models with different numbers of parameters. Its use in analysis of cosmological models has been limited by difficulties in calculating it, with current numerical algorithms requiring supercomputers. In this paper we give exact formulae for the Bayesian evidence in the case of Gaussian likelihoods with arbitrary correlations and top-hat priors, and approximate formulae for the case of likelihood distributions with leading non-Gaussianities (skewness and kurtosis). We apply these formulae to cosmological models wit",
+    "url": "https://arxiv.org/pdf/2301.13783v1",
+    "query": "Bayesian sequential testing evidence accumulation stopping rule"
+  },
+  {
+    "arxiv_id": "1501.05870v2",
+    "title": "A Linear Programming Approach to Sequential Hypothesis Testing",
+    "authors": [
+      "Michael Fauss",
+      "Abdelhak M. Zoubir"
+    ],
+    "year": 2015,
+    "abstract": "Under some mild Markov assumptions it is shown that the problem of designing optimal sequential tests for two simple hypotheses can be formulated as a linear program. The result is derived by investigating the Lagrangian dual of the sequential testing problem, which is an unconstrained optimal stopping problem, depending on two unknown Lagrangian multipliers. It is shown that the derivative of the optimal cost function with respect to these multipliers coincides with the error probabilities of the corresponding sequential test. This property is used to formulate an optimization problem that is",
+    "url": "https://arxiv.org/pdf/1501.05870v2",
+    "query": "Bayesian sequential testing evidence accumulation stopping rule"
+  },
+  {
+    "arxiv_id": "2509.21734v3",
+    "title": "Optimal Stopping for Sequential Bayesian Experimental Design",
+    "authors": [
+      "Chen Cheng",
+      "Xun Huan"
+    ],
+    "year": 2025,
+    "abstract": "Sequential Bayesian experimental design is often formulated as a fixed-horizon policy optimization problem, in which the number of experiments is specified before data collection begins. In practical campaigns, however, additional measurements may provide diminishing information relative to their cost, making termination an integral part of experimental design. Common threshold-based stopping rules are easy to implement but myopic, because they compare the current state with a fixed criterion rather than the expected value of future experiments. This work develops a Bayesian optimal stopping f",
+    "url": "https://arxiv.org/pdf/2509.21734v3",
+    "query": "Bayesian sequential testing evidence accumulation stopping rule"
+  },
+  {
+    "arxiv_id": "2405.16331v1",
+    "title": "Confirming the Null: Remarks on Equivalence Testing and the Topology of Confirmation",
+    "authors": [
+      "Reid Dale"
+    ],
+    "year": 2024,
+    "abstract": "Null Hypothesis Statistical Testing is a dominant framework for conducting statistical analysis across the sciences. There remains considerable debate as to whether, and under what circumstances, evidence can be said to be confirmatory of a null hypothesis. This paper presents a modal logic of short-run frequentist confirmation developed by leveraging the duality between hypothesis testing and statistical estimation.\n  It is shown that a hypothesis is confirmable if and only if it satisfies the topological condition of having nonempty interior. Consequently, two-sided hypotheses are not statis",
+    "url": "https://arxiv.org/pdf/2405.16331v1",
+    "query": "TOST equivalence testing null result interpretation"
+  },
+  {
+    "arxiv_id": "2205.05897v1",
+    "title": "CAGI, the Critical Assessment of Genome Interpretation, establishes progress and prospects for computational genetic variant interpretation methods",
+    "authors": [
+      "The Critical Assessment of Genome Interpretation Consortium"
+    ],
+    "year": 2022,
+    "abstract": "The Critical Assessment of Genome Interpretation (CAGI) aims to advance the state of the art for computational prediction of genetic variant impact, particularly those relevant to disease. The five complete editions of the CAGI community experiment comprised 50 challenges, in which participants made blind predictions of phenotypes from genetic data, and these were evaluated by independent assessors. Overall, results show that while current methods are imperfect, they have major utility for research and clinical applications. Missense variant interpretation methods are able to estimate biochemi",
+    "url": "https://arxiv.org/pdf/2205.05897v1",
+    "query": "TOST equivalence testing null result interpretation"
+  },
+  {
+    "arxiv_id": "2202.12139v1",
+    "title": "Testing Deep Learning Models: A First Comparative Study of Multiple Testing Techniques",
+    "authors": [
+      "Mohit Kumar Ahuja",
+      "Arnaud Gotlieb",
+      "Helge Spieker"
+    ],
+    "year": 2022,
+    "abstract": "Deep Learning (DL) has revolutionized the capabilities of vision-based systems (VBS) in critical applications such as autonomous driving, robotic surgery, critical infrastructure surveillance, air and maritime traffic control, etc. By analyzing images, voice, videos, or any type of complex signals, DL has considerably increased the situation awareness of these systems. At the same time, while relying more and more on trained DL models, the reliability and robustness of VBS have been challenged and it has become crucial to test thoroughly these models to assess their capabilities and potential ",
+    "url": "https://arxiv.org/pdf/2202.12139v1",
+    "query": "TOST equivalence testing null result interpretation"
+  },
+  {
+    "arxiv_id": "1503.01884v3",
+    "title": "Null-null components of the generalized Einstein tensor for Lovelock models",
+    "authors": [
+      "Alessandro Pesci"
+    ],
+    "year": 2015,
+    "abstract": "For spherical symmetry, we provide expressions for the radial null-null components of the generalized Einstein tensor $E_{ab}$ for Lovelock models for diagonal $E_{ab}$ in terms of the metric and of the radial null-null components of the Ricci tensor. We show they can be usefully employed for example in obtaining the Birkhoff-like theorem for Lovelock models, as well as in providing a relation between the null energy and null convergence conditions for the same models.",
+    "url": "https://arxiv.org/pdf/1503.01884v3",
+    "query": "TOST equivalence testing null result interpretation"
+  },
+  {
+    "arxiv_id": "2405.13786v1",
+    "title": "Towards Explainable Test Case Prioritisation with Learning-to-Rank Models",
+    "authors": [
+      "Aurora Ram\u00edrez",
+      "Mario Berrios",
+      "Jos\u00e9 Ra\u00fal Romero"
+    ],
+    "year": 2024,
+    "abstract": "Test case prioritisation (TCP) is a critical task in regression testing to ensure quality as software evolves. Machine learning has become a common way to achieve it. In particular, learning-to-rank (LTR) algorithms provide an effective method of ordering and prioritising test cases. However, their use poses a challenge in terms of explainability, both globally at the model level and locally for particular results. Here, we present and discuss scenarios that require different explanations and how the particularities of TCP (multiple builds over time, test case and test suite variations, etc.) ",
+    "url": "https://arxiv.org/pdf/2405.13786v1",
+    "query": "TOST equivalence testing null result interpretation"
+  },
+  {
+    "arxiv_id": "9802006v1",
+    "title": "Remarks on unsharp quantum observables, objectification, and modal interpretations",
+    "authors": [
+      "P. Busch"
+    ],
+    "year": 1998,
+    "abstract": "  This paper addresses the question whether a variant of a modal interpretation is conceivable that could accommodate property ascriptions associated with nonorthogonal resolutions of the unity and nonorthogonal families of relative states as they occur in imperfect or genuinely unsharp measurements. I will review a recent formulation of the quantum measurement problem in the form of an insolubility theorem that incorporates the case of unsharp object observables as well as certain types of unsharp pointers. In addition to demonstrating the necessity for some modification of quantum mechanics,",
+    "url": "https://arxiv.org/pdf/quant-ph/9802006v1",
+    "query": "TOST equivalence testing null result interpretation"
+  },
+  {
+    "arxiv_id": "2308.09631v3",
+    "title": "Non existence of closed and bounded null geodesics in Kerr spacetimes",
+    "authors": [
+      "Giulio Sanzeni"
+    ],
+    "year": 2023,
+    "abstract": "The Kerr-star spacetime is the extension over the horizons and in the negative radial region of the slowly rotating Kerr black hole. It is known that below the inner horizon, there exist both timelike and null (lightlike) closed curves. Nevertheless, we prove that null geodesics can be neither closed nor even contained in a compact subset of the Kerr-star spacetime.",
+    "url": "https://arxiv.org/pdf/2308.09631v3",
+    "query": "TOST equivalence testing null result interpretation"
+  },
+  {
+    "arxiv_id": "2101.00458v2",
+    "title": "Gravity at Finite Temperature, Equivalence Principle,and Local Lorentz Invariance",
+    "authors": [
+      "M. Gasperini"
+    ],
+    "year": 2021,
+    "abstract": "In this Chapter we illustrate the close connection between the violation of the weak equivalence principle typical of gravitational interactions at finite temperature, and similar violations induced by a breaking of the local Lorentz symmetry. We also discuss the physical implications of the effective repulsive forces possibly arising in such a generalized gravitational context, by considering, for an illustrative purpose, a quasi-Riemannian model of gravity with rotational symmetry as the local gauge group in tangent space.",
+    "url": "https://arxiv.org/pdf/2101.00458v2",
+    "query": "TOST equivalence testing null result interpretation"
+  },
+  {
+    "arxiv_id": "2305.07943v1",
+    "title": "Illumination-insensitive Binary Descriptor for Visual Measurement Based on Local Inter-patch Invariance",
+    "authors": [
+      "Xinyu Lin",
+      "Yingjie Zhou",
+      "Xun Zhang"
+    ],
+    "year": 2023,
+    "abstract": "Binary feature descriptors have been widely used in various visual measurement tasks, particularly those with limited computing resources and storage capacities. Existing binary descriptors may not perform well for long-term visual measurement tasks due to their sensitivity to illumination variations. It can be observed that when image illumination changes dramatically, the relative relationship among local patches mostly remains intact. Based on the observation, consequently, this study presents an illumination-insensitive binary (IIB) descriptor by leveraging the local inter-patch invariance",
+    "url": "https://arxiv.org/pdf/2305.07943v1",
+    "query": "measurement invariance robustness effect heterogeneity"
+  },
+  {
+    "arxiv_id": "2305.11782v2",
+    "title": "Real-time and Robust Feature Detection of Continuous Marker Pattern for Dense 3-D Deformation Measurement",
+    "authors": [
+      "Mingxuan Li",
+      "Yen Hang Zhou",
+      "Liemin Li"
+    ],
+    "year": 2023,
+    "abstract": "Visuotactile sensing technology has received much attention in recent years. This article proposes a feature detection method applicable to visuotactile sensors based on continuous marker patterns (CMP) to measure 3-d deformation. First, we construct the feature model of checkerboard-like corners under contact deformation, and design a novel double-layer circular sampler. Then, we propose the judging criteria and response function of corner features by analyzing sampling signals' amplitude-frequency characteristics and circular cross-correlation behavior. The proposed feature detection algorit",
+    "url": "https://arxiv.org/pdf/2305.11782v2",
+    "query": "measurement invariance robustness effect heterogeneity"
+  },
+  {
+    "arxiv_id": "2101.07005v2",
+    "title": "Optical Flow Method for Measuring Deformation of Soil Specimen Subjected to Torsional Shearing",
+    "authors": [
+      "Piotr E. Srokosz",
+      "Marcin Bujko",
+      "Marta Boche\u0144ska"
+    ],
+    "year": 2021,
+    "abstract": "In this study optical flow method was used for soil small deformation measurement in laboratory tests. The main objective was to observe how the deformation distributes along the whole height of cylindrical soil specimen subjected to torsional shearing (TS test). The experiments were conducted on dry non-cohesive soil specimens under two values of isotropic pressure. Specimens were loaded with low-amplitude cyclic torque to analyze the deformation within the small strain range (0.001-0.01%). Optical flow method variant by Ce Liu (2009) was used for motion estimation from series of images. This",
+    "url": "https://arxiv.org/pdf/2101.07005v2",
+    "query": "measurement invariance robustness effect heterogeneity"
+  },
+  {
+    "arxiv_id": "1506.02689v1",
+    "title": "Identification of Error Sources in High Precision Weight Measurements of Gyroscopes",
+    "authors": [
+      "I. L\u0151rincz",
+      "M. Tajmar"
+    ],
+    "year": 2015,
+    "abstract": "A number of weight anomalies have been reported in the past with respect to gyroscopes. Much attention was gained from a paper in Physical Review Letters, when Japanese scientists announced that a gyroscope loses weight up to $0.005\\%$ when spinning only in the clockwise rotation with the gyroscope's axis in the vertical direction. Immediately afterwards, a number of other teams tried to replicate the effect, obtaining a null result. It was suggested that the reported effect by the Japanese was probably due to a vibration artifact, however, no final conclusion on the real cause has been obtain",
+    "url": "https://arxiv.org/pdf/1506.02689v1",
+    "query": "measurement invariance robustness effect heterogeneity"
+  },
+  {
+    "arxiv_id": "2308.03953v2",
+    "title": "PMU measurements based short-term voltage stability assessment of power systems via deep transfer learning",
+    "authors": [
+      "Yang Li",
+      "Shitu Zhang",
+      "Yuanzheng Li"
+    ],
+    "year": 2023,
+    "abstract": "Deep learning has emerged as an effective solution for addressing the challenges of short-term voltage stability assessment (STVSA) in power systems. However, existing deep learning-based STVSA approaches face limitations in adapting to topological changes, sample labeling, and handling small datasets. To overcome these challenges, this paper proposes a novel phasor measurement unit (PMU) measurements-based STVSA method by using deep transfer learning. The method leverages the real-time dynamic information captured by PMUs to create an initial dataset. It employs temporal ensembling for sample",
+    "url": "https://arxiv.org/pdf/2308.03953v2",
+    "query": "measurement invariance robustness effect heterogeneity"
+  },
+  {
+    "arxiv_id": "2506.00969v1",
+    "title": "Data Heterogeneity Modeling for Trustworthy Machine Learning",
+    "authors": [
+      "Jiashuo Liu",
+      "Peng Cui"
+    ],
+    "year": 2025,
+    "abstract": "Data heterogeneity plays a pivotal role in determining the performance of machine learning (ML) systems. Traditional algorithms, which are typically designed to optimize average performance, often overlook the intrinsic diversity within datasets. This oversight can lead to a myriad of issues, including unreliable decision-making, inadequate generalization across different domains, unfair outcomes, and false scientific inferences. Hence, a nuanced approach to modeling data heterogeneity is essential for the development of dependable, data-driven systems. In this survey paper, we present a thoro",
+    "url": "https://arxiv.org/pdf/2506.00969v1",
+    "query": "measurement invariance robustness effect heterogeneity"
+  },
+  {
+    "arxiv_id": "2411.19532v1",
+    "title": "Heterogeneity of tumor biophysical properties and their potential role as prognostic markers",
+    "authors": [
+      "Anja Madleine Markl",
+      "Daniel Nieder",
+      "Diana Isabel Sandoval-Bojorquez"
+    ],
+    "year": 2024,
+    "abstract": "Progress in our knowledge of tumor mechanisms and complexity led to the understanding of the physical parameters of cancer cells and their microenvironment, including the mechanical, thermal, and electrical properties, solid stress, and liquid pressure, as critical regulators of tumor progression and potential prognostic traits associated with clinical outcomes. The biological hallmarks of cancer and physical abnormalities of tumors are mutually reinforced, promoting a vicious cycle of tumor progression. A comprehensive analysis of the biological and physical tumor parameters is critical for d",
+    "url": "https://arxiv.org/pdf/2411.19532v1",
+    "query": "measurement invariance robustness effect heterogeneity"
+  },
+  {
+    "arxiv_id": "2005.11050v1",
+    "title": "Autonomous Task Dropping Mechanism to Achieve Robustness in Heterogeneous Computing Systems",
+    "authors": [
+      "Ali Mokhtari",
+      "Chavit Denninnart",
+      "Mohsen Amini Salehi"
+    ],
+    "year": 2020,
+    "abstract": "Robustness of a distributed computing system is defined as the ability to maintain its performance in the presence of uncertain parameters. Uncertainty is a key problem in heterogeneous (and even homogeneous) distributed computing systems that perturbs system robustness. Notably, the performance of these systems is perturbed by uncertainty in both task execution time and arrival. Accordingly, our goal is to make the system robust against these uncertainties. Considering task execution time as a random variable, we use probabilistic analysis to develop an autonomous proactive task dropping mech",
+    "url": "https://arxiv.org/pdf/2005.11050v1",
+    "query": "measurement invariance robustness effect heterogeneity"
+  },
+  {
+    "arxiv_id": "1004.3611v2",
+    "title": "Tidal alignments as a contaminant of the galaxy bispectrum",
+    "authors": [
+      "Elisabeth Krause",
+      "Christopher Hirata"
+    ],
+    "year": 2010,
+    "abstract": "If the orientations of galaxies are correlated with large-scale structure, then anisotropic selection effects such as preferential selection of face-on disc galaxies can contaminate large scale structure observables. Here we consider the effect on the galaxy bispectrum, which has attracted interest as a way to break the degeneracy between galaxy bias and the amplitude of matter fluctuations sigma_8. We consider two models of intrinsic galaxy alignments: one where the probability distribution for the galaxy's orientation contains a term linear in the local tidal field, appropriate for elliptica",
+    "url": "https://arxiv.org/pdf/1004.3611v2",
+    "query": "alignment capability evaluation benchmark contamination"
+  },
+  {
+    "arxiv_id": "2602.05656v2",
+    "title": "Alignment Verifiability in Large Language Models: Normative Indistinguishability under Behavioral Evaluation",
+    "authors": [
+      "Igor Santos-Grueiro"
+    ],
+    "year": 2026,
+    "abstract": "Behavioral evaluation is the dominant paradigm for assessing alignment in large language models (LLMs). In current practice, observed compliance under finite evaluation protocols is treated as evidence of latent alignment. However, the inference from bounded behavioral evidence to claims about global latent properties is rarely analyzed as an identifiability problem. In this paper, we study alignment evaluation through the lens of statistical identifiability under partial observability. We allow agent policies to condition their behavior on observable signals correlated with the evaluation reg",
+    "url": "https://arxiv.org/pdf/2602.05656v2",
+    "query": "alignment capability evaluation benchmark contamination"
+  },
+  {
+    "arxiv_id": "1801.05075v2",
+    "title": "A Human-Grounded Evaluation Benchmark for Local Explanations of Machine Learning",
+    "authors": [
+      "Sina Mohseni",
+      "Jeremy E. Block",
+      "Eric D. Ragan"
+    ],
+    "year": 2018,
+    "abstract": "Research in interpretable machine learning proposes different computational and human subject approaches to evaluate model saliency explanations. These approaches measure different qualities of explanations to achieve diverse goals in designing interpretable machine learning systems. In this paper, we propose a human attention benchmark for image and text domains using multi-layer human attention masks aggregated from multiple human annotators. We then present an evaluation study to evaluate model saliency explanations obtained using Grad-cam and LIME techniques. We demonstrate our benchmark's",
+    "url": "https://arxiv.org/pdf/1801.05075v2",
+    "query": "alignment capability evaluation benchmark contamination"
+  },
+  {
+    "arxiv_id": "2312.03893v1",
+    "title": "Deliberative Technology for Alignment",
+    "authors": [
+      "Andrew Konya",
+      "Deger Turan",
+      "Aviv Ovadya"
+    ],
+    "year": 2023,
+    "abstract": "For humanity to maintain and expand its agency into the future, the most powerful systems we create must be those which act to align the future with the will of humanity. The most powerful systems today are massive institutions like governments, firms, and NGOs. Deliberative technology is already being used across these institutions to help align governance and diplomacy with human will, and modern AI is poised to make this technology significantly better. At the same time, the race to superhuman AGI is already underway, and the AI systems it gives rise to may become the most powerful systems ",
+    "url": "https://arxiv.org/pdf/2312.03893v1",
+    "query": "alignment capability evaluation benchmark contamination"
+  },
+  {
+    "arxiv_id": "2504.04596v1",
+    "title": "SECQUE: A Benchmark for Evaluating Real-World Financial Analysis Capabilities",
+    "authors": [
+      "Noga Ben Yoash",
+      "Meni Brief",
+      "Oded Ovadia"
+    ],
+    "year": 2025,
+    "abstract": "We introduce SECQUE, a comprehensive benchmark for evaluating large language models (LLMs) in financial analysis tasks. SECQUE comprises 565 expert-written questions covering SEC filings analysis across four key categories: comparison analysis, ratio calculation, risk assessment, and financial insight generation. To assess model performance, we develop SECQUE-Judge, an evaluation mechanism leveraging multiple LLM-based judges, which demonstrates strong alignment with human evaluations. Additionally, we provide an extensive analysis of various models' performance on our benchmark. By making SEC",
+    "url": "https://arxiv.org/pdf/2504.04596v1",
+    "query": "alignment capability evaluation benchmark contamination"
+  },
+  {
+    "arxiv_id": "2407.21530v2",
+    "title": "Data Contamination Report from the 2024 CONDA Shared Task",
+    "authors": [
+      "Oscar Sainz",
+      "Iker Garc\u00eda-Ferrero",
+      "Alon Jacovi"
+    ],
+    "year": 2024,
+    "abstract": "The 1st Workshop on Data Contamination (CONDA 2024) focuses on all relevant aspects of data contamination in natural language processing, where data contamination is understood as situations where evaluation data is included in pre-training corpora used to train large scale models, compromising evaluation results. The workshop fostered a shared task to collect evidence on data contamination in current available datasets and models. The goal of the shared task and associated database is to assist the community in understanding the extent of the problem and to assist researchers in avoiding repo",
+    "url": "https://arxiv.org/pdf/2407.21530v2",
+    "query": "alignment capability evaluation benchmark contamination"
+  },
+  {
+    "arxiv_id": "2407.08716v1",
+    "title": "A Taxonomy for Data Contamination in Large Language Models",
+    "authors": [
+      "Medha Palavalli",
+      "Amanda Bertsch",
+      "Matthew R. Gormley"
+    ],
+    "year": 2024,
+    "abstract": "Large language models pretrained on extensive web corpora demonstrate remarkable performance across a wide range of downstream tasks. However, a growing concern is data contamination, where evaluation datasets may be contained in the pretraining corpus, inflating model performance. Decontamination, the process of detecting and removing such data, is a potential solution; yet these contaminants may originate from altered versions of the test set, evading detection during decontamination. How different types of contamination impact the performance of language models on downstream tasks is not fu",
+    "url": "https://arxiv.org/pdf/2407.08716v1",
+    "query": "alignment capability evaluation benchmark contamination"
+  },
+  {
+    "arxiv_id": "2511.21779v1",
+    "title": "Aligning Artificial Superintelligence via a Multi-Box Protocol",
+    "authors": [
+      "Avraham Yair Negozio"
+    ],
+    "year": 2025,
+    "abstract": "We propose a novel protocol for aligning artificial superintelligence (ASI) based on mutual verification among multiple isolated systems that self-modify to achieve alignment. The protocol operates by containing multiple diverse artificial superintelligences in strict isolation (\"boxes\"), with humans remaining entirely outside the system. Each superintelligence has no ability to communicate with humans and cannot communicate directly with other superintelligences. The only interaction possible is through an auditable submission interface accessible exclusively to the superintelligences themsel",
+    "url": "https://arxiv.org/pdf/2511.21779v1",
+    "query": "alignment capability evaluation benchmark contamination"
+  },
+  {
+    "arxiv_id": "2501.03569v1",
+    "title": "What Does a Software Engineer Look Like? Exploring Societal Stereotypes in LLMs",
+    "authors": [
+      "Muneera Bano",
+      "Hashini Gunatilake",
+      "Rashina Hoda"
+    ],
+    "year": 2025,
+    "abstract": "Large language models (LLMs) have rapidly gained popularity and are being embedded into professional applications due to their capabilities in generating human-like content. However, unquestioned reliance on their outputs and recommendations can be problematic as LLMs can reinforce societal biases and stereotypes. This study investigates how LLMs, specifically OpenAI's GPT-4 and Microsoft Copilot, can reinforce gender and racial stereotypes within the software engineering (SE) profession through both textual and graphical outputs. We used each LLM to generate 300 profiles, consisting of 100 ge",
+    "url": "https://arxiv.org/pdf/2501.03569v1",
+    "query": "LLM representation engineering linear probing evaluation"
+  },
+  {
+    "arxiv_id": "2606.05868v1",
+    "title": "YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition",
+    "authors": [
+      " PSBC LLM Team",
+      " Huawei LLM Team",
+      "Ruihan Long"
+    ],
+    "year": 2026,
+    "abstract": "Large language models (LLMs) drive significant financial innovations, yet their high-concurrency deployment is severely bottlenecked by KV cache memory overhead, which inflates infrastructure costs and throttles scalability. To address this, we propose YouZhi-LLM, a highly efficient financial LLM empowered by a comprehensive structural transition and training pipeline natively built on the Huawei Ascend ecosystem. At its algorithmic core, YouZhi-LLM features a layer-adaptive GQA-to-MLA transition framework that dynamically assigns per-layer FreqFold sizes, maximizing KV-cache compression while",
+    "url": "https://arxiv.org/pdf/2606.05868v1",
+    "query": "LLM representation engineering linear probing evaluation"
+  },
+  {
+    "arxiv_id": "1101.2456v3",
+    "title": "Polynomial representations and categorifications of Fock Space",
+    "authors": [
+      "Jiuzu Hong",
+      "Oded Yacobi"
+    ],
+    "year": 2011,
+    "abstract": "The rings of symmetric polynomials form an inverse system whose limit, the ring of symmetric functions, is the model for the bosonic Fock space representation of the affine Lie algebra. We categorify this construction by considering an inverse limit of categories of polynomial representation of general linear groups. We show that this limit naturally carries an action of the affine Lie algebra (in the sense of Rouquier), thereby obtaining a famiy of categorifications of the bosonic Fock space representation.",
+    "url": "https://arxiv.org/pdf/1101.2456v3",
+    "query": "LLM representation engineering linear probing evaluation"
+  },
+  {
+    "arxiv_id": "2204.06033v1",
+    "title": "Text and Team: What Article Metadata Characteristics Drive Citations in Software Engineering?",
+    "authors": [
+      "Lorenz Graf-Vlachy",
+      "Daniel Graziotin",
+      "Stefan Wagner"
+    ],
+    "year": 2022,
+    "abstract": "Context: Citations are a key measure of scientific performance in most fields, including software engineering. However, there is limited research that studies which characteristics of articles' metadata (title, abstract, keywords, and author list) are driving citations in this field. Objective: In this study, we propose a simple theoretical model for how citations come to be with respect to article metadata, we hypothesize theoretical linkages between metadata characteristics and citations of articles, and we empirically test these hypotheses. Method: We use multiple regression analyses to exa",
+    "url": "https://arxiv.org/pdf/2204.06033v1",
+    "query": "LLM representation engineering linear probing evaluation"
+  },
+  {
+    "arxiv_id": "2406.04710v2",
+    "title": "Morescient GAI for Software Engineering (Extended Version)",
+    "authors": [
+      "Marcus Kessel",
+      "Colin Atkinson"
+    ],
+    "year": 2024,
+    "abstract": "The ability of Generative AI (GAI) technology to automatically check, synthesize and modify software engineering artifacts promises to revolutionize all aspects of software engineering. Using GAI for software engineering tasks is consequently one of the most rapidly expanding fields of software engineering research, with over a hundred LLM-based code models having been published since 2021. However, the overwhelming majority of existing code models share a major weakness - they are exclusively trained on the syntactic facet of software, significantly lowering their trustworthiness in tasks dep",
+    "url": "https://arxiv.org/pdf/2406.04710v2",
+    "query": "LLM representation engineering linear probing evaluation"
+  },
+  {
+    "arxiv_id": "0711.0795v4",
+    "title": "Finite-Dimensional Representations of Hyper Loop Algebras Over Non-Algebraically Closed Fields",
+    "authors": [
+      "Dijana Jakelic",
+      "Adriano Moura"
+    ],
+    "year": 2007,
+    "abstract": "  We study finite-dimensional representations of hyper loop algebras over non-algebraically closed fields. The main results concern the classification of the irreducible representations, the construction of the Weyl modules, base change, tensor products of irreducible and Weyl modules, and the block decomposition of the underlying abelian category. Several results are interestingly related to the study of irreducible representations of polynomial algebras and Galois theory.",
+    "url": "https://arxiv.org/pdf/0711.0795v4",
+    "query": "LLM representation engineering linear probing evaluation"
+  },
+  {
+    "arxiv_id": "2506.09713v2",
+    "title": "A First Look at Bugs in LLM Inference Engines",
+    "authors": [
+      "Mugeng Liu",
+      "Siqi Zhong",
+      "Weichen Bi"
+    ],
+    "year": 2025,
+    "abstract": "Large language model-specific inference engines (in short as \\emph{LLM inference engines}) have become a fundamental component of modern AI infrastructure, enabling the deployment of LLM-powered applications (LLM apps) across cloud and local devices. Despite their critical role, LLM inference engines are prone to bugs due to the immense resource demands of LLMs and the complexities of cross-platform compatibility. However, a systematic understanding of these bugs remains lacking. To bridge this gap, we present the first empirical study on bugs in LLM inference engines. We mine official reposit",
+    "url": "https://arxiv.org/pdf/2506.09713v2",
+    "query": "LLM representation engineering linear probing evaluation"
+  },
+  {
+    "arxiv_id": "2502.06193v3",
+    "title": "Can LLMs Replace Human Evaluators? An Empirical Study of LLM-as-a-Judge in Software Engineering",
+    "authors": [
+      "Ruiqi Wang",
+      "Jiyu Guo",
+      "Cuiyun Gao"
+    ],
+    "year": 2025,
+    "abstract": "Recently, large language models (LLMs) have been deployed to tackle various software engineering (SE) tasks like code generation, significantly advancing the automation of SE tasks. However, assessing the quality of these LLM-generated code and text remains challenging. The commonly used Pass@k metric necessitates extensive unit tests and configured environments, demands a high labor cost, and is not suitable for evaluating LLM-generated text. Conventional metrics like BLEU, which measure only lexical rather than semantic similarity, have also come under scrutiny. In response, a new trend has ",
+    "url": "https://arxiv.org/pdf/2502.06193v3",
+    "query": "LLM representation engineering linear probing evaluation"
+  }
+]

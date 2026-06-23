@@ -1,0 +1,201 @@
+{
+  "2310.01405": {
+    "arxiv_id": "2310.01405",
+    "title": "Representation Engineering: A Top-Down Approach to AI Transparency",
+    "authors": [
+      "Andy Zou",
+      "Long Phan",
+      "Sarah Chen"
+    ],
+    "year": 2023,
+    "abstract": "In this paper, we identify and characterize the emerging area of representation engineering (RepE), an approach to enhancing the transparency of AI systems that draws on insights from cognitive neuroscience. RepE places population-level representations, rather than neurons or circuits, at the center of analysis, equipping us with novel methods for monitoring and manipulating high-level cognitive phenomena in deep neural networks (DNNs). We provide baselines and an initial analysis of RepE techniques, showing that they offer simple yet effective solutions for improving our understanding and con",
+    "url": "https://arxiv.org/pdf/2310.01405v4"
+  },
+  "2212.08073": {
+    "arxiv_id": "2212.08073",
+    "title": "Constitutional AI: Harmlessness from AI Feedback",
+    "authors": [
+      "Yuntao Bai",
+      "Saurav Kadavath",
+      "Sandipan Kundu"
+    ],
+    "year": 2022,
+    "abstract": "As AI systems become more capable, we would like to enlist their help to supervise other AIs. We experiment with methods for training a harmless AI assistant through self-improvement, without any human labels identifying harmful outputs. The only human oversight is provided through a list of rules or principles, and so we refer to the method as 'Constitutional AI'. The process involves both a supervised learning and a reinforcement learning phase. In the supervised phase we sample from an initial model, then generate self-critiques and revisions, and then finetune the original model on revised",
+    "url": "https://arxiv.org/pdf/2212.08073v1"
+  },
+  "2204.05862": {
+    "arxiv_id": "2204.05862",
+    "title": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback",
+    "authors": [
+      "Yuntao Bai",
+      "Andy Jones",
+      "Kamal Ndousse"
+    ],
+    "year": 2022,
+    "abstract": "We apply preference modeling and reinforcement learning from human feedback (RLHF) to finetune language models to act as helpful and harmless assistants. We find this alignment training improves performance on almost all NLP evaluations, and is fully compatible with training for specialized skills such as python coding and summarization. We explore an iterated online mode of training, where preference models and RL policies are updated on a weekly cadence with fresh human feedback data, efficiently improving our datasets and models. Finally, we investigate the robustness of RLHF training, and ",
+    "url": "https://arxiv.org/pdf/2204.05862v1"
+  },
+  "2407.10035": {
+    "arxiv_id": "2407.10035",
+    "title": "Opinion formation under mass media influence on the Barabasi-Albert network",
+    "authors": [
+      "Ramacos Fardela",
+      "Zulfi Abdullah",
+      "Roni Muslim"
+    ],
+    "year": 2024,
+    "abstract": "We study numerically the dynamics of opinion formation under the influence of mass media using the $q$-voter model on a Barabasi-Albert network. We investigate the scenario where a voter adopts the mass media's opinion with a probability $p$ when there is no unanimity among a group of $q$ agents. Through numerical simulation, we identify a critical probability threshold, $p_t$, at which the system consistently reaches complete consensus. This threshold probability $p_t$ decreases as the group size $q$ increases, following a power-law relation $p_t \\propto q^\u03b3$ with $\u03b3\\approx -1.187$. Additiona",
+    "url": "https://arxiv.org/pdf/2407.10035v1"
+  },
+  "2309.07875": {
+    "arxiv_id": "2309.07875",
+    "title": "Safety-Tuned LLaMAs: Lessons From Improving the Safety of Large Language Models that Follow Instructions",
+    "authors": [
+      "Federico Bianchi",
+      "Mirac Suzgun",
+      "Giuseppe Attanasio"
+    ],
+    "year": 2023,
+    "abstract": "Training large language models to follow instructions makes them perform better on a wide range of tasks and generally become more helpful. However, a perfectly helpful model will follow even the most malicious instructions and readily generate harmful content. In this paper, we raise concerns over the safety of models that only emphasize helpfulness, not harmlessness, in their instruction-tuning. We show that several popular instruction-tuned models are highly unsafe. Moreover, we show that adding just 3% safety examples (a few hundred demonstrations) when fine-tuning a model like LLaMA can s",
+    "url": "https://arxiv.org/pdf/2309.07875v3"
+  },
+  "2312.14238": {
+    "arxiv_id": "2312.14238",
+    "title": "InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks",
+    "authors": [
+      "Zhe Chen",
+      "Jiannan Wu",
+      "Wenhai Wang"
+    ],
+    "year": 2023,
+    "abstract": "The exponential growth of large language models (LLMs) has opened up numerous possibilities for multimodal AGI systems. However, the progress in vision and vision-language foundation models, which are also critical elements of multi-modal AGI, has not kept pace with LLMs. In this work, we design a large-scale vision-language foundation model (InternVL), which scales up the vision foundation model to 6 billion parameters and progressively aligns it with the LLM, using web-scale image-text data from various sources. This model can be broadly applied to and achieve state-of-the-art performance on",
+    "url": "https://arxiv.org/pdf/2312.14238v3"
+  },
+  "2306.15595": {
+    "arxiv_id": "2306.15595",
+    "title": "Extending Context Window of Large Language Models via Positional Interpolation",
+    "authors": [
+      "Shouyuan Chen",
+      "Sherman Wong",
+      "Liangjian Chen"
+    ],
+    "year": 2023,
+    "abstract": "We present Position Interpolation (PI) that extends the context window sizes of RoPE-based pretrained LLMs such as LLaMA models to up to 32768 with minimal fine-tuning (within 1000 steps), while demonstrating strong empirical results on various tasks that require long context, including passkey retrieval, language modeling, and long document summarization from LLaMA 7B to 65B. Meanwhile, the extended model by Position Interpolation preserve quality relatively well on tasks within its original context window. To achieve this goal, Position Interpolation linearly down-scales the input position i",
+    "url": "https://arxiv.org/pdf/2306.15595v2"
+  },
+  "1904.04484": {
+    "arxiv_id": "1904.04484",
+    "title": "Meta-analysis of Bayesian analyses",
+    "authors": [
+      "Paul Blomstedt",
+      "Diego Mesquita",
+      "Omar Rivasplata"
+    ],
+    "year": 2019,
+    "abstract": "Meta-analysis aims to generalize results from multiple related statistical analyses through a combined analysis. While the natural outcome of a Bayesian study is a posterior distribution, traditional Bayesian meta-analyses proceed by combining summary statistics (i.e., point-valued estimates) computed from data. In this paper, we develop a framework for combining posterior distributions from multiple related Bayesian studies into a meta-analysis. Importantly, the method is capable of reusing pre-computed posteriors from computationally costly analyses, without needing the implementation detail",
+    "url": "https://arxiv.org/pdf/1904.04484v2"
+  },
+  "2203.15897": {
+    "arxiv_id": "2203.15897",
+    "title": "Calibrated Model Criticism Using Split Predictive Checks",
+    "authors": [
+      "Jiawei Li",
+      "Jonathan H. Huggins"
+    ],
+    "year": 2022,
+    "abstract": "Checking how well a fitted model explains the data is one of the most fundamental parts of a Bayesian data analysis. However, existing model checking methods suffer from trade-offs between being well-calibrated, automated, and computationally efficient. To overcome these limitations, we propose split predictive checks (SPCs), which combine the ease-of-use and speed of posterior predictive checks with the good calibration properties of predictive checks that rely on model-specific derivations or inference schemes. We develop an asymptotic theory for two types of SPCs: single SPCs and the divide",
+    "url": "https://arxiv.org/pdf/2203.15897v3"
+  },
+  "1611.07469": {
+    "arxiv_id": "1611.07469",
+    "title": "Fast Measurements of Robustness to Changing Priors in Variational Bayes",
+    "authors": [
+      "Ryan Giordano",
+      "Tamara Broderick",
+      "Michael Jordan"
+    ],
+    "year": 2016,
+    "abstract": "In Bayesian analysis, the posterior follows from the data and a choice of a prior and a likelihood. One hopes that the posterior is robust to reasonable variation in the choice of prior, since this choice is made by the modeler and is often somewhat subjective. A different, equally subjectively plausible choice of prior may result in a substantially different posterior, and so different conclusions drawn from the data. Were this to be the case, our conclusions would not be robust to the choice of prior. To determine whether our model is robust, we must quantify how sensitive our posterior is t",
+    "url": "https://arxiv.org/pdf/1611.07469v2"
+  },
+  "2406.12845": {
+    "arxiv_id": "2406.12845",
+    "title": "Interpretable Preferences via Multi-Objective Reward Modeling and Mixture-of-Experts",
+    "authors": [
+      "Haoxiang Wang",
+      "Wei Xiong",
+      "Tengyang Xie"
+    ],
+    "year": 2024,
+    "abstract": "Reinforcement learning from human feedback (RLHF) has emerged as the primary method for aligning large language models (LLMs) with human preferences. The RLHF process typically starts by training a reward model (RM) using human preference data. Conventional RMs are trained on pairwise responses to the same user request, with relative ratings indicating which response humans prefer. The trained RM serves as a proxy for human preferences. However, due to the black-box nature of RMs, their outputs lack interpretability, as humans cannot intuitively understand why an RM thinks a response is good o",
+    "url": "https://arxiv.org/pdf/2406.12845v1"
+  },
+  "2410.09724": {
+    "arxiv_id": "2410.09724",
+    "title": "Taming Overconfidence in LLMs: Reward Calibration in RLHF",
+    "authors": [
+      "Jixuan Leng",
+      "Chengsong Huang",
+      "Banghua Zhu"
+    ],
+    "year": 2024,
+    "abstract": "Language model calibration refers to the alignment between the confidence of the model and the actual performance of its responses. While previous studies point out the overconfidence phenomenon in Large Language Models (LLMs) and show that LLMs trained with Reinforcement Learning from Human Feedback (RLHF) are overconfident with a more sharpened output probability, in this study, we reveal that RLHF tends to lead models to express verbalized overconfidence in their own responses. We investigate the underlying cause of this overconfidence and demonstrate that reward models used for Proximal Po",
+    "url": "https://arxiv.org/pdf/2410.09724v2"
+  },
+  "2604.10585": {
+    "arxiv_id": "2604.10585",
+    "title": "Calibration Collapse Under Sycophancy Fine-Tuning: How Reward Hacking Breaks Uncertainty Quantification in LLMs",
+    "authors": [
+      "Subramanyam Sahoo"
+    ],
+    "year": 2026,
+    "abstract": "Modern large language models (LLMs) are increasingly fine-tuned via reinforcement learning from human feedback (RLHF) or related reward optimisation schemes. While such procedures improve perceived helpfulness, we investigate whether sycophantic reward signals degrade calibration -- a property essential for reliable uncertainty quantification. We fine-tune Qwen3-8B under three regimes: no fine-tuning (base), neutral supervised fine-tuning (SFT) on TriviaQA, and sycophancy-inducing Group Relative Policy Optimisation (GRPO) that rewards agreement with planted wrong answers. Evaluating on $1{,}00",
+    "url": "https://arxiv.org/pdf/2604.10585v1"
+  },
+  "2409.15360": {
+    "arxiv_id": "2409.15360",
+    "title": "Reward-Robust RLHF in LLMs",
+    "authors": [
+      "Yuzi Yan",
+      "Xingzhou Lou",
+      "Jialian Li"
+    ],
+    "year": 2024,
+    "abstract": "As Large Language Models (LLMs) continue to progress toward more advanced forms of intelligence, Reinforcement Learning from Human Feedback (RLHF) is increasingly seen as a key pathway toward achieving Artificial General Intelligence (AGI). However, the reliance on reward-model-based (RM-based) alignment methods introduces significant challenges due to the inherent instability and imperfections of Reward Models (RMs), which can lead to critical issues such as reward hacking and misalignment with human intentions. In this paper, we introduce a reward-robust RLHF framework aimed at addressing th",
+    "url": "https://arxiv.org/pdf/2409.15360v3"
+  },
+  "2606.09073": {
+    "arxiv_id": "2606.09073",
+    "title": "A Unifying Lens on Reward Uncertainty in RLHF",
+    "authors": [
+      "Ely Hahami",
+      "Yoel Zimmermann",
+      "Ray Zhou"
+    ],
+    "year": 2026,
+    "abstract": "Reinforcement learning from human feedback (RLHF) is bottlenecked by reward hacking, where the policy exploits errors in a proxy reward model (RM) and produces high RM scores without genuine quality gains. A natural mitigation is pessimism: lowering rewards in regions where the RM is uncertain. However, standard scalar RMs provide no principled notion of uncertainty. We argue that the right object is a distributional reward model $p(r\\mid x,y)$. Under either a Bayesian inference or a KL-distributionally robust optimization (KL-DRO) lens, the KL-regularized RLHF objective admits a closed-form e",
+    "url": "https://arxiv.org/pdf/2606.09073v2"
+  },
+  "2411.10156": {
+    "arxiv_id": "2411.10156",
+    "title": "Mitigating Sycophancy in Decoder-Only Transformer Architectures: Synthetic Data Intervention",
+    "authors": [
+      "Libo Wang"
+    ],
+    "year": 2024,
+    "abstract": "To address the sycophancy problem caused by reinforcement learning from human feedback in large language models, this research applies synthetic data intervention technology to the decoder-only transformer architecture. Based on the research gaps in the existing literature, the researcher designed an experimental process to reduce the tendency of models to cater by generating diversified data, and used GPT4o as an experimental tool for verification. The experiment used 100 true and false questions, and compared the performance of the model trained with synthetic data intervention and the origi",
+    "url": "https://arxiv.org/pdf/2411.10156v5"
+  },
+  "2502.18770": {
+    "arxiv_id": "2502.18770",
+    "title": "Reward Shaping to Mitigate Reward Hacking in RLHF",
+    "authors": [
+      "Jiayi Fu",
+      "Xuandong Zhao",
+      "Chengyuan Yao"
+    ],
+    "year": 2025,
+    "abstract": "Reinforcement Learning from Human Feedback (RLHF) is essential for aligning large language models (LLMs) with human values. However, RLHF is susceptible to \\emph{reward hacking}, where the agent exploits flaws in the reward function rather than learning the intended behavior, thus degrading alignment. Although reward shaping helps stabilize RLHF and partially mitigate reward hacking, a systematic investigation into shaping techniques and their underlying principles remains lacking. To bridge this gap, we present a comprehensive study of the prevalent reward shaping methods. Our analysis sugges",
+    "url": "https://arxiv.org/pdf/2502.18770v5"
+  }
+}

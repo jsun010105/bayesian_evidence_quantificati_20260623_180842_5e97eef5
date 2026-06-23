@@ -1,0 +1,608 @@
+[
+  {
+    "arxiv_id": "2005.05010v3",
+    "title": "Homological mirror symmetry for log Calabi-Yau surfaces",
+    "authors": [
+      "Paul Hacking",
+      "Ailsa Keating",
+      "Wendelin Lutz"
+    ],
+    "year": 2020,
+    "abstract": "Given a log Calabi-Yau surface $Y$ with maximal boundary $D$ and distinguished complex structure, we explain how to construct a mirror Lefschetz fibration $w: M \\to \\mathbb{C}$, where $M$ is a Weinstein four-manifold, such that the directed Fukaya category of $w$ is isomorphic to $D^b \\text{Coh}(Y)$, and the wrapped Fukaya category $D^b\\mathcal{W} (M)$ is isomorphic to $D^b \\text{Coh}(Y \\backslash D)$. We construct an explicit isomorphism between $M$ and the total space of the almost-toric fibration arising in the work of Gross-Hacking-Keel; when $D$ is negative definite this is expected to be",
+    "url": "https://arxiv.org/pdf/2005.05010v3",
+    "query": "RLHF reward hacking evaluation robustness benchmark"
+  },
+  {
+    "arxiv_id": "2502.18770v5",
+    "title": "Reward Shaping to Mitigate Reward Hacking in RLHF",
+    "authors": [
+      "Jiayi Fu",
+      "Xuandong Zhao",
+      "Chengyuan Yao"
+    ],
+    "year": 2025,
+    "abstract": "Reinforcement Learning from Human Feedback (RLHF) is essential for aligning large language models (LLMs) with human values. However, RLHF is susceptible to \\emph{reward hacking}, where the agent exploits flaws in the reward function rather than learning the intended behavior, thus degrading alignment. Although reward shaping helps stabilize RLHF and partially mitigate reward hacking, a systematic investigation into shaping techniques and their underlying principles remains lacking. To bridge this gap, we present a comprehensive study of the prevalent reward shaping methods. Our analysis sugges",
+    "url": "https://arxiv.org/pdf/2502.18770v5",
+    "query": "RLHF reward hacking evaluation robustness benchmark"
+  },
+  {
+    "arxiv_id": "2606.03238v1",
+    "title": "When RLHF Fails: A Mechanistic Taxonomy of Reward Hacking, Collapse, and Evaluator Gaming",
+    "authors": [
+      "Zelalem Abahana"
+    ],
+    "year": 2026,
+    "abstract": "Reinforcement learning from human feedback (RLHF) makes large-scale post-training possible by replacing an underspecified human objective with learned and scalable proxies. The same substitution creates a structured failure surface: optimization can raise the learned reward while external quality falls, degrade both proxy and judge scores, reveal proxy under-alignment, or produce evaluator-specific disagreement. We present an empirical failure-mode study of a compact RLHF pipeline with proximal policy optimization (PPO), direct preference optimization (DPO), uncertainty-penalized PPO (UP-PPO),",
+    "url": "https://arxiv.org/pdf/2606.03238v1",
+    "query": "RLHF reward hacking evaluation robustness benchmark"
+  },
+  {
+    "arxiv_id": "2604.02986v1",
+    "title": "Mitigating Reward Hacking in RLHF via Advantage Sign Robustness",
+    "authors": [
+      "Shinnosuke Ono",
+      "Johannes Ackermann",
+      "Soichiro Nishimori"
+    ],
+    "year": 2026,
+    "abstract": "Reward models (RMs) used in reinforcement learning from human feedback (RLHF) are vulnerable to reward hacking: as the policy maximizes a learned proxy reward, true quality plateaus or degrades. We make the assumption that reward hacking is often caused by flipped advantage signs: instead of reducing the likelihood of a bad response, a flipped sign causes the update to increase it. By considering an adversarial perturbation in the RM parameter space, we can derive a certified sign-preservation radius, which is the smallest perturbation that can flip the advantage sign during policy optimizatio",
+    "url": "https://arxiv.org/pdf/2604.02986v1",
+    "query": "RLHF reward hacking evaluation robustness benchmark"
+  },
+  {
+    "arxiv_id": "2602.10623v2",
+    "title": "Mitigating Reward Hacking in RLHF via Bayesian Non-negative Reward Modeling",
+    "authors": [
+      "Zhibin Duan",
+      "Guowei Rong",
+      "Zhuo Li"
+    ],
+    "year": 2026,
+    "abstract": "Reward models learned from human preferences are central to aligning large language models (LLMs) via reinforcement learning from human feedback, yet they are often vulnerable to reward hacking due to noisy annotations and systematic biases such as response length or style. We propose Bayesian Non-Negative Reward Model (BNRM), a principled reward modeling framework that integrates non-negative factor analysis into Bradley-Terry (BT) preference model. BNRM represents rewards through a sparse, non-negative latent factor generative process that operates at two complementary levels: instance-speci",
+    "url": "https://arxiv.org/pdf/2602.10623v2",
+    "query": "RLHF reward hacking evaluation robustness benchmark"
+  },
+  {
+    "arxiv_id": "2501.19358v3",
+    "title": "The Energy Loss Phenomenon in RLHF: A New Perspective on Mitigating Reward Hacking",
+    "authors": [
+      "Yuchun Miao",
+      "Sen Zhang",
+      "Liang Ding"
+    ],
+    "year": 2025,
+    "abstract": "This work identifies the Energy Loss Phenomenon in Reinforcement Learning from Human Feedback (RLHF) and its connection to reward hacking. Specifically, energy loss in the final layer of a Large Language Model (LLM) gradually increases during the RL process, with an excessive increase in energy loss characterizing reward hacking. Beyond empirical analysis, we further provide a theoretical foundation by proving that, under mild conditions, the increased energy loss reduces the upper bound of contextual relevance in LLMs, which is a critical aspect of reward hacking as the reduced contextual rel",
+    "url": "https://arxiv.org/pdf/2501.19358v3",
+    "query": "RLHF reward hacking evaluation robustness benchmark"
+  },
+  {
+    "arxiv_id": "2402.07319v1",
+    "title": "ODIN: Disentangled Reward Mitigates Hacking in RLHF",
+    "authors": [
+      "Lichang Chen",
+      "Chen Zhu",
+      "Davit Soselia"
+    ],
+    "year": 2024,
+    "abstract": "In this work, we study the issue of reward hacking on the response length, a challenge emerging in Reinforcement Learning from Human Feedback (RLHF) on LLMs. A well-formatted, verbose but less helpful response from the LLMs can often deceive LLMs or even human evaluators to achieve high scores. The same issue also holds for some reward models in RL. To address the challenges in both training and evaluation, we establish a more reliable evaluation protocol for comparing different training configurations, which inspects the trade-off between LLM evaluation score and response length obtained by v",
+    "url": "https://arxiv.org/pdf/2402.07319v1",
+    "query": "RLHF reward hacking evaluation robustness benchmark"
+  },
+  {
+    "arxiv_id": "2402.09345v5",
+    "title": "InfoRM: Mitigating Reward Hacking in RLHF via Information-Theoretic Reward Modeling",
+    "authors": [
+      "Yuchun Miao",
+      "Sen Zhang",
+      "Liang Ding"
+    ],
+    "year": 2024,
+    "abstract": "Despite the success of reinforcement learning from human feedback (RLHF) in aligning language models with human values, reward hacking, also termed reward overoptimization, remains a critical challenge. This issue primarily arises from reward misgeneralization, where reward models (RMs) compute reward using spurious features that are irrelevant to human preferences. In this work, we tackle this problem from an information-theoretic perspective and propose a framework for reward modeling, namely InfoRM, by introducing a variational information bottleneck objective to filter out irrelevant infor",
+    "url": "https://arxiv.org/pdf/2402.09345v5",
+    "query": "RLHF reward hacking evaluation robustness benchmark"
+  },
+  {
+    "arxiv_id": "2601.16513v1",
+    "title": "Competing Visions of Ethical AI: A Case Study of OpenAI",
+    "authors": [
+      "Melissa Wilfley",
+      "Mengting Ai",
+      "Madelyn Rose Sanfilippo"
+    ],
+    "year": 2026,
+    "abstract": "Introduction. AI Ethics is framed distinctly across actors and stakeholder groups. We report results from a case study of OpenAI analysing ethical AI discourse. Method. Research addressed: How has OpenAI's public discourse leveraged 'ethics', 'safety', 'alignment' and adjacent related concepts over time, and what does discourse signal about framing in practice? A structured corpus, differentiating between communication for a general audience and communication with an academic audience, was assembled from public documentation. Analysis. Qualitative content analysis of ethical themes combined in",
+    "url": "https://arxiv.org/pdf/2601.16513v1",
+    "query": "constitutional AI alignment evaluation null results"
+  },
+  {
+    "arxiv_id": "2603.28944v1",
+    "title": "AI prediction leads people to forgo guaranteed rewards",
+    "authors": [
+      "Aoi Naito",
+      "Hirokazu Shirado"
+    ],
+    "year": 2026,
+    "abstract": "Artificial intelligence (AI) is understood to affect the content of people's decisions. Here, using a behavioral implementation of the classic Newcomb's paradox in 1,305 participants, we show that AI can also change how people decide. In this paradigm, belief in predictive authority can lead individuals to constrain decision-making, forgoing a guaranteed reward. Over 40% of participants treated AI as such a predictive authority. This significantly increased the odds of forgoing the guaranteed reward by a factor of 3.39 (95% CI: 2.45-4.70) compared with random framing, and reduced earnings by 1",
+    "url": "https://arxiv.org/pdf/2603.28944v1",
+    "query": "constitutional AI alignment evaluation null results"
+  },
+  {
+    "arxiv_id": "2501.02842v1",
+    "title": "Foundations of GenIR",
+    "authors": [
+      "Qingyao Ai",
+      "Jingtao Zhan",
+      "Yiqun Liu"
+    ],
+    "year": 2025,
+    "abstract": "The chapter discusses the foundational impact of modern generative AI models on information access (IA) systems. In contrast to traditional AI, the large-scale training and superior data modeling of generative AI models enable them to produce high-quality, human-like responses, which brings brand new opportunities for the development of IA paradigms. In this chapter, we identify and introduce two of them in details, i.e., information generation and information synthesis. Information generation allows AI to create tailored content addressing user needs directly, enhancing user experience with i",
+    "url": "https://arxiv.org/pdf/2501.02842v1",
+    "query": "constitutional AI alignment evaluation null results"
+  },
+  {
+    "arxiv_id": "2602.05656v2",
+    "title": "Alignment Verifiability in Large Language Models: Normative Indistinguishability under Behavioral Evaluation",
+    "authors": [
+      "Igor Santos-Grueiro"
+    ],
+    "year": 2026,
+    "abstract": "Behavioral evaluation is the dominant paradigm for assessing alignment in large language models (LLMs). In current practice, observed compliance under finite evaluation protocols is treated as evidence of latent alignment. However, the inference from bounded behavioral evidence to claims about global latent properties is rarely analyzed as an identifiability problem. In this paper, we study alignment evaluation through the lens of statistical identifiability under partial observability. We allow agent policies to condition their behavior on observable signals correlated with the evaluation reg",
+    "url": "https://arxiv.org/pdf/2602.05656v2",
+    "query": "constitutional AI alignment evaluation null results"
+  },
+  {
+    "arxiv_id": "2603.03074v1",
+    "title": "Design Generative AI for Practitioners: Exploring Interaction Approaches Aligned with Creative Practice",
+    "authors": [
+      "Xiaohan Peng",
+      "Wendy E. Mackay",
+      "Janin Koch"
+    ],
+    "year": 2026,
+    "abstract": "Design is a non-linear, reflective process in which practitioners engage with visual, semantic, and other expressive materials to explore, iterate, and refine ideas. As Generative AI (GenAI) becomes integrated into professional design practice, traditional interaction approaches focusing on prompts or whole-image manipulation can misalign AI output with designers' intent, forcing visual thinkers into verbal reasoning or post-hoc adjustments. We present three interaction approaches from DesignPrompt, FusAIn, and DesignTrace that distribute control across intent, input, and process, enabling des",
+    "url": "https://arxiv.org/pdf/2603.03074v1",
+    "query": "constitutional AI alignment evaluation null results"
+  },
+  {
+    "arxiv_id": "2312.03893v1",
+    "title": "Deliberative Technology for Alignment",
+    "authors": [
+      "Andrew Konya",
+      "Deger Turan",
+      "Aviv Ovadya"
+    ],
+    "year": 2023,
+    "abstract": "For humanity to maintain and expand its agency into the future, the most powerful systems we create must be those which act to align the future with the will of humanity. The most powerful systems today are massive institutions like governments, firms, and NGOs. Deliberative technology is already being used across these institutions to help align governance and diplomacy with human will, and modern AI is poised to make this technology significantly better. At the same time, the race to superhuman AGI is already underway, and the AI systems it gives rise to may become the most powerful systems ",
+    "url": "https://arxiv.org/pdf/2312.03893v1",
+    "query": "constitutional AI alignment evaluation null results"
+  },
+  {
+    "arxiv_id": "2604.18850v1",
+    "title": "The Triadic Loop: A Framework for Negotiating Alignment in AI Co-hosted Livestreaming",
+    "authors": [
+      "Katherine Wang",
+      "Nadia Berthouze",
+      "Aneesha Singh"
+    ],
+    "year": 2026,
+    "abstract": "AI systems are increasingly embedded in multi-user social environments, yet most alignment frameworks conceptualize interaction as a dyadic relationship between a single user and an AI system. Livestreaming platforms challenge this assumption: interaction unfolds among streamers and audiences in real time, producing dynamic affective and social feedback loops. In this paper, we introduce the Triadic Loop, a conceptual framework that reconceptualizes alignment in AI co-hosted livestreaming as a temporally reinforced process of bidirectional adaptation among three actors: streamer $\\leftrightarr",
+    "url": "https://arxiv.org/pdf/2604.18850v1",
+    "query": "constitutional AI alignment evaluation null results"
+  },
+  {
+    "arxiv_id": "2506.04679v1",
+    "title": "Normative Conflicts and Shallow AI Alignment",
+    "authors": [
+      "Rapha\u00ebl Milli\u00e8re"
+    ],
+    "year": 2025,
+    "abstract": "The progress of AI systems such as large language models (LLMs) raises increasingly pressing concerns about their safe deployment. This paper examines the value alignment problem for LLMs, arguing that current alignment strategies are fundamentally inadequate to prevent misuse. Despite ongoing efforts to instill norms such as helpfulness, honesty, and harmlessness in LLMs through fine-tuning based on human preferences, they remain vulnerable to adversarial attacks that exploit conflicts between these norms. I argue that this vulnerability reflects a fundamental limitation of existing alignment",
+    "url": "https://arxiv.org/pdf/2506.04679v1",
+    "query": "constitutional AI alignment evaluation null results"
+  },
+  {
+    "arxiv_id": "2403.03788v1",
+    "title": "PPTC-R benchmark: Towards Evaluating the Robustness of Large Language Models for PowerPoint Task Completion",
+    "authors": [
+      "Zekai Zhang",
+      "Yiduo Guo",
+      "Yaobo Liang"
+    ],
+    "year": 2024,
+    "abstract": "The growing dependence on Large Language Models (LLMs) for finishing user instructions necessitates a comprehensive understanding of their robustness to complex task completion in real-world situations. To address this critical need, we propose the PowerPoint Task Completion Robustness benchmark (PPTC-R) to measure LLMs' robustness to the user PPT task instruction and software version. Specifically, we construct adversarial user instructions by attacking user instructions at sentence, semantic, and multi-language levels. To assess the robustness of Language Models to software versions, we vary",
+    "url": "https://arxiv.org/pdf/2403.03788v1",
+    "query": "LLM safety evaluation benchmark statistical significance"
+  },
+  {
+    "arxiv_id": "2606.05868v1",
+    "title": "YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition",
+    "authors": [
+      " PSBC LLM Team",
+      " Huawei LLM Team",
+      "Ruihan Long"
+    ],
+    "year": 2026,
+    "abstract": "Large language models (LLMs) drive significant financial innovations, yet their high-concurrency deployment is severely bottlenecked by KV cache memory overhead, which inflates infrastructure costs and throttles scalability. To address this, we propose YouZhi-LLM, a highly efficient financial LLM empowered by a comprehensive structural transition and training pipeline natively built on the Huawei Ascend ecosystem. At its algorithmic core, YouZhi-LLM features a layer-adaptive GQA-to-MLA transition framework that dynamically assigns per-layer FreqFold sizes, maximizing KV-cache compression while",
+    "url": "https://arxiv.org/pdf/2606.05868v1",
+    "query": "LLM safety evaluation benchmark statistical significance"
+  },
+  {
+    "arxiv_id": "2605.11209v1",
+    "title": "Measuring Five-Nines Reliability: Sample-Efficient LLM Evaluation in Saturated Benchmarks",
+    "authors": [
+      "Eungyeup Kim",
+      "Chenchen Gu",
+      "Vashisth Tiwari"
+    ],
+    "year": 2026,
+    "abstract": "While existing benchmarks demonstrate the near-perfect performance of large language models (LLMs) on various tasks, this apparent saturation often obscures the need for rigorous evaluation of their reliability. In real-world deployment, however, achieving extremely high reliability (e.g., \"five-nines\" (99.999%) vs. \"three-nines\" (99.9%)) is fundamentally critical, as this gap results in an order-of-magnitude increase in failures, which is catastrophic in reliability-critical applications. Still, estimating such a rare failure probability with tight confidence bounds requires prohibitively lar",
+    "url": "https://arxiv.org/pdf/2605.11209v1",
+    "query": "LLM safety evaluation benchmark statistical significance"
+  },
+  {
+    "arxiv_id": "2203.10416v1",
+    "title": "Methodology for Testing and Evaluation of Safety Analytics Approaches",
+    "authors": [
+      "Antonio R. Paiva",
+      "Ashutosh Tewari"
+    ],
+    "year": 2022,
+    "abstract": "There has been a significant increase in the development of data-driven safety analytics approaches in recent years. In light of these advances it has become imperative to evaluate such approaches in a principled way to determine their merits and limitations. To that end, we propose an evaluation methodology underpinned by a simulated environment that allows for a comprehensive assessment of safety analytics approaches. While assessing those approaches with historical field data is undoubtedly important, such an assessment has limited statistical power because it corresponds to only one realiz",
+    "url": "https://arxiv.org/pdf/2203.10416v1",
+    "query": "LLM safety evaluation benchmark statistical significance"
+  },
+  {
+    "arxiv_id": "1801.05075v2",
+    "title": "A Human-Grounded Evaluation Benchmark for Local Explanations of Machine Learning",
+    "authors": [
+      "Sina Mohseni",
+      "Jeremy E. Block",
+      "Eric D. Ragan"
+    ],
+    "year": 2018,
+    "abstract": "Research in interpretable machine learning proposes different computational and human subject approaches to evaluate model saliency explanations. These approaches measure different qualities of explanations to achieve diverse goals in designing interpretable machine learning systems. In this paper, we propose a human attention benchmark for image and text domains using multi-layer human attention masks aggregated from multiple human annotators. We then present an evaluation study to evaluate model saliency explanations obtained using Grad-cam and LIME techniques. We demonstrate our benchmark's",
+    "url": "https://arxiv.org/pdf/1801.05075v2",
+    "query": "LLM safety evaluation benchmark statistical significance"
+  },
+  {
+    "arxiv_id": "2410.21965v1",
+    "title": "SG-Bench: Evaluating LLM Safety Generalization Across Diverse Tasks and Prompt Types",
+    "authors": [
+      "Yutao Mou",
+      "Shikun Zhang",
+      "Wei Ye"
+    ],
+    "year": 2024,
+    "abstract": "Ensuring the safety of large language model (LLM) applications is essential for developing trustworthy artificial intelligence. Current LLM safety benchmarks have two limitations. First, they focus solely on either discriminative or generative evaluation paradigms while ignoring their interconnection. Second, they rely on standardized inputs, overlooking the effects of widespread prompting techniques, such as system prompts, few-shot demonstrations, and chain-of-thought prompting. To overcome these issues, we developed SG-Bench, a novel benchmark to assess the generalization of LLM safety acro",
+    "url": "https://arxiv.org/pdf/2410.21965v1",
+    "query": "LLM safety evaluation benchmark statistical significance"
+  },
+  {
+    "arxiv_id": "2304.10436v1",
+    "title": "Safety Assessment of Chinese Large Language Models",
+    "authors": [
+      "Hao Sun",
+      "Zhexin Zhang",
+      "Jiawen Deng"
+    ],
+    "year": 2023,
+    "abstract": "With the rapid popularity of large language models such as ChatGPT and GPT-4, a growing amount of attention is paid to their safety concerns. These models may generate insulting and discriminatory content, reflect incorrect social values, and may be used for malicious purposes such as fraud and dissemination of misleading information. Evaluating and enhancing their safety is particularly essential for the wide application of large language models (LLMs). To further promote the safe deployment of LLMs, we develop a Chinese LLM safety assessment benchmark. Our benchmark explores the comprehensiv",
+    "url": "https://arxiv.org/pdf/2304.10436v1",
+    "query": "LLM safety evaluation benchmark statistical significance"
+  },
+  {
+    "arxiv_id": "2601.06757v1",
+    "title": "MTMCS-Bench: Evaluating Contextual Safety of Multimodal Large Language Models in Multi-Turn Dialogues",
+    "authors": [
+      "Zheyuan Liu",
+      "Dongwhi Kim",
+      "Yixin Wan"
+    ],
+    "year": 2026,
+    "abstract": "Multimodal large language models (MLLMs) are increasingly deployed as assistants that interact through text and images, making it crucial to evaluate contextual safety when risk depends on both the visual scene and the evolving dialogue. Existing contextual safety benchmarks are mostly single-turn and often miss how malicious intent can emerge gradually or how the same scene can support both benign and exploitative goals. We introduce the Multi-Turn Multimodal Contextual Safety Benchmark (MTMCS-Bench), a benchmark of realistic images and multi-turn conversations that evaluates contextual safet",
+    "url": "https://arxiv.org/pdf/2601.06757v1",
+    "query": "LLM safety evaluation benchmark statistical significance"
+  },
+  {
+    "arxiv_id": "2306.04338v1",
+    "title": "Changing Data Sources in the Age of Machine Learning for Official Statistics",
+    "authors": [
+      "Cedric De Boom",
+      "Michael Reusens"
+    ],
+    "year": 2023,
+    "abstract": "Data science has become increasingly essential for the production of official statistics, as it enables the automated collection, processing, and analysis of large amounts of data. With such data science practices in place, it enables more timely, more insightful and more flexible reporting. However, the quality and integrity of data-science-driven statistics rely on the accuracy and reliability of the data sources and the machine learning techniques that support them. In particular, changes in data sources are inevitable to occur and pose significant risks that are crucial to address in the c",
+    "url": "https://arxiv.org/pdf/2306.04338v1",
+    "query": "power analysis underpowered experiments machine learning"
+  },
+  {
+    "arxiv_id": "2006.16189v4",
+    "title": "DOME: Recommendations for supervised machine learning validation in biology",
+    "authors": [
+      "Ian Walsh",
+      "Dmytro Fishman",
+      "Dario Garcia-Gasulla"
+    ],
+    "year": 2020,
+    "abstract": "Modern biology frequently relies on machine learning to provide predictions and improve decision processes. There have been recent calls for more scrutiny on machine learning performance and possible limitations. Here we present a set of community-wide recommendations aiming to help establish standards of supervised machine learning validation in biology. Adopting a structured methods description for machine learning based on data, optimization, model, evaluation (DOME) will aim to help both reviewers and readers to better understand and assess the performance and limitations of a method or ou",
+    "url": "https://arxiv.org/pdf/2006.16189v4",
+    "query": "power analysis underpowered experiments machine learning"
+  },
+  {
+    "arxiv_id": "2201.12150v2",
+    "title": "Learning Curves for Decision Making in Supervised Machine Learning: A Survey",
+    "authors": [
+      "Felix Mohr",
+      "Jan N. van Rijn"
+    ],
+    "year": 2022,
+    "abstract": "Learning curves are a concept from social sciences that has been adopted in the context of machine learning to assess the performance of a learning algorithm with respect to a certain resource, e.g., the number of training examples or the number of training iterations. Learning curves have important applications in several machine learning contexts, most notably in data acquisition, early stopping of model training, and model selection. For instance, learning curves can be used to model the performance of the combination of an algorithm and its hyperparameter configuration, providing insights ",
+    "url": "https://arxiv.org/pdf/2201.12150v2",
+    "query": "power analysis underpowered experiments machine learning"
+  },
+  {
+    "arxiv_id": "2302.08893v4",
+    "title": "Active learning for data streams: a survey",
+    "authors": [
+      "Davide Cacciarelli",
+      "Murat Kulahci"
+    ],
+    "year": 2023,
+    "abstract": "Online active learning is a paradigm in machine learning that aims to select the most informative data points to label from a data stream. The problem of minimizing the cost associated with collecting labeled observations has gained a lot of attention in recent years, particularly in real-world applications where data is only available in an unlabeled form. Annotating each observation can be time-consuming and costly, making it difficult to obtain large amounts of labeled data. To overcome this issue, many active learning strategies have been proposed in the last decades, aiming to select the ",
+    "url": "https://arxiv.org/pdf/2302.08893v4",
+    "query": "power analysis underpowered experiments machine learning"
+  },
+  {
+    "arxiv_id": "2304.02381v2",
+    "title": "Physics-Inspired Interpretability Of Machine Learning Models",
+    "authors": [
+      "Maximilian P Niroomand",
+      "David J Wales"
+    ],
+    "year": 2023,
+    "abstract": "The ability to explain decisions made by machine learning models remains one of the most significant hurdles towards widespread adoption of AI in highly sensitive areas such as medicine, cybersecurity or autonomous driving. Great interest exists in understanding which features of the input data prompt model decision making. In this contribution, we propose a novel approach to identify relevant features of the input data, inspired by methods from the energy landscapes field, developed in the physical sciences. By identifying conserved weights within groups of minima of the loss landscapes, we c",
+    "url": "https://arxiv.org/pdf/2304.02381v2",
+    "query": "power analysis underpowered experiments machine learning"
+  },
+  {
+    "arxiv_id": "1905.04749v2",
+    "title": "A Benchmark Study of Machine Learning Models for Online Fake News Detection",
+    "authors": [
+      "Junaed Younus Khan",
+      "Md. Tawkat Islam Khondaker",
+      "Sadia Afroz"
+    ],
+    "year": 2019,
+    "abstract": "The proliferation of fake news and its propagation on social media has become a major concern due to its ability to create devastating impacts. Different machine learning approaches have been suggested to detect fake news. However, most of those focused on a specific type of news (such as political) which leads us to the question of dataset-bias of the models used. In this research, we conducted a benchmark study to assess the performance of different applicable machine learning approaches on three different datasets where we accumulated the largest and most diversified one. We explored a numb",
+    "url": "https://arxiv.org/pdf/1905.04749v2",
+    "query": "power analysis underpowered experiments machine learning"
+  },
+  {
+    "arxiv_id": "2602.11092v2",
+    "title": "MerLin: A Discovery Engine for Photonic and Hybrid Quantum Machine Learning",
+    "authors": [
+      "Cassandre Notton",
+      "Benjamin Stott",
+      "Philippe Schoeb"
+    ],
+    "year": 2026,
+    "abstract": "Identifying where quantum models may offer practical benefits in near term quantum machine learning (QML) requires moving beyond isolated algorithmic proposals toward systematic and empirical exploration across models, datasets, and hardware constraints. We introduce MerLin, an open-source framework designed as a discovery engine for photonic and hybrid quantum machine learning. MerLin integrates optimized strong simulation of linear optical circuits into standard PyTorch and scikit learn workflows, enabling end-to-end differentiable training of quantum layers.\n  MerLin is designed around syst",
+    "url": "https://arxiv.org/pdf/2602.11092v2",
+    "query": "power analysis underpowered experiments machine learning"
+  },
+  {
+    "arxiv_id": "2303.15563v1",
+    "title": "Privacy-preserving machine learning for healthcare: open challenges and future perspectives",
+    "authors": [
+      "Alejandro Guerra-Manzanares",
+      "L. Julian Lechuga Lopez",
+      "Michail Maniatakos"
+    ],
+    "year": 2023,
+    "abstract": "Machine Learning (ML) has recently shown tremendous success in modeling various healthcare prediction tasks, ranging from disease diagnosis and prognosis to patient treatment. Due to the sensitive nature of medical data, privacy must be considered along the entire ML pipeline, from model training to inference. In this paper, we conduct a review of recent literature concerning Privacy-Preserving Machine Learning (PPML) for healthcare. We primarily focus on privacy-preserving training and inference-as-a-service, and perform a comprehensive review of existing trends, identify challenges, and disc",
+    "url": "https://arxiv.org/pdf/2303.15563v1",
+    "query": "power analysis underpowered experiments machine learning"
+  },
+  {
+    "arxiv_id": "2509.21734v3",
+    "title": "Optimal Stopping for Sequential Bayesian Experimental Design",
+    "authors": [
+      "Chen Cheng",
+      "Xun Huan"
+    ],
+    "year": 2025,
+    "abstract": "Sequential Bayesian experimental design is often formulated as a fixed-horizon policy optimization problem, in which the number of experiments is specified before data collection begins. In practical campaigns, however, additional measurements may provide diminishing information relative to their cost, making termination an integral part of experimental design. Common threshold-based stopping rules are easy to implement but myopic, because they compare the current state with a fixed criterion rather than the expected value of future experiments. This work develops a Bayesian optimal stopping f",
+    "url": "https://arxiv.org/pdf/2509.21734v3",
+    "query": "sequential Bayesian experimental design adaptive stopping"
+  },
+  {
+    "arxiv_id": "2507.19663v1",
+    "title": "Adaptive Bayesian Data-Driven Design of Reliable Solder Joints for Micro-electronic Devices",
+    "authors": [
+      "Leo Guo",
+      "Adwait Inamdar",
+      "Willem D. van Driel"
+    ],
+    "year": 2025,
+    "abstract": "Solder joint reliability related to failures due to thermomechanical loading is a critically important yet physically complex engineering problem. As a result, simulated behavior is oftentimes computationally expensive. In an increasingly data-driven world, the usage of efficient data-driven design schemes is a popular choice. Among them, Bayesian optimization (BO) with Gaussian process regression is one of the most important representatives. The authors argue that computational savings can be obtained from exploiting thorough surrogate modeling and selecting a design candidate based on multip",
+    "url": "https://arxiv.org/pdf/2507.19663v1",
+    "query": "sequential Bayesian experimental design adaptive stopping"
+  },
+  {
+    "arxiv_id": "1503.07791v1",
+    "title": "Sequential Monte Carlo with Adaptive Weights for Approximate Bayesian Computation",
+    "authors": [
+      "Fernando V. Bonassi",
+      "Mike West"
+    ],
+    "year": 2015,
+    "abstract": "Methods of approximate Bayesian computation (ABC) are increasingly used for analysis of complex models. A major challenge for ABC is over-coming the often inherent problem of high rejection rates in the accept/reject methods based on prior:predictive sampling. A number of recent developments aim to address this with extensions based on sequential Monte Carlo (SMC) strategies. We build on this here, introducing an ABC SMC method that uses data-based adaptive weights. This easily implemented and computationally trivial extension of ABC SMC can very substantially improve acceptance rates, as is d",
+    "url": "https://arxiv.org/pdf/1503.07791v1",
+    "query": "sequential Bayesian experimental design adaptive stopping"
+  },
+  {
+    "arxiv_id": "2103.02438v2",
+    "title": "Deep Adaptive Design: Amortizing Sequential Bayesian Experimental Design",
+    "authors": [
+      "Adam Foster",
+      "Desi R. Ivanova",
+      "Ilyas Malik"
+    ],
+    "year": 2021,
+    "abstract": "We introduce Deep Adaptive Design (DAD), a method for amortizing the cost of adaptive Bayesian experimental design that allows experiments to be run in real-time. Traditional sequential Bayesian optimal experimental design approaches require substantial computation at each stage of the experiment. This makes them unsuitable for most real-world applications, where decisions must typically be made quickly. DAD addresses this restriction by learning an amortized design network upfront and then using this to rapidly run (multiple) adaptive experiments at deployment time. This network represents a ",
+    "url": "https://arxiv.org/pdf/2103.02438v2",
+    "query": "sequential Bayesian experimental design adaptive stopping"
+  },
+  {
+    "arxiv_id": "2312.00622v1",
+    "title": "Practical Path-based Bayesian Optimization",
+    "authors": [
+      "Jose Pablo Folch",
+      "James Odgers",
+      "Shiqiang Zhang"
+    ],
+    "year": 2023,
+    "abstract": "There has been a surge in interest in data-driven experimental design with applications to chemical engineering and drug manufacturing. Bayesian optimization (BO) has proven to be adaptable to such cases, since we can model the reactions of interest as expensive black-box functions. Sometimes, the cost of this black-box functions can be separated into two parts: (a) the cost of the experiment itself, and (b) the cost of changing the input parameters. In this short paper, we extend the SnAKe algorithm to deal with both types of costs simultaneously. We further propose extensions to the case of ",
+    "url": "https://arxiv.org/pdf/2312.00622v1",
+    "query": "sequential Bayesian experimental design adaptive stopping"
+  },
+  {
+    "arxiv_id": "1111.0935v1",
+    "title": "Adaptive Hamiltonian Estimation Using Bayesian Experimental Design",
+    "authors": [
+      "Christopher Ferrie",
+      "Christopher E. Granade",
+      "D. G. Cory"
+    ],
+    "year": 2011,
+    "abstract": "Using Bayesian experimental design techniques, we have shown that for a single two-level quantum mechanical system under strong (projective) measurement, the dynamical parameters of a model Hamiltonian can be estimated with exponentially improved accuracy over offline estimation strategies. To achieve this, we derive an adaptive protocol which finds the optimal experiments based on previous observations. We show that the risk associated with this algorithm is close to the global optimum, given a uniform prior. Additionally, we show that sampling at the Nyquist rate is not optimal.",
+    "url": "https://arxiv.org/pdf/1111.0935v1",
+    "query": "sequential Bayesian experimental design adaptive stopping"
+  },
+  {
+    "arxiv_id": "1903.05480v3",
+    "title": "Variational Bayesian Optimal Experimental Design",
+    "authors": [
+      "Adam Foster",
+      "Martin Jankowiak",
+      "Eli Bingham"
+    ],
+    "year": 2019,
+    "abstract": "Bayesian optimal experimental design (BOED) is a principled framework for making efficient use of limited experimental resources. Unfortunately, its applicability is hampered by the difficulty of obtaining accurate estimates of the expected information gain (EIG) of an experiment. To address this, we introduce several classes of fast EIG estimators by building on ideas from amortized variational inference. We show theoretically and empirically that these estimators can provide significant gains in speed and accuracy over previous approaches. We further demonstrate the practicality of our appro",
+    "url": "https://arxiv.org/pdf/1903.05480v3",
+    "query": "sequential Bayesian experimental design adaptive stopping"
+  },
+  {
+    "arxiv_id": "1107.1445v1",
+    "title": "Bayesian experimental design for the active nitridation of graphite by atomic nitrogen",
+    "authors": [
+      "Gabriel Terejanu",
+      "Rochan R. Upadhyay",
+      "Kenji Miki"
+    ],
+    "year": 2011,
+    "abstract": "The problem of optimal data collection to efficiently learn the model parameters of a graphite nitridation experiment is studied in the context of Bayesian analysis using both synthetic and real experimental data. The paper emphasizes that the optimal design can be obtained as a result of an information theoretic sensitivity analysis. Thus, the preferred design is where the statistical dependence between the model parameters and observables is the highest possible. In this paper, the statistical dependence between random variables is quantified by mutual information and estimated using a k-nea",
+    "url": "https://arxiv.org/pdf/1107.1445v1",
+    "query": "sequential Bayesian experimental design adaptive stopping"
+  },
+  {
+    "arxiv_id": "2306.04338v1",
+    "title": "Changing Data Sources in the Age of Machine Learning for Official Statistics",
+    "authors": [
+      "Cedric De Boom",
+      "Michael Reusens"
+    ],
+    "year": 2023,
+    "abstract": "Data science has become increasingly essential for the production of official statistics, as it enables the automated collection, processing, and analysis of large amounts of data. With such data science practices in place, it enables more timely, more insightful and more flexible reporting. However, the quality and integrity of data-science-driven statistics rely on the accuracy and reliability of the data sources and the machine learning techniques that support them. In particular, changes in data sources are inevitable to occur and pose significant risks that are crucial to address in the c",
+    "url": "https://arxiv.org/pdf/2306.04338v1",
+    "query": "publication bias null results machine learning alignment"
+  },
+  {
+    "arxiv_id": "2006.16189v4",
+    "title": "DOME: Recommendations for supervised machine learning validation in biology",
+    "authors": [
+      "Ian Walsh",
+      "Dmytro Fishman",
+      "Dario Garcia-Gasulla"
+    ],
+    "year": 2020,
+    "abstract": "Modern biology frequently relies on machine learning to provide predictions and improve decision processes. There have been recent calls for more scrutiny on machine learning performance and possible limitations. Here we present a set of community-wide recommendations aiming to help establish standards of supervised machine learning validation in biology. Adopting a structured methods description for machine learning based on data, optimization, model, evaluation (DOME) will aim to help both reviewers and readers to better understand and assess the performance and limitations of a method or ou",
+    "url": "https://arxiv.org/pdf/2006.16189v4",
+    "query": "publication bias null results machine learning alignment"
+  },
+  {
+    "arxiv_id": "2201.12150v2",
+    "title": "Learning Curves for Decision Making in Supervised Machine Learning: A Survey",
+    "authors": [
+      "Felix Mohr",
+      "Jan N. van Rijn"
+    ],
+    "year": 2022,
+    "abstract": "Learning curves are a concept from social sciences that has been adopted in the context of machine learning to assess the performance of a learning algorithm with respect to a certain resource, e.g., the number of training examples or the number of training iterations. Learning curves have important applications in several machine learning contexts, most notably in data acquisition, early stopping of model training, and model selection. For instance, learning curves can be used to model the performance of the combination of an algorithm and its hyperparameter configuration, providing insights ",
+    "url": "https://arxiv.org/pdf/2201.12150v2",
+    "query": "publication bias null results machine learning alignment"
+  },
+  {
+    "arxiv_id": "2302.08893v4",
+    "title": "Active learning for data streams: a survey",
+    "authors": [
+      "Davide Cacciarelli",
+      "Murat Kulahci"
+    ],
+    "year": 2023,
+    "abstract": "Online active learning is a paradigm in machine learning that aims to select the most informative data points to label from a data stream. The problem of minimizing the cost associated with collecting labeled observations has gained a lot of attention in recent years, particularly in real-world applications where data is only available in an unlabeled form. Annotating each observation can be time-consuming and costly, making it difficult to obtain large amounts of labeled data. To overcome this issue, many active learning strategies have been proposed in the last decades, aiming to select the ",
+    "url": "https://arxiv.org/pdf/2302.08893v4",
+    "query": "publication bias null results machine learning alignment"
+  },
+  {
+    "arxiv_id": "2304.02381v2",
+    "title": "Physics-Inspired Interpretability Of Machine Learning Models",
+    "authors": [
+      "Maximilian P Niroomand",
+      "David J Wales"
+    ],
+    "year": 2023,
+    "abstract": "The ability to explain decisions made by machine learning models remains one of the most significant hurdles towards widespread adoption of AI in highly sensitive areas such as medicine, cybersecurity or autonomous driving. Great interest exists in understanding which features of the input data prompt model decision making. In this contribution, we propose a novel approach to identify relevant features of the input data, inspired by methods from the energy landscapes field, developed in the physical sciences. By identifying conserved weights within groups of minima of the loss landscapes, we c",
+    "url": "https://arxiv.org/pdf/2304.02381v2",
+    "query": "publication bias null results machine learning alignment"
+  },
+  {
+    "arxiv_id": "1905.04749v2",
+    "title": "A Benchmark Study of Machine Learning Models for Online Fake News Detection",
+    "authors": [
+      "Junaed Younus Khan",
+      "Md. Tawkat Islam Khondaker",
+      "Sadia Afroz"
+    ],
+    "year": 2019,
+    "abstract": "The proliferation of fake news and its propagation on social media has become a major concern due to its ability to create devastating impacts. Different machine learning approaches have been suggested to detect fake news. However, most of those focused on a specific type of news (such as political) which leads us to the question of dataset-bias of the models used. In this research, we conducted a benchmark study to assess the performance of different applicable machine learning approaches on three different datasets where we accumulated the largest and most diversified one. We explored a numb",
+    "url": "https://arxiv.org/pdf/1905.04749v2",
+    "query": "publication bias null results machine learning alignment"
+  },
+  {
+    "arxiv_id": "2303.15563v1",
+    "title": "Privacy-preserving machine learning for healthcare: open challenges and future perspectives",
+    "authors": [
+      "Alejandro Guerra-Manzanares",
+      "L. Julian Lechuga Lopez",
+      "Michail Maniatakos"
+    ],
+    "year": 2023,
+    "abstract": "Machine Learning (ML) has recently shown tremendous success in modeling various healthcare prediction tasks, ranging from disease diagnosis and prognosis to patient treatment. Due to the sensitive nature of medical data, privacy must be considered along the entire ML pipeline, from model training to inference. In this paper, we conduct a review of recent literature concerning Privacy-Preserving Machine Learning (PPML) for healthcare. We primarily focus on privacy-preserving training and inference-as-a-service, and perform a comprehensive review of existing trends, identify challenges, and disc",
+    "url": "https://arxiv.org/pdf/2303.15563v1",
+    "query": "publication bias null results machine learning alignment"
+  },
+  {
+    "arxiv_id": "2602.11092v2",
+    "title": "MerLin: A Discovery Engine for Photonic and Hybrid Quantum Machine Learning",
+    "authors": [
+      "Cassandre Notton",
+      "Benjamin Stott",
+      "Philippe Schoeb"
+    ],
+    "year": 2026,
+    "abstract": "Identifying where quantum models may offer practical benefits in near term quantum machine learning (QML) requires moving beyond isolated algorithmic proposals toward systematic and empirical exploration across models, datasets, and hardware constraints. We introduce MerLin, an open-source framework designed as a discovery engine for photonic and hybrid quantum machine learning. MerLin integrates optimized strong simulation of linear optical circuits into standard PyTorch and scikit learn workflows, enabling end-to-end differentiable training of quantum layers.\n  MerLin is designed around syst",
+    "url": "https://arxiv.org/pdf/2602.11092v2",
+    "query": "publication bias null results machine learning alignment"
+  }
+]

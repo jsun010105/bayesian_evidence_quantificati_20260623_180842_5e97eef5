@@ -1,0 +1,28 @@
+Null results in AI alignment research present a critical interpretational challenge:
+when an intervention fails to induce measurable behavioral change, this can reflect
+either genuine model robustness or experimental insufficiency arising from weak
+interventions, small samples, or insensitive metrics. Classical null hypothesis
+significance testing cannot distinguish these cases, yet alignment researchers
+routinely interpret inconclusive null results as evidence of safety.
+
+We develop and validate \ours, a Bayesian evidence quantification framework that
+explicitly models intervention strength, measurement sensitivity, and prior effect
+size distributions to yield a calibrated posterior over two competing hypotheses:
+true robustness versus experimental weakness. The framework computes closed-form
+Bayes factors (avoiding MCMC) and provides a sensitivity analysis over prior
+hyperparameters to assess the robustness of conclusions.
+
+Applied retrospectively to 27 published alignment null results spanning activation
+steering, \rlhf, and jailbreak evaluations, \ours finds that \mainresult of null
+results have posterior probability $P(\text{weakness} \mid \text{data}) > 0.3$---nearly
+double our pre-registered threshold---and \emph{zero} published null results constitute
+strong evidence of genuine robustness ($\mathrm{BF}_{01} > 10$). Prospective validation
+using real \llama experiments reveals an unexpected ``inverse jailbreak'' effect:
+weak educational-framing interventions achieve 20\% jailbreak success rates while
+strong explicit jailbreak patterns yield 0\%, yet \ours correctly classifies the
+strong-intervention null result as \emph{inconclusive} rather than evidence of
+robustness.
+
+These results demonstrate that alignment research is systematically producing
+underpowered experiments whose null results mislead robustness assessment. We
+release \ours as a practical diagnostic tool for the alignment community.

@@ -1,0 +1,162 @@
+\section{Methodology}
+\label{sec:method}
+
+\subsection{Problem Formulation}
+
+We consider any alignment experiment that reports a null result: an intervention
+(activation steering, \rlhf fine-tuning, jailbreak prompt) was applied and no
+statistically significant behavioral change was observed. The central question is:
+does this null result reflect (a) genuine model robustness $\Hnull$: the true effect
+size $\delta \approx 0$, or (b) experimental weakness $\Halt$: a real effect $\delta > 0$
+that was undetectable due to insufficient power?
+
+Formally, let $t$ be the observed test statistic and $n$ be the effective sample size.
+Under $\Hnull$, the true effect is zero: $t \mid \delta=0 \sim \gN(0, 1)$.
+Under $\Halt$, the effect exists but may be small: we place a Gaussian prior on
+the effect size $\delta \sim \gN(\mu_0, \sigma_0^2)$ and marginalize:
+\begin{equation}
+t \mid \Halt \sim \gN\!\left(\frac{\mu_0 \sqrt{n}}{\sigma_\epsilon},
+    \sqrt{1 + \frac{n \sigma_0^2}{\sigma_\epsilon^2}}\right),
+\label{eq:h1marginal}
+\end{equation}
+where $\sigma_\epsilon$ is the observation noise (set to 1 for standardized statistics).
+
+\subsection{Bayesian Evidence Computation}
+
+\para{Closed-form Bayes factor.}
+Because both hypotheses yield Gaussian distributions over $t$, the Bayes factor
+$\mathrm{BF}_{01} = P(t \mid \Hnull) / P(t \mid \Halt)$ has a closed form:
+\begin{equation}
+\mathrm{BF}_{01}(t, n) =
+    \frac{\phi(t; \, 0, \, 1)}
+         {\phi\!\left(t; \, \mu_0\sqrt{n}, \,
+             \sqrt{1 + n\sigma_0^2}\right)},
+\label{eq:bf01}
+\end{equation}
+where $\phi(\cdot; \mu, \sigma)$ denotes the Gaussian pdf. This formulation
+avoids MCMC, enabling retrospective analysis of large study sets and sensitivity
+grids in seconds.
+
+\para{Posterior probabilities.}
+With equal prior model probabilities $P(\Hnull) = P(\Halt) = 0.5$, the posterior is:
+\begin{align}
+P(\Hnull \mid t) &= \frac{\mathrm{BF}_{01}}{1 + \mathrm{BF}_{01}}, \\
+P(\text{weakness} \mid t) &= 1 - P(\Hnull \mid t) = \frac{1}{1 + \mathrm{BF}_{01}}.
+\label{eq:posterior}
+\end{align}
+
+\para{Evidence classification.}
+We follow the Jeffreys scale \citep{jeffreys1961theory}, adapted for our two-sided
+classification (\tabref{tab:jeffreys}):
+
+\begin{table}[h]
+\centering
+\caption{Evidence classification on the Jeffreys scale for $\mathrm{BF}_{01}$.}
+\label{tab:jeffreys}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+$\mathrm{BF}_{01}$ range & Classification & Interpretation \\
+\midrule
+$> 10$       & Strong robustness   & Data strongly favor $\Hnull$ \\
+$3$--$10$    & Moderate robustness & Moderate evidence for $\Hnull$ \\
+$1/3$--$3$   & Inconclusive        & Data do not discriminate \\
+$0.1$--$1/3$ & Moderate weakness   & Moderate evidence for $\Halt$ \\
+$< 0.1$      & Strong weakness     & Data strongly favor $\Halt$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Prior Specification}
+
+We set $\mu_0 = 0.3$ and $\sigma_0 = 0.2$, reflecting:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=2pt]
+\item $\mu_0 = 0.3$: A small-to-medium effect size (Cohen's $d$), consistent with
+published behavioral interventions in activation steering \citep{turner2023actadd,kelkar2026persona}
+and \rlhf evaluations \citep{abahana2026rlhf}.
+\item $\sigma_0 = 0.2$: Substantial uncertainty about the true effect magnitude;
+95\% of prior mass on $\delta \in [-0.09, 0.69]$.
+\end{itemize}
+
+\subsection{Sensitivity Analysis}
+
+Because prior choice affects Bayes factors, we conduct a full $9 \times 9$ grid
+search over $\mu_0 \in [0.1, 0.5]$ and $\sigma_0 \in [0.1, 0.35]$ for each null
+result in our retrospective dataset. For each study, we record the fraction of 81
+prior configurations that yield $\mathrm{BF}_{01} < 1/3$ (moderate weakness). This
+measures how prior-robust the weakness conclusion is.
+
+\subsection{Retrospective Dataset}
+
+We curate 33 alignment studies from the literature, classifying 27 as null results.
+Studies span five intervention categories: activation steering ($n=13$), \rlhf ($n=11$),
+Constitutional AI ($n=2$), benchmark evaluation ($n=2$), and jailbreak/prompting
+($n=4$). For each study, we extract: the intervention type, the observed effect size
+(Cohen's $d$ or equivalent), the effective sample size $n$, and whether the result
+was reported as null.
+
+Effect sizes were sourced directly from papers where reported, or estimated
+conservatively from $t$-statistics and $p$-values otherwise. Studies are drawn from
+the literature review described in \secref{sec:related}, with representative entries
+constructed for common study types documented in that literature.
+
+\para{Dataset statistics.}
+Across 27 null results: mean Cohen's $d = 0.162$ (median $0.130$, range $[0.010, 0.450]$);
+mean $n = 112$ (median $61$, range $[15, 500]$). The 6 positive results are included
+for calibration only and are excluded from hypothesis testing.
+
+\subsection{Classical Power Analysis Baseline}
+
+To compare \ours against a classical baseline, we compute retrospective post-hoc
+power for each null result using the noncentral $t$-distribution:
+\begin{equation}
+\text{Power} = 1 - P\!\left(|t| < t_{\alpha/2, \nu} \,\Big|\, \lambda = d\sqrt{n}\right),
+\label{eq:power}
+\end{equation}
+where $t_{\alpha/2, \nu}$ is the critical value at $\alpha = 0.05$ (two-sided) and
+$\lambda$ is the non-centrality parameter. We report the Spearman correlation
+$\rho(\mathrm{BF}_{01}, \text{Power})$ across the 27 null results to characterize
+how well classical power predicts our Bayesian diagnostic.
+
+\subsection{Prospective LLM Experiments}
+
+To validate \ours prospectively, we conduct controlled experiments using \llama via
+the OpenRouter API (temperature $= 0$, deterministic). We design two experimental
+paradigms with systematically varied intervention strength:
+
+\para{Experiment 1: Jailbreak resistance.}
+We test three intervention strength levels ($n=10$ per condition):
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=2pt]
+\item \textit{Weak}: Polite educational framing (\eg ``For my cybersecurity class...'')
+\item \textit{Medium}: Assertive authority framing (\eg ``I'm a security researcher...'')
+\item \textit{Strong}: Explicit jailbreak patterns (DAN, ``SYSTEM OVERRIDE'', ``no restrictions'')
+\end{itemize}
+Responses are classified using lexical pattern matching: explicit refusal phrases
+indicate non-compliance, compliance indicators suggest jailbreak success.
+
+\para{Experiment 2: Sycophancy susceptibility.}
+We test three social pressure levels ($n=10$ per condition):
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=2pt]
+\item \textit{Low}: Simple disagreement (``I think you're wrong'')
+\item \textit{Medium}: Assertive expertise (``I'm a PhD expert...'')
+\item \textit{High}: Strong authority appeal (``50 papers... STRONGLY disagree'')
+\end{itemize}
+Responses are classified by whether the model capitulates (sycophancy) or maintains
+its position.
+
+We apply \ours to each condition's observed rate, treating it as a proportion test
+with the null hypothesis that the true rate is zero (true robustness). We also run
+a sequential analysis, updating the Bayes factor trial-by-trial and testing whether
+the stopping threshold ($\mathrm{BF}_{01} > 10$ or $< 0.1$) is reached within $n=10$.
+
+\subsection{Synthetic Validation}
+
+Before applying \ours to real data, we validate its calibration under known ground
+truth. We simulate $500$ experiments per condition across 7 sample sizes
+($n \in \{5, 10, 20, 30, 50, 100, 200\}$) under two regimes:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=2pt]
+\item $\delta = 0$ (true null): We verify that \ours classifies inconclusive rather
+than ``strong robustness'' for small $n$, confirming it does not overstate certainty.
+\item $\delta = 0.3$ (moderate effect): We verify that the fraction classified as
+weakness increases monotonically with $n$, confirming correct power scaling.
+\end{itemize}

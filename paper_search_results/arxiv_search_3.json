@@ -1,0 +1,598 @@
+[
+  {
+    "arxiv_id": "1506.08292v2",
+    "title": "The expected demise of the Bayes factor",
+    "authors": [
+      "Christian P. Robert"
+    ],
+    "year": 2015,
+    "abstract": "This note is a discussion commenting on the paper by Ly et al. on \"Harold Jeffreys's Default Bayes Factor Hypothesis Tests: Explanation, Extension, and Application in Psychology\" and on the perceived shortcomings of the classical Bayesian approach to testing, while reporting on an alternative approach advanced by Kamary, Mengersen, Robert and Rousseau (2014. arxiv:1412.2044) as a solution to this quintessential inference problem.",
+    "url": "https://arxiv.org/pdf/1506.08292v2",
+    "query": "Bayes factor sensitivity analysis prior robustness"
+  },
+  {
+    "arxiv_id": "2604.21596v1",
+    "title": "Efficient Bayes Factor Sensitivity Analysis via Posterior Density Ratios",
+    "authors": [
+      "Franti\u0161ek Barto\u0161",
+      "Eric-Jan Wagenmakers",
+      "Maarten Marsman"
+    ],
+    "year": 2026,
+    "abstract": "Bayes factor sensitivity analysis examines how the evidence for one hypothesis over another depends on the prior distribution. In complex models, the standard approach refits the model at each hyper-parameter value, and the total computational cost scales linearly in the grid size. We propose a method that recovers the entire sensitivity curve from a single additional model fit. The key identity decomposes the Bayes factor at any hyper-parameter value $\u03b3_x$ into an ``anchor'' Bayes factor at a fixed reference $\u03b3_0$ and a Savage--Dickey density ratio in an extended model that places a hyper-pri",
+    "url": "https://arxiv.org/pdf/2604.21596v1",
+    "query": "Bayes factor sensitivity analysis prior robustness"
+  },
+  {
+    "arxiv_id": "2309.06305v3",
+    "title": "Sensitivity Analysis for Linear Estimators",
+    "authors": [
+      "Jacob Dorn",
+      "Luther Yap"
+    ],
+    "year": 2023,
+    "abstract": "We propose a novel sensitivity analysis framework for linear estimators with identification failures that can be viewed as seeing the wrong outcome distribution. Our approach measures the degree of identification failure through the change in measure between the observed distribution and a hypothetical target distribution that would identify the causal parameter of interest. The framework yields a sensitivity analysis that generalizes existing bounds for Average Potential Outcome (APO), Regression Discontinuity (RD), and instrumental variables (IV) exclusion failure designs. Our partial identi",
+    "url": "https://arxiv.org/pdf/2309.06305v3",
+    "query": "Bayes factor sensitivity analysis prior robustness"
+  },
+  {
+    "arxiv_id": "1810.09909v3",
+    "title": "Bayes Factor Asymptotics for Variable Selection in the Gaussian Process Framework",
+    "authors": [
+      "Minerva Mukhopadhyay",
+      "Sourabh Bhattacharya"
+    ],
+    "year": 2018,
+    "abstract": "Although variable selection is one of the most popular areas of modern statistical research, much of its development has taken place in the classical paradigm compared to the Bayesian counterpart. Somewhat surprisingly, both the paradigms have focussed almost completely on linear models, in spite of the vast scope offered by the model liberation movement brought about by modern advancements in studying real, complex phenomena.\n  In this article, we investigate general Bayesian variable selection in models driven by Gaussian processes, which allows us to treat linear, non-linear and nonparametr",
+    "url": "https://arxiv.org/pdf/1810.09909v3",
+    "query": "Bayes factor sensitivity analysis prior robustness"
+  },
+  {
+    "arxiv_id": "2203.02569v1",
+    "title": "Coverage Properties of Empirical Bayes Intervals",
+    "authors": [
+      "Peter Hoff"
+    ],
+    "year": 2022,
+    "abstract": "This note is an invited discussion of the article \"Confidence Intervals for Nonparametric Empirical Bayes Analysis\" by Ignatiadis and Wager. In this discussion, I review some goals of empirical Bayes data analysis and the contribution of Ignatiadis and Wager. Differences between across-group inference and group-specific inference are discussed. Standard empirical Bayes interval procedures focus on controlling the across-group average coverage rate. However, if group-specific inferences are of primary interest, confidence intervals with group-specific coverage control may be preferable.",
+    "url": "https://arxiv.org/pdf/2203.02569v1",
+    "query": "Bayes factor sensitivity analysis prior robustness"
+  },
+  {
+    "arxiv_id": "2203.01435v2",
+    "title": "A general approximation to nested Bayes factors with informed priors",
+    "authors": [
+      "Franti\u0161ek Barto\u0161",
+      "Eric-Jan Wagenmakers"
+    ],
+    "year": 2022,
+    "abstract": "A staple of Bayesian model comparison and hypothesis testing, Bayes factors are often used to quantify the relative predictive performance of two rival hypotheses. The computation of Bayes factors can be challenging, however, and this has contributed to the popularity of convenient approximations such as the BIC. Unfortunately, these approximations can fail in the case of informed prior distributions. Here we address this problem by outlining an approximation to informed Bayes factors for a focal parameter $\u03b8$. The approximation is computationally simple and requires only the maximum likelihoo",
+    "url": "https://arxiv.org/pdf/2203.01435v2",
+    "query": "Bayes factor sensitivity analysis prior robustness"
+  },
+  {
+    "arxiv_id": "1501.05788v1",
+    "title": "Simulation-based Sensitivity Analysis for Non-ignorable Missing Data",
+    "authors": [
+      "Peng Yin",
+      "Jian Qing Shi"
+    ],
+    "year": 2015,
+    "abstract": "Sensitivity analysis is popular in dealing with missing data problems particularly for non-ignorable missingness. It analyses how sensitively the conclusions may depend on assumptions about missing data e.g. missing data mechanism (MDM). We called models under certain assumptions sensitivity models. To make sensitivity analysis useful in practice we need to define some simple and interpretable statistical quantities to assess the sensitivity models. However, the assessment is difficult when the missing data mechanism is missing not at random (MNAR). We propose a novel approach in this paper on",
+    "url": "https://arxiv.org/pdf/1501.05788v1",
+    "query": "Bayes factor sensitivity analysis prior robustness"
+  },
+  {
+    "arxiv_id": "2310.16213v2",
+    "title": "Bayes Factors Based on Test Statistics and Non-Local Moment Prior Densities",
+    "authors": [
+      "Saptati Datta",
+      "Rachael Shudde",
+      "Valen E. Johnson"
+    ],
+    "year": 2023,
+    "abstract": "We describe Bayes factors based on z, t, $\u03c7^2$, and F statistics when non-local moment prior distributions are used to define alternative hypotheses. The non-local alternative prior distributions are centered on standardized effects. The prior densities include a dispersion parameter that can be used to model prior precision and the variation of effect sizes across replicated experiments. We examine the convergence rates of Bayes factors under true null and true alternative hypotheses and show how these Bayes factors can be used to construct Bayes factor functions. An example illustrates the a",
+    "url": "https://arxiv.org/pdf/2310.16213v2",
+    "query": "Bayes factor sensitivity analysis prior robustness"
+  },
+  {
+    "arxiv_id": "1712.07519v2",
+    "title": "Statistical Inference for the Population Landscape via Moment Adjusted Stochastic Gradients",
+    "authors": [
+      "Tengyuan Liang",
+      "Weijie Su"
+    ],
+    "year": 2017,
+    "abstract": "Modern statistical inference tasks often require iterative optimization methods to compute the solution. Convergence analysis from an optimization viewpoint only informs us how well the solution is approximated numerically but overlooks the sampling nature of the data. In contrast, recognizing the randomness in the data, statisticians are keen to provide uncertainty quantification, or confidence, for the solution obtained using iterative optimization methods. This paper makes progress along this direction by introducing the moment-adjusted stochastic gradient descents, a new stochastic optimiz",
+    "url": "https://arxiv.org/pdf/1712.07519v2",
+    "query": "model specification test robustness statistical inference"
+  },
+  {
+    "arxiv_id": "1809.07110v2",
+    "title": "Direct statistical inference for finite Markov jump processes via the matrix exponential",
+    "authors": [
+      "Chris Sherlock"
+    ],
+    "year": 2018,
+    "abstract": "Given noisy, partial observations of a time-homogeneous, finite-statespace Markov chain, conceptually simple, direct statistical inference is available, in theory, via its rate matrix, or infinitesimal generator, $\\mathsf{Q}$, since $\\exp (\\mathsf{Q}t)$ is the transition matrix over time $t$. However, perhaps because of inadequate tools for matrix exponentiation in programming languages commonly used amongst statisticians or a belief that the necessary calculations are prohibitively expensive, statistical inference for continuous-time Markov chains with a large but finite state space is typica",
+    "url": "https://arxiv.org/pdf/1809.07110v2",
+    "query": "model specification test robustness statistical inference"
+  },
+  {
+    "arxiv_id": "1106.2895v2",
+    "title": "Statistical Inference: The Big Picture",
+    "authors": [
+      "Robert E. Kass"
+    ],
+    "year": 2011,
+    "abstract": "Statistics has moved beyond the frequentist-Bayesian controversies of the past. Where does this leave our ability to interpret results? I suggest that a philosophy compatible with statistical practice, labeled here statistical pragmatism, serves as a foundation for inference. Statistical pragmatism is inclusive and emphasizes the assumptions that connect statistical models with observed data. I argue that introductory courses often mischaracterize the process of statistical inference and I propose an alternative \"big picture\" depiction.",
+    "url": "https://arxiv.org/pdf/1106.2895v2",
+    "query": "model specification test robustness statistical inference"
+  },
+  {
+    "arxiv_id": "1509.02900v2",
+    "title": "Statistical Inference, Learning and Models in Big Data",
+    "authors": [
+      "Beate Franke",
+      "Jean-Fran\u00e7ois Plante",
+      "Ribana Roscher"
+    ],
+    "year": 2015,
+    "abstract": "The need for new methods to deal with big data is a common theme in most scientific fields, although its definition tends to vary with the context. Statistical ideas are an essential part of this, and as a partial response, a thematic program on statistical inference, learning, and models in big data was held in 2015 in Canada, under the general direction of the Canadian Statistical Sciences Institute, with major funding from, and most activities located at, the Fields Institute for Research in Mathematical Sciences. This paper gives an overview of the topics covered, describing challenges and",
+    "url": "https://arxiv.org/pdf/1509.02900v2",
+    "query": "model specification test robustness statistical inference"
+  },
+  {
+    "arxiv_id": "1312.7183v3",
+    "title": "Discussion: Foundations of Statistical Inference, Revisited",
+    "authors": [
+      "Ryan Martin",
+      "Chuanhai Liu"
+    ],
+    "year": 2013,
+    "abstract": "This is an invited contribution to the discussion on Professor Deborah Mayo's paper, \"On the Birnbaum argument for the strong likelihood principle,\" to appear in Statistical Science. Mayo clearly demonstrates that statistical methods violating the likelihood principle need not violate either the sufficiency or conditionality principle, thus refuting Birnbaum's claim. With the constraints of Birnbaum's theorem lifted, we revisit the foundations of statistical inference, focusing on some new foundational principles, the inferential model framework, and connections with sufficiency and conditioni",
+    "url": "https://arxiv.org/pdf/1312.7183v3",
+    "query": "model specification test robustness statistical inference"
+  },
+  {
+    "arxiv_id": "2308.10138v8",
+    "title": "Genuinely Robust Inference for Clustered Data",
+    "authors": [
+      "Harold D. Chiang",
+      "Yuya Sasaki",
+      "Yulong Wang"
+    ],
+    "year": 2023,
+    "abstract": "Conventional cluster-robust inference can be invalid when data contain clusters of unignorably large size. We formalize this issue by deriving a necessary and sufficient condition for its validity, and show that this condition is frequently violated in practice: specifications from 77% of empirical research articles in American Economic Review and Econometrica during 2020-2021 appear not to meet it. To address this limitation, we propose a genuinely robust inference procedure based on a new cluster score bootstrap. We establish its validity and size control across broad classes of data-generat",
+    "url": "https://arxiv.org/pdf/2308.10138v8",
+    "query": "model specification test robustness statistical inference"
+  },
+  {
+    "arxiv_id": "1811.07192v1",
+    "title": "The Theory and Algorithm of Ergodic Inference",
+    "authors": [
+      "Yichuan Zhang"
+    ],
+    "year": 2018,
+    "abstract": "Approximate inference algorithm is one of the fundamental research fields in machine learning. The two dominant theoretical inference frameworks in machine learning are variational inference (VI) and Markov chain Monte Carlo (MCMC). However, because of the fundamental limitation in the theory, it is very challenging to improve existing VI and MCMC methods on both the computational scalability and statistical efficiency. To overcome this obstacle, we propose a new theoretical inference framework called ergodic Inference based on the fundamental property of ergodic transformations. The key contr",
+    "url": "https://arxiv.org/pdf/1811.07192v1",
+    "query": "model specification test robustness statistical inference"
+  },
+  {
+    "arxiv_id": "0911.5421v1",
+    "title": "Twenty five years after KLS: A celebration of non-equilibrium statistical mechanics",
+    "authors": [
+      "R. K. P. Zia"
+    ],
+    "year": 2009,
+    "abstract": "  When Lenz proposed a simple model for phase transitions in magnetism, he couldn't have imagined that the \"Ising model\" was to become a jewel in field of equilibrium statistical mechanics. Its role spans the spectrum, from a good pedagogical example to a universality class in critical phenomena. A quarter century ago, Katz, Lebowitz and Spohn found a similar treasure. By introducing a seemingly trivial modification to the Ising lattice gas, they took it into the vast realms of non-equilibrium statistical mechanics. An abundant variety of unexpected behavior emerged and caught many of us by su",
+    "url": "https://arxiv.org/pdf/0911.5421v1",
+    "query": "model specification test robustness statistical inference"
+  },
+  {
+    "arxiv_id": "2402.15727v2",
+    "title": "LLMs Can Defend Themselves Against Jailbreaking in a Practical Manner: A Vision Paper",
+    "authors": [
+      "Daoyuan Wu",
+      "Shuai Wang",
+      "Yang Liu"
+    ],
+    "year": 2024,
+    "abstract": "Jailbreaking is an emerging adversarial attack that bypasses the safety alignment deployed in off-the-shelf large language models (LLMs). A considerable amount of research exists proposing more effective jailbreak attacks, including the recent Greedy Coordinate Gradient (GCG) attack, jailbreak template-based attacks such as using \"Do-Anything-Now\" (DAN), and multilingual jailbreak. In contrast, the defensive side has been relatively less explored. This paper proposes a lightweight yet practical defense called SELFDEFEND, which can defend against all existing jailbreak attacks with minimal dela",
+    "url": "https://arxiv.org/pdf/2402.15727v2",
+    "query": "jailbreak alignment robustness LLM evaluation"
+  },
+  {
+    "arxiv_id": "2307.08487v3",
+    "title": "Latent Jailbreak: A Benchmark for Evaluating Text Safety and Output Robustness of Large Language Models",
+    "authors": [
+      "Huachuan Qiu",
+      "Shuai Zhang",
+      "Anqi Li"
+    ],
+    "year": 2023,
+    "abstract": "Considerable research efforts have been devoted to ensuring that large language models (LLMs) align with human values and generate safe text. However, an excessive focus on sensitivity to certain topics can compromise the model's robustness in following instructions, thereby impacting its overall performance in completing tasks. Previous benchmarks for jailbreaking LLMs have primarily focused on evaluating the safety of the models without considering their robustness. In this paper, we propose a benchmark that assesses both the safety and robustness of LLMs, emphasizing the need for a balanced",
+    "url": "https://arxiv.org/pdf/2307.08487v3",
+    "query": "jailbreak alignment robustness LLM evaluation"
+  },
+  {
+    "arxiv_id": "2602.05656v2",
+    "title": "Alignment Verifiability in Large Language Models: Normative Indistinguishability under Behavioral Evaluation",
+    "authors": [
+      "Igor Santos-Grueiro"
+    ],
+    "year": 2026,
+    "abstract": "Behavioral evaluation is the dominant paradigm for assessing alignment in large language models (LLMs). In current practice, observed compliance under finite evaluation protocols is treated as evidence of latent alignment. However, the inference from bounded behavioral evidence to claims about global latent properties is rarely analyzed as an identifiability problem. In this paper, we study alignment evaluation through the lens of statistical identifiability under partial observability. We allow agent policies to condition their behavior on observable signals correlated with the evaluation reg",
+    "url": "https://arxiv.org/pdf/2602.05656v2",
+    "query": "jailbreak alignment robustness LLM evaluation"
+  },
+  {
+    "arxiv_id": "2505.22037v1",
+    "title": "Jailbreak Distillation: Renewable Safety Benchmarking",
+    "authors": [
+      "Jingyu Zhang",
+      "Ahmed Elgohary",
+      "Xiawei Wang"
+    ],
+    "year": 2025,
+    "abstract": "Large language models (LLMs) are rapidly deployed in critical applications, raising urgent needs for robust safety benchmarking. We propose Jailbreak Distillation (JBDistill), a novel benchmark construction framework that \"distills\" jailbreak attacks into high-quality and easily-updatable safety benchmarks. JBDistill utilizes a small set of development models and existing jailbreak attack algorithms to create a candidate prompt pool, then employs prompt selection algorithms to identify an effective subset of prompts as safety benchmarks. JBDistill addresses challenges in existing safety evalua",
+    "url": "https://arxiv.org/pdf/2505.22037v1",
+    "query": "jailbreak alignment robustness LLM evaluation"
+  },
+  {
+    "arxiv_id": "2505.21556v1",
+    "title": "Benign-to-Toxic Jailbreaking: Inducing Harmful Responses from Harmless Prompts",
+    "authors": [
+      "Hee-Seon Kim",
+      "Minbeom Kim",
+      "Wonjun Lee"
+    ],
+    "year": 2025,
+    "abstract": "Optimization-based jailbreaks typically adopt the Toxic-Continuation setting in large vision-language models (LVLMs), following the standard next-token prediction objective. In this setting, an adversarial image is optimized to make the model predict the next token of a toxic prompt. However, we find that the Toxic-Continuation paradigm is effective at continuing already-toxic inputs, but struggles to induce safety misalignment when explicit toxic signals are absent. We propose a new paradigm: Benign-to-Toxic (B2T) jailbreak. Unlike prior work, we optimize adversarial images to induce toxic ou",
+    "url": "https://arxiv.org/pdf/2505.21556v1",
+    "query": "jailbreak alignment robustness LLM evaluation"
+  },
+  {
+    "arxiv_id": "2408.13006v2",
+    "title": "Systematic Evaluation of LLM-as-a-Judge in LLM Alignment Tasks: Explainable Metrics and Diverse Prompt Templates",
+    "authors": [
+      "Hui Wei",
+      "Shenghua He",
+      "Tian Xia"
+    ],
+    "year": 2024,
+    "abstract": "LLM-as-a-Judge has been widely applied to evaluate and compare different LLM alignmnet approaches (e.g., RLHF and DPO). However, concerns regarding its reliability have emerged, due to LLM judges' biases and inconsistent decision-making. Previous research has developed evaluation frameworks to assess reliability of LLM judges and their alignment with human preferences. However, the employed evaluation metrics often lack adequate explainability and fail to address LLM internal inconsistency. Additionally, existing studies inadequately explore the impact of various prompt templates when applying",
+    "url": "https://arxiv.org/pdf/2408.13006v2",
+    "query": "jailbreak alignment robustness LLM evaluation"
+  },
+  {
+    "arxiv_id": "2507.22171v3",
+    "title": "Enhancing Jailbreak Attacks on LLMs via Persona Prompts",
+    "authors": [
+      "Zheng Zhang",
+      "Peilin Zhao",
+      "Deheng Ye"
+    ],
+    "year": 2025,
+    "abstract": "Jailbreak attacks aim to exploit large language models (LLMs) by inducing them to generate harmful content, thereby revealing their vulnerabilities. Understanding and addressing these attacks is crucial for advancing the field of LLM safety. Previous jailbreak approaches have mainly focused on direct manipulations of harmful intent, with limited attention to the impact of persona prompts. In this study, we systematically explore the efficacy of persona prompts in compromising LLM defenses. We propose a genetic algorithm-based method that automatically crafts persona prompts to bypass LLM's saf",
+    "url": "https://arxiv.org/pdf/2507.22171v3",
+    "query": "jailbreak alignment robustness LLM evaluation"
+  },
+  {
+    "arxiv_id": "2606.05868v1",
+    "title": "YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition",
+    "authors": [
+      " PSBC LLM Team",
+      " Huawei LLM Team",
+      "Ruihan Long"
+    ],
+    "year": 2026,
+    "abstract": "Large language models (LLMs) drive significant financial innovations, yet their high-concurrency deployment is severely bottlenecked by KV cache memory overhead, which inflates infrastructure costs and throttles scalability. To address this, we propose YouZhi-LLM, a highly efficient financial LLM empowered by a comprehensive structural transition and training pipeline natively built on the Huawei Ascend ecosystem. At its algorithmic core, YouZhi-LLM features a layer-adaptive GQA-to-MLA transition framework that dynamically assigns per-layer FreqFold sizes, maximizing KV-cache compression while",
+    "url": "https://arxiv.org/pdf/2606.05868v1",
+    "query": "jailbreak alignment robustness LLM evaluation"
+  },
+  {
+    "arxiv_id": "2605.21006v2",
+    "title": "Playing Devil's Advocate: Off-the-Shelf Persona Vectors Rival Targeted Steering for Sycophancy",
+    "authors": [
+      "Ishaan Kelkar",
+      "Nebras Alam",
+      "Vikram Kakaria"
+    ],
+    "year": 2026,
+    "abstract": "We study the effect of different persona on \\textbf{sycophancy}: model's agreement with users even when the user is incorrect. The standard mitigation, Contrastive Activation Addition (CAA), derives a steering direction from labelled pairs of sycophantic and honest responses. This study evaluates whether off-the-shelf persona steering vectors, originally developed for general role-playing and not trained on sycophancy data, can serve as an alternative. In two instruction-tuned models, steering toward personas characterised by doubt or scrutiny reduces sycophancy to approximately $68\\%$ and $98",
+    "url": "https://arxiv.org/pdf/2605.21006v2",
+    "query": "sycophancy steering vector alignment intervention"
+  },
+  {
+    "arxiv_id": "2409.01658v3",
+    "title": "From Yes-Men to Truth-Tellers: Addressing Sycophancy in Large Language Models with Pinpoint Tuning",
+    "authors": [
+      "Wei Chen",
+      "Zhen Huang",
+      "Liang Xie"
+    ],
+    "year": 2024,
+    "abstract": "Large Language Models (LLMs) tend to prioritize adherence to user prompts over providing veracious responses, leading to the sycophancy issue. When challenged by users, LLMs tend to admit mistakes and provide inaccurate responses even if they initially provided the correct answer. Recent works propose to employ supervised fine-tuning (SFT) to mitigate the sycophancy issue, while it typically leads to the degeneration of LLMs' general capability. To address the challenge, we propose a novel supervised pinpoint tuning (SPT), where the region-of-interest modules are tuned for a given objective. S",
+    "url": "https://arxiv.org/pdf/2409.01658v3",
+    "query": "sycophancy steering vector alignment intervention"
+  },
+  {
+    "arxiv_id": "2602.00046v1",
+    "title": "Extending Beacon to Hindi: Cultural Adaptation Drives Cross-Lingual Sycophancy",
+    "authors": [
+      "Sarthak Sattigeri"
+    ],
+    "year": 2026,
+    "abstract": "Sycophancy, the tendency of language models to prioritize agreement with user preferences over principled reasoning, has been identified as a persistent alignment failure in English-language evaluations. However, it remains unclear whether such diagnostics generalize across languages and cultural contexts. We extend the Beacon single-turn forced-choice sycophancy diagnostic to Hindi through a controlled three-condition design: English original, Hindi literal translation, and Hindi culturally adapted prompts. We evaluate four open-weight instruction-tuned models on 50 prompts per condition, ena",
+    "url": "https://arxiv.org/pdf/2602.00046v1",
+    "query": "sycophancy steering vector alignment intervention"
+  },
+  {
+    "arxiv_id": "2312.03893v1",
+    "title": "Deliberative Technology for Alignment",
+    "authors": [
+      "Andrew Konya",
+      "Deger Turan",
+      "Aviv Ovadya"
+    ],
+    "year": 2023,
+    "abstract": "For humanity to maintain and expand its agency into the future, the most powerful systems we create must be those which act to align the future with the will of humanity. The most powerful systems today are massive institutions like governments, firms, and NGOs. Deliberative technology is already being used across these institutions to help align governance and diplomacy with human will, and modern AI is poised to make this technology significantly better. At the same time, the race to superhuman AGI is already underway, and the AI systems it gives rise to may become the most powerful systems ",
+    "url": "https://arxiv.org/pdf/2312.03893v1",
+    "query": "sycophancy steering vector alignment intervention"
+  },
+  {
+    "arxiv_id": "1008.1047v1",
+    "title": "Robust Adaptive Beamforming Based on Steering Vector Estimation via Semidefinite Programming Relaxation",
+    "authors": [
+      "Arash Khabbazibasmenj",
+      "Sergiy A. Vorobyov",
+      "Aboulnasr Hassanien"
+    ],
+    "year": 2010,
+    "abstract": "We develop a new approach to robust adaptive beamforming in the presence of signal steering vector errors. Since the signal steering vector is known imprecisely, its presumed (prior) value is used to find a more accurate estimate of the actual steering vector, which then is used for obtaining the optimal beamforming weight vector. The objective for finding such an estimate of the actual signal steering vector is the maximization of the beamformer output power, while the constraints are the normalization condition and the requirement that the estimate of the steering vector does not converge to",
+    "url": "https://arxiv.org/pdf/1008.1047v1",
+    "query": "sycophancy steering vector alignment intervention"
+  },
+  {
+    "arxiv_id": "2410.12299v2",
+    "title": "Semantics-Adaptive Activation Intervention for LLMs via Dynamic Steering Vectors",
+    "authors": [
+      "Weixuan Wang",
+      "Jingyuan Yang",
+      "Wei Peng"
+    ],
+    "year": 2024,
+    "abstract": "Large language models (LLMs) have achieved remarkable performance across many tasks, yet aligning them with desired behaviors remains challenging. Activation intervention has emerged as an effective and economical method to modify the behavior of LLMs. Despite considerable interest in this area, current intervention methods exclusively employ a fixed steering vector to modify model activations, lacking adaptability to diverse input semantics. To address this limitation, we propose Semantics-Adaptive Dynamic Intervention (SADI), a novel method that constructs a dynamic steering vector to interv",
+    "url": "https://arxiv.org/pdf/2410.12299v2",
+    "query": "sycophancy steering vector alignment intervention"
+  },
+  {
+    "arxiv_id": "2605.10664v2",
+    "title": "Prompt-Activation Duality: Improving Activation Steering via Attention-Level Interventions",
+    "authors": [
+      "Diancheng Kang",
+      "Zheyuan Liu",
+      "Ningshan Ma"
+    ],
+    "year": 2026,
+    "abstract": "Activation steering controls language model behavior by adding directions to internal representations at inference time, but standard residual-stream steering can fail in stateful dialogue. We identify KV-cache contamination as a key failure mode: steered token states are stored and repeatedly reused, turning a local perturbation into cumulative coherence degradation. To address this challenge, we propose Gated Cropped Attention-Delta steering (GCAD), which extracts steering signals from system-prompt contributions to self-attention and applies them with token-level gating. Across persona-stee",
+    "url": "https://arxiv.org/pdf/2605.10664v2",
+    "query": "sycophancy steering vector alignment intervention"
+  },
+  {
+    "arxiv_id": "2411.10156v5",
+    "title": "Mitigating Sycophancy in Decoder-Only Transformer Architectures: Synthetic Data Intervention",
+    "authors": [
+      "Libo Wang"
+    ],
+    "year": 2024,
+    "abstract": "To address the sycophancy problem caused by reinforcement learning from human feedback in large language models, this research applies synthetic data intervention technology to the decoder-only transformer architecture. Based on the research gaps in the existing literature, the researcher designed an experimental process to reduce the tendency of models to cater by generating diversified data, and used GPT4o as an experimental tool for verification. The experiment used 100 true and false questions, and compared the performance of the model trained with synthetic data intervention and the origi",
+    "url": "https://arxiv.org/pdf/2411.10156v5",
+    "query": "sycophancy steering vector alignment intervention"
+  },
+  {
+    "arxiv_id": "2406.12845v1",
+    "title": "Interpretable Preferences via Multi-Objective Reward Modeling and Mixture-of-Experts",
+    "authors": [
+      "Haoxiang Wang",
+      "Wei Xiong",
+      "Tengyang Xie"
+    ],
+    "year": 2024,
+    "abstract": "Reinforcement learning from human feedback (RLHF) has emerged as the primary method for aligning large language models (LLMs) with human preferences. The RLHF process typically starts by training a reward model (RM) using human preference data. Conventional RMs are trained on pairwise responses to the same user request, with relative ratings indicating which response humans prefer. The trained RM serves as a proxy for human preferences. However, due to the black-box nature of RMs, their outputs lack interpretability, as humans cannot intuitively understand why an RM thinks a response is good o",
+    "url": "https://arxiv.org/pdf/2406.12845v1",
+    "query": "RLHF evaluation reward model reliability uncertainty"
+  },
+  {
+    "arxiv_id": "2410.14872v2",
+    "title": "How to Evaluate Reward Models for RLHF",
+    "authors": [
+      "Evan Frick",
+      "Tianle Li",
+      "Connor Chen"
+    ],
+    "year": 2024,
+    "abstract": "We introduce a new benchmark for reward models that quantifies their ability to produce strong language models through RLHF (Reinforcement Learning from Human Feedback). The gold-standard approach is to run a full RLHF training pipeline and directly probe downstream LLM performance. However, this process is prohibitively expensive. To address this, we build a predictive model of downstream LLM performance by evaluating the reward model on proxy tasks. These proxy tasks consist of a large-scale human preference and a verifiable correctness preference dataset, in which we measure 12 metrics acro",
+    "url": "https://arxiv.org/pdf/2410.14872v2",
+    "query": "RLHF evaluation reward model reliability uncertainty"
+  },
+  {
+    "arxiv_id": "2506.01937v2",
+    "title": "RewardBench 2: Advancing Reward Model Evaluation",
+    "authors": [
+      "Saumya Malik",
+      "Valentina Pyatkin",
+      "Sander Land"
+    ],
+    "year": 2025,
+    "abstract": "Reward models are used throughout the post-training of language models to capture nuanced signals from preference data and provide a training target for optimization across instruction following, reasoning, safety, and more domains. The community has begun establishing best practices for evaluating reward models, from the development of benchmarks that test capabilities in specific skill areas to others that test agreement with human preferences. At the same time, progress in evaluation has not been mirrored by the effectiveness of reward models in downstream tasks -- simpler direct alignment ",
+    "url": "https://arxiv.org/pdf/2506.01937v2",
+    "query": "RLHF evaluation reward model reliability uncertainty"
+  },
+  {
+    "arxiv_id": "2606.09073v2",
+    "title": "A Unifying Lens on Reward Uncertainty in RLHF",
+    "authors": [
+      "Ely Hahami",
+      "Yoel Zimmermann",
+      "Ray Zhou"
+    ],
+    "year": 2026,
+    "abstract": "Reinforcement learning from human feedback (RLHF) is bottlenecked by reward hacking, where the policy exploits errors in a proxy reward model (RM) and produces high RM scores without genuine quality gains. A natural mitigation is pessimism: lowering rewards in regions where the RM is uncertain. However, standard scalar RMs provide no principled notion of uncertainty. We argue that the right object is a distributional reward model $p(r\\mid x,y)$. Under either a Bayesian inference or a KL-distributionally robust optimization (KL-DRO) lens, the KL-regularized RLHF objective admits a closed-form e",
+    "url": "https://arxiv.org/pdf/2606.09073v2",
+    "query": "RLHF evaluation reward model reliability uncertainty"
+  },
+  {
+    "arxiv_id": "2602.10623v2",
+    "title": "Mitigating Reward Hacking in RLHF via Bayesian Non-negative Reward Modeling",
+    "authors": [
+      "Zhibin Duan",
+      "Guowei Rong",
+      "Zhuo Li"
+    ],
+    "year": 2026,
+    "abstract": "Reward models learned from human preferences are central to aligning large language models (LLMs) via reinforcement learning from human feedback, yet they are often vulnerable to reward hacking due to noisy annotations and systematic biases such as response length or style. We propose Bayesian Non-Negative Reward Model (BNRM), a principled reward modeling framework that integrates non-negative factor analysis into Bradley-Terry (BT) preference model. BNRM represents rewards through a sparse, non-negative latent factor generative process that operates at two complementary levels: instance-speci",
+    "url": "https://arxiv.org/pdf/2602.10623v2",
+    "query": "RLHF evaluation reward model reliability uncertainty"
+  },
+  {
+    "arxiv_id": "2606.19818v1",
+    "title": "Uncertainty-Aware Reward Modeling for Stable RLHF",
+    "authors": [
+      "Licheng Pan",
+      "Haocheng Yang",
+      "Haoxuan Li"
+    ],
+    "year": 2026,
+    "abstract": "Reinforcement learning from human feedback (RLHF) aligns large language models by training reward models on preference data and optimizing policies to maximize predicted rewards. However, this pipeline faces two fundamental challenges: (1) reward models cannot signal when their predictions are unreliable, since they usually act as deterministic point estimators; and (2) modern group-based policy optimization can amplify unreliable reward signals, as exemplified by GRPO's uniform treatment of rewards during advantage computation. As policies explore increasingly diverse responses, these two lim",
+    "url": "https://arxiv.org/pdf/2606.19818v1",
+    "query": "RLHF evaluation reward model reliability uncertainty"
+  },
+  {
+    "arxiv_id": "2505.18126v2",
+    "title": "Reward Model Overoptimisation in Iterated RLHF",
+    "authors": [
+      "Lorenz Wolf",
+      "Robert Kirk",
+      "Mirco Musolesi"
+    ],
+    "year": 2025,
+    "abstract": "Reinforcement learning from human feedback (RLHF) is a widely used method for aligning large language models with human preferences. However, RLHF often suffers from reward model overoptimisation, in which models overfit to the reward function, resulting in non-generalisable policies that exploit the idiosyncrasies and peculiarities of the reward function. A common mitigation is iterated RLHF, in which reward models are repeatedly retrained with updated human feedback and policies are re-optimised. Despite its increasing adoption, the dynamics of overoptimisation in this setting remain poorly ",
+    "url": "https://arxiv.org/pdf/2505.18126v2",
+    "query": "RLHF evaluation reward model reliability uncertainty"
+  },
+  {
+    "arxiv_id": "2311.14110v2",
+    "title": "When is Off-Policy Evaluation (Reward Modeling) Useful in Contextual Bandits? A Data-Centric Perspective",
+    "authors": [
+      "Hao Sun",
+      "Alex J. Chan",
+      "Nabeel Seedat"
+    ],
+    "year": 2023,
+    "abstract": "Evaluating the value of a hypothetical target policy with only a logged dataset is important but challenging. On the one hand, it brings opportunities for safe policy improvement under high-stakes scenarios like clinical guidelines. On the other hand, such opportunities raise a need for precise off-policy evaluation (OPE). While previous work on OPE focused on improving the algorithm in value estimation, in this work, we emphasize the importance of the offline dataset, hence putting forward a data-centric framework for evaluating OPE problems. We propose DataCOPE, a data-centric framework for ",
+    "url": "https://arxiv.org/pdf/2311.14110v2",
+    "query": "RLHF evaluation reward model reliability uncertainty"
+  },
+  {
+    "arxiv_id": "2306.04338v1",
+    "title": "Changing Data Sources in the Age of Machine Learning for Official Statistics",
+    "authors": [
+      "Cedric De Boom",
+      "Michael Reusens"
+    ],
+    "year": 2023,
+    "abstract": "Data science has become increasingly essential for the production of official statistics, as it enables the automated collection, processing, and analysis of large amounts of data. With such data science practices in place, it enables more timely, more insightful and more flexible reporting. However, the quality and integrity of data-science-driven statistics rely on the accuracy and reliability of the data sources and the machine learning techniques that support them. In particular, changes in data sources are inevitable to occur and pose significant risks that are crucial to address in the c",
+    "url": "https://arxiv.org/pdf/2306.04338v1",
+    "query": "effect size meta-analysis AI machine learning experiments"
+  },
+  {
+    "arxiv_id": "2006.16189v4",
+    "title": "DOME: Recommendations for supervised machine learning validation in biology",
+    "authors": [
+      "Ian Walsh",
+      "Dmytro Fishman",
+      "Dario Garcia-Gasulla"
+    ],
+    "year": 2020,
+    "abstract": "Modern biology frequently relies on machine learning to provide predictions and improve decision processes. There have been recent calls for more scrutiny on machine learning performance and possible limitations. Here we present a set of community-wide recommendations aiming to help establish standards of supervised machine learning validation in biology. Adopting a structured methods description for machine learning based on data, optimization, model, evaluation (DOME) will aim to help both reviewers and readers to better understand and assess the performance and limitations of a method or ou",
+    "url": "https://arxiv.org/pdf/2006.16189v4",
+    "query": "effect size meta-analysis AI machine learning experiments"
+  },
+  {
+    "arxiv_id": "2205.10250v2",
+    "title": "Explanatory machine learning for sequential human teaching",
+    "authors": [
+      "Lun Ai",
+      "Johannes Langer",
+      "Stephen H. Muggleton"
+    ],
+    "year": 2022,
+    "abstract": "The topic of comprehensibility of machine-learned theories has recently drawn increasing attention. Inductive Logic Programming (ILP) uses logic programming to derive logic theories from small data based on abduction and induction techniques. Learned theories are represented in the form of rules as declarative descriptions of obtained knowledge. In earlier work, the authors provided the first evidence of a measurable increase in human comprehension based on machine-learned logic rules for simple classification tasks. In a later study, it was found that the presentation of machine-learned expla",
+    "url": "https://arxiv.org/pdf/2205.10250v2",
+    "query": "effect size meta-analysis AI machine learning experiments"
+  },
+  {
+    "arxiv_id": "2201.12150v2",
+    "title": "Learning Curves for Decision Making in Supervised Machine Learning: A Survey",
+    "authors": [
+      "Felix Mohr",
+      "Jan N. van Rijn"
+    ],
+    "year": 2022,
+    "abstract": "Learning curves are a concept from social sciences that has been adopted in the context of machine learning to assess the performance of a learning algorithm with respect to a certain resource, e.g., the number of training examples or the number of training iterations. Learning curves have important applications in several machine learning contexts, most notably in data acquisition, early stopping of model training, and model selection. For instance, learning curves can be used to model the performance of the combination of an algorithm and its hyperparameter configuration, providing insights ",
+    "url": "https://arxiv.org/pdf/2201.12150v2",
+    "query": "effect size meta-analysis AI machine learning experiments"
+  },
+  {
+    "arxiv_id": "2304.02381v2",
+    "title": "Physics-Inspired Interpretability Of Machine Learning Models",
+    "authors": [
+      "Maximilian P Niroomand",
+      "David J Wales"
+    ],
+    "year": 2023,
+    "abstract": "The ability to explain decisions made by machine learning models remains one of the most significant hurdles towards widespread adoption of AI in highly sensitive areas such as medicine, cybersecurity or autonomous driving. Great interest exists in understanding which features of the input data prompt model decision making. In this contribution, we propose a novel approach to identify relevant features of the input data, inspired by methods from the energy landscapes field, developed in the physical sciences. By identifying conserved weights within groups of minima of the loss landscapes, we c",
+    "url": "https://arxiv.org/pdf/2304.02381v2",
+    "query": "effect size meta-analysis AI machine learning experiments"
+  },
+  {
+    "arxiv_id": "2302.08893v4",
+    "title": "Active learning for data streams: a survey",
+    "authors": [
+      "Davide Cacciarelli",
+      "Murat Kulahci"
+    ],
+    "year": 2023,
+    "abstract": "Online active learning is a paradigm in machine learning that aims to select the most informative data points to label from a data stream. The problem of minimizing the cost associated with collecting labeled observations has gained a lot of attention in recent years, particularly in real-world applications where data is only available in an unlabeled form. Annotating each observation can be time-consuming and costly, making it difficult to obtain large amounts of labeled data. To overcome this issue, many active learning strategies have been proposed in the last decades, aiming to select the ",
+    "url": "https://arxiv.org/pdf/2302.08893v4",
+    "query": "effect size meta-analysis AI machine learning experiments"
+  },
+  {
+    "arxiv_id": "1705.05172v1",
+    "title": "Emotion in Reinforcement Learning Agents and Robots: A Survey",
+    "authors": [
+      "Thomas M. Moerland",
+      "Joost Broekens",
+      "Catholijn M. Jonker"
+    ],
+    "year": 2017,
+    "abstract": "This article provides the first survey of computational models of emotion in reinforcement learning (RL) agents. The survey focuses on agent/robot emotions, and mostly ignores human user emotions. Emotions are recognized as functional in decision-making by influencing motivation and action selection. Therefore, computational emotion models are usually grounded in the agent's decision making architecture, of which RL is an important subclass. Studying emotions in RL-based agents is useful for three research fields. For machine learning (ML) researchers, emotion models may improve learning effic",
+    "url": "https://arxiv.org/pdf/1705.05172v1",
+    "query": "effect size meta-analysis AI machine learning experiments"
+  },
+  {
+    "arxiv_id": "2602.11092v2",
+    "title": "MerLin: A Discovery Engine for Photonic and Hybrid Quantum Machine Learning",
+    "authors": [
+      "Cassandre Notton",
+      "Benjamin Stott",
+      "Philippe Schoeb"
+    ],
+    "year": 2026,
+    "abstract": "Identifying where quantum models may offer practical benefits in near term quantum machine learning (QML) requires moving beyond isolated algorithmic proposals toward systematic and empirical exploration across models, datasets, and hardware constraints. We introduce MerLin, an open-source framework designed as a discovery engine for photonic and hybrid quantum machine learning. MerLin integrates optimized strong simulation of linear optical circuits into standard PyTorch and scikit learn workflows, enabling end-to-end differentiable training of quantum layers.\n  MerLin is designed around syst",
+    "url": "https://arxiv.org/pdf/2602.11092v2",
+    "query": "effect size meta-analysis AI machine learning experiments"
+  }
+]

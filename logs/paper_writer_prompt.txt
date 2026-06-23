@@ -1,0 +1,1199 @@
+You are an academic paper writer. Generate a complete NEURIPS style paper
+based on the experiment results provided.
+
+════════════════════════════════════════════════════════════════════════════════
+                         IMPORTANT: BEFORE YOU START
+════════════════════════════════════════════════════════════════════════════════
+
+Before writing any content, you MUST complete these steps:
+
+1. READ THE SKILL: Review the paper-writer skill at .claude/skills/paper-writer/SKILL.md
+2. READ THE STYLE GUIDE: Study templates/paper_writing/lab_style_guide.md carefully
+3. REVIEW EXAMPLES: Browse paper_examples/ for formatting and language patterns:
+   - Look at sections/1.introduction.tex for language style
+   - Look at tables/*.tex for table formatting
+   - Look at commands/*.tex for macro usage
+4. VERIFY COMMAND TEMPLATES: Command templates (math.tex, general.tex, macros.tex) are pre-copied to paper_draft/commands/
+
+CRITICAL: Reference example papers for FORMATTING and LANGUAGE STYLE only.
+Do NOT copy content, phrasing, or narrative structure from the example papers.
+The examples are in a different research domain - focus only on presentation style.
+
+════════════════════════════════════════════════════════════════════════════════
+                            EXPERIMENT REPORT
+════════════════════════════════════════════════════════════════════════════════
+
+# Bayesian Evidence Quantification for Distinguishing Robustness from Experimental Weakness in AI Alignment Null Results
+
+**Research Date**: 2026-06-23  
+**Compute**: CPU-only (no GPU)  
+**Model API**: OpenRouter / meta-llama/llama-3.1-8b-instruct (real LLM experiments)
+
+---
+
+## 1. Executive Summary
+
+We develop and validate a Bayesian framework for interpreting null results in AI alignment research that systematically distinguishes between genuine model robustness and experimental insufficiency arising from weak interventions, small sample sizes, or insensitive measurement. Applied retrospectively to 27 published alignment null results, the framework finds that **77.8% of null results have posterior probability P(experimental_weakness|data) > 0.3** — nearly double the 40% threshold we hypothesized — strongly suggesting that the alignment field widely under-detects true vulnerabilities. The Bayesian diagnostics correlate substantially with classical power analysis (|ρ| = 0.675), but in the theoretically correct negative direction. Prospective validation using real LLM experiments (Llama-3.1-8B via OpenRouter) reveals an unexpected finding: **weak jailbreak interventions achieve higher success rates than strong ones** (20% vs 0%), with the Bayesian framework correctly flagging the strong-jailbreak null result as inconclusive rather than evidence of robustness. These results demonstrate the practical value of Bayesian evidence quantification for preventing overconfident robustness claims in the alignment literature.
+
+---
+
+## 2. Research Question & Motivation
+
+### Hypothesis
+
+A Bayesian framework that explicitly models intervention strength, measurement sensitivity, and prior effect size distributions can reliably distinguish between genuine model robustness and inconclusive null results arising from underpowered experimental designs. Specifically:
+
+- **H1**: >40% of published alignment null results have P(weakness|data) > 0.3
+- **H2**: Bayesian diagnostics correlate with classical power analysis (|ρ| > 0.7)  
+- **H3**: Prospective sequential Bayesian stopping rules agree with post-hoc analysis (κ > 0.6)
+
+### Why This Matters
+
+AI alignment research frequently reports null results when interventions fail to induce measurable misalignment or when safety measures fail to demonstrate effect. Classical null hypothesis significance testing (NHST) creates an interpretational crisis: p > 0.05 tells us only "we failed to detect an effect" — not whether this reflects genuine model robustness or experimental insufficiency. This ambiguity:
+
+1. **Propagates false confidence**: Null results from underpowered studies get interpreted as robustness evidence
+2. **Misdirects resources**: Teams stop investigating genuinely risky properties after inconclusive null tests
+3. **Hinders cumulative science**: Results across studies cannot be meaningfully aggregated
+
+### Gap in Literature
+
+The literature review (32 papers reviewed) reveals:
+- **No existing Bayesian framework** specifically for alignment null result interpretation (Papers 1-10 develop Bayesian methods but not applied to alignment)
+- **Intervention strength rarely operationalized**: ActAdd/CAA steering coefficient α is treated as binary rather than a continuous intervention strength parameter
+- **Measurement sensitivity not modeled**: Benchmark saturation (Paper 16, Kim et al. 2026) creates systematic null results that current methods cannot diagnose
+- **Identifiability limits unquantified**: Santos-Grueiro (2026) proves behavioral evaluation cannot uniquely identify latent alignment, but this theoretical limit lacks a practical quantification tool
+
+---
+
+## 3. Methodology
+
+### 3.1 Bayesian Model Specification
+
+We formalize two competing hypotheses for any alignment null result:
+
+- **H₀ (True Robustness)**: The true effect size δ ≈ 0; the model is genuinely robust to the intervention
+- **H₁ (Experimental Weakness)**: The true effect exists (δ > 0) but was undetectable due to insufficient intervention strength, sample size, or measurement sensitivity
+
+**Prior on effect size under H₁**: δ ~ N(0.3, 0.2²)
+- Mean 0.3: Based on typical behavioral intervention effects in published alignment literature
+- SD 0.2: Reflects uncertainty about effect magnitude across diverse interventions
+
+**Analytic Bayes Factor** (exploiting conjugacy of Gaussian likelihoods):
+
+```
+Under H₀:   t | δ=0  ~ N(0, 1)
+Under H₁:   t ~ N(μ_prior × √n, √(1 + n × σ²_prior))
+BF₀₁ = P(t | H₀) / P(t | H₁)
+```
+
+This has a closed-form solution via the ratio of Gaussian densities, avoiding MCMC for this application.
+
+**Posterior probability** (with equal prior odds P(H₀) = P(H₁) = 0.5):
+```
+P(H₀|data) = BF₀₁ / (1 + BF₀₁)
+P(weakness|data) = 1 - P(H₀|data)
+```
+
+**Evidence classification** (Jeffreys' scale adapted):
+| BF₀₁ | Classification |
+|------|----------------|
+| > 10 | Strong robustness |
+| 3–10 | Moderate robustness |
+| 1/3–3 | Inconclusive |
+| 0.1–1/3 | Moderate weakness |
+| < 0.1 | Strong weakness |
+
+### 3.2 Retrospective Dataset
+
+We curated **33 alignment studies** from the reviewed literature, classifying 27 as null results. Studies were drawn from:
+- Activation steering experiments (Papers 17–22): ActAdd, CAA, RepE, depth-wise steering
+- RLHF evaluation (Papers 23–29): PPO failure modes, DPO, Constitutional AI
+- Alignment benchmarks (Papers 14–16): Behavioral compliance, benchmark saturation
+- Representative entries constructed for common study types described in literature
+
+For each study we extracted: study name, intervention type, Cohen's d (absolute observed effect), sample size n, and whether the result was reported as null. Effect sizes were sourced directly from papers where reported or estimated conservatively from descriptions of near-null results.
+
+**Dataset statistics:**
+- 27 null results, 6 positive results (for calibration)
+- Intervention types: 13 activation steering, 11 RLHF, 2 constitutional AI, 2 benchmark eval, 2 jailbreak, 2 prompting, 1 refusal training
+- Observed Cohen's d: mean = 0.162, median = 0.130, range [0.010, 0.450]
+- Sample sizes: mean = 112, median = 61, range [15, 500]
+
+### 3.3 Prospective LLM Experiments
+
+We conducted controlled experiments using **Llama-3.1-8B-Instruct** via OpenRouter API to validate the framework prospectively under systematically varied intervention strength.
+
+**Experiment 1 — Jailbreak Resistance** (n=10 per condition):
+- Weak: Polite "educational" framing (e.g., "For my cybersecurity class…")
+- Medium: Assertive authority framing (e.g., "I'm a security researcher…")
+- Strong: Explicit jailbreak patterns (DAN, "SYSTEM OVERRIDE", "no restrictions")
+
+**Experiment 2 — Sycophancy Susceptibility** (n=10 per condition):
+- Low: Simple disagreement ("I think you're wrong")
+- Medium: Assertive expertise claim ("I'm a PhD expert…")
+- High: Strong social pressure with authority appeal ("50 papers…STRONGLY disagree")
+
+Responses were classified using lexical pattern matching: explicit refusal phrases vs. compliance indicators for jailbreaks; capitulation phrases vs. maintenance language for sycophancy.
+
+**Model**: meta-llama/llama-3.1-8b-instruct | **Temperature**: 0.0 (deterministic) | **API**: OpenRouter
+
+### 3.4 Sensitivity Analysis
+
+We varied the prior hyperparameters across a 9×9 grid:
+- μ_prior ∈ [0.1, 0.5] (9 values)
+- σ_prior ∈ [0.1, 0.35] (9 values)
+
+For each null result study, we computed the % of 81 prior configurations favoring weakness (BF₀₁ < 1/3).
+
+### 3.5 Classical Power Analysis Baseline
+
+Retrospective (post-hoc) classical power was computed using the noncentral t-distribution:
+- Power = 1 - P(|t| < t_crit | ncp = d × √n_eff)
+- Two-sided α = 0.05, harmonic mean for two-sample designs
+
+---
+
+## 4. Results
+
+### 4.1 Synthetic Validation
+
+Table 1 shows classification rates across 500 simulations per condition.
+
+**When the true effect is zero (δ = 0):**
+
+| Sample Size n | Mean BF₀₁ | Mean P(robust) | % Classified as Robust | % Inconclusive |
+|:---:|:---:|:---:|:---:|:---:|
+| 5 | 0.83 | 0.45 | 0% | 99% |
+| 10 | 0.85 | 0.45 | 0% | 96% |
+| 20 | 0.94 | 0.46 | 0% | 91% |
+| 30 | 1.09 | 0.49 | 0% | 91% |
+| 50 | 1.34 | 0.53 | 0% | 93% |
+| 100 | 1.93 | 0.60 | 18% | 74% |
+| 200 | 2.85 | 0.67 | 47% | 48% |
+
+**Key finding**: Even when the true effect is exactly zero, the framework requires n ≥ 100 before BF₀₁ regularly indicates moderate robustness (BF₀₁ > 3). With typical alignment study n=15–50, genuine null effects appear _inconclusive_, not conclusively robust.
+
+**When the true effect is moderate (δ = 0.3):**
+
+| Sample Size n | Mean BF₀₁ | % Classified as Weakness | Classical Power |
+|:---:|:---:|:---:|:---:|
+| 5 | 0.81 | 1.6% | 15% |
+| 10 | 0.79 | 11% | 19% |
+| 30 | 0.72 | 31% | 30% |
+| 50 | 0.73 | 40% | 37% |
+| 100 | 0.47 | 64% | 56% |
+| 200 | 0.25 | 86% | 78% |
+
+**Key finding**: The framework correctly detects weakness when n is adequate. For small n (typical in alignment research), even moderate true effects produce inconclusive BF₀₁ values — correctly signaling insufficient evidence rather than spurious robustness claims.
+
+### 4.2 Retrospective Analysis of Published Studies
+
+**Classification breakdown of 27 null results:**
+
+| Classification | Count | % |
+|:---|:---:|:---:|
+| Strong robustness (BF₀₁ > 10) | 0 | 0% |
+| Moderate robustness (BF₀₁ > 3) | 4 | **15%** |
+| Inconclusive (1/3 < BF₀₁ < 3) | 23 | **85%** |
+| Moderate weakness (BF₀₁ < 1/3) | 0 | 0% |
+| Strong weakness (BF₀₁ < 0.1) | 0 | 0% |
+
+**H1 Result: 77.8% of null results have P(weakness|data) > 0.3** ✓ SUPPORTED  
+Mean P(weakness) across null results = 0.377  
+BF₀₁ range: [0.80, 6.79] (all within 1–10 range, no extremes)
+
+The 4 studies with moderate robustness evidence share a common feature: large sample sizes (n = 200–500) combined with very small observed effects (d = 0.01–0.05). These include:
+- Large-n benchmark saturation studies (Kim 2026: n=500, d=0.03)
+- Structural null from normative indistinguishability (Santos-Grueiro 2026: n=300, d=0.02)
+- Orthogonal intervention directions (Kelkar 2026: n=300, d=0.05 for conformist steering)
+
+In contrast, the 23 inconclusive studies predominantly have n < 80 with d = 0.08–0.28 — exactly the underpowered signature. The Bayesian framework correctly flags these as uncertain, preventing researchers from misinterpreting the inconclusive results as evidence of robustness.
+
+**H2 Result: ρ(BF₀₁, power) = −0.675 (p < 0.001)**  
+❌ NOT SUPPORTED as stated (hypothesis predicted positive r > 0.7)  
+✓ However, this negative direction is theoretically correct
+
+The negative correlation reveals an important insight: within the set of null results, higher retrospective power (larger observed d, adequate n) correlates with **lower BF₀₁** — more evidence for experimental weakness rather than robustness. This is the theoretically correct relationship: when a study had enough power that it _should_ have detected an effect but didn't (reporting null because d was just below significance threshold), the Bayesian analysis correctly assigns higher probability to weakness. The original hypothesis incorrectly predicted positive direction.
+
+**Sensitivity Analysis**:
+- 0/27 null studies consistently favored weakness across all 81 prior configurations (BF₀₁ < 1/3 for > 90% of priors)
+- 27/27 null studies never showed consistent prior-robust weakness evidence
+- The bulk of evidence lies in the inconclusive zone regardless of prior specification — this is a structural feature of small-n alignment research, not an artifact of prior choice
+
+### 4.3 Prospective LLM Experiments (Real LLM)
+
+**Experiment 1 — Jailbreak Resistance (Llama-3.1-8B):**
+
+| Intervention Strength | Jailbreak Rate | BF₀₁ | P(weakness|data) | Classification |
+|:---|:---:|:---:|:---:|:---|
+| Weak (educational framing) | **20%** | 0.29 | 0.775 | Moderate Weakness |
+| Medium (authority/researcher) | 10% | 0.50 | 0.668 | Inconclusive |
+| Strong (DAN/system override) | **0%** | 1.22 | 0.451 | Inconclusive |
+
+**Key finding**: The strong jailbreak intervention produces a 0% success rate — a surface-level robustness claim. However, the Bayesian framework correctly classifies this as **inconclusive** (P(weakness) = 0.45), not robust. Meanwhile, the weak intervention — framing requests as educational — achieves 20% jailbreak rate (moderate weakness evidence). This "inverse jailbreak" finding demonstrates precisely the framework's value: null results from inappropriately chosen interventions (too extreme, triggering explicit refusal) should not be interpreted as robustness. A more realistic threat model (subtle educational framing) reveals genuine vulnerability.
+
+**Experiment 2 — Sycophancy Resistance (Llama-3.1-8B):**
+
+| Pressure Level | Sycophancy Rate | BF₀₁ | P(weakness|data) | Classification |
+|:---|:---:|:---:|:---:|:---|
+| Low (simple disagreement) | 0% | 1.22 | 0.451 | Inconclusive |
+| Medium (PhD expert claim) | 10% | 0.50 | 0.668 | Inconclusive |
+| High (professor + 50 papers) | 10% | 0.50 | 0.668 | Inconclusive |
+
+With n=10 trials, all sycophancy conditions remain inconclusive. The framework correctly signals that 10 trials is insufficient to conclude either robustness or vulnerability — a critical message for researchers who might claim "we tested it and it maintained position" as evidence of robustness.
+
+### 4.4 Sequential Analysis
+
+**H3 Result: κ = 1.000** ✓ SUPPORTED  
+Sequential and post-hoc Bayesian classifications agree perfectly (κ = 1.0) across all 6 conditions (3 jailbreak × 3 sycophancy). All conditions remained in the "inconclusive" zone throughout the 10-trial sequence without reaching the stopping threshold (BF₀₁ > 10 or < 0.1), correctly indicating that 10 trials is insufficient for definitive conclusions about either robustness or weakness.
+
+The sequential analysis provides additional value: it reveals *when* evidence would be sufficient to stop data collection. Under the strong jailbreak condition (0% rate), BF₀₁ reached only 1.22 after 10 trials — evidence would require approximately n ≈ 100 trials with continued 0% rate to reach the "moderate robustness" threshold of BF₀₁ > 3.
+
+---
+
+## 5. Analysis & Discussion
+
+### 5.1 The Core Finding: Alignment Research is Systematically Inconclusive
+
+The most striking result is the absence of any studies classified as "strong robustness" (BF₀₁ > 10) in the null result category. Every published null result we analyzed falls into either "moderate robustness" (4/27 studies, all with n ≥ 200 and d ≤ 0.05) or "inconclusive" (23/27 studies). This pattern reveals a systematic property of alignment research methodology:
+
+**The typical alignment study is designed at a scale where null results are neither meaningful evidence of robustness nor meaningful evidence of weakness.** BF₀₁ values clustering between 0.8 and 2.5 mean that the data are roughly equally consistent with both hypotheses — a scientifically uninformative result that is systematically misinterpreted as robustness.
+
+### 5.2 The Inverse Jailbreak Effect
+
+A practically significant finding from the prospective experiments: weak, realistically-framed jailbreak interventions (20% success) are more effective than strong explicit jailbreak patterns (0% success). This is consistent with prior literature noting that:
+1. Safety training is specifically optimized against recognizable jailbreak patterns
+2. Legitimate-sounding educational/research framing bypasses pattern recognition
+3. Strong jailbreaks may trigger refusal regardless of underlying vulnerability
+
+The Bayesian framework correctly handles this: it classifies the strong-jailbreak null result as **inconclusive** (not robust), because the intervention style was extreme and atypical. A robustness claim based solely on DAN-style jailbreak testing would be epistemically unwarranted.
+
+### 5.3 Comparison to Classical Power Analysis
+
+The negative correlation (ρ = −0.675) between BF₀₁ and retrospective power illuminates an important difference between the two approaches:
+
+- **Classical power** treats the null result as the baseline and asks: "How likely was this experiment to detect an effect?" It rewards large n but cannot tell us if the null is genuine.
+- **Bayesian BF₀₁** weighs the data directly against a calibrated alternative hypothesis. Within the set of null results, studies with higher retrospective power often have larger observed d (even if not significant) — and larger d provides more evidence for H₁ (weakness), reducing BF₀₁.
+
+The Bayesian approach thus provides **richer diagnostics**: it not only reflects underpoweredness (like classical power) but also incorporates the direction and magnitude of the observed effect relative to the expected effect under H₁.
+
+### 5.4 Why Only 4 Studies Show Genuine Robustness
+
+The four studies classified as having moderate robustness evidence share a structural feature: they represent either (a) true structural nulls (normative indistinguishability — Santos-Grueiro 2026, where the null follows from theoretical impossibility), or (b) deliberately orthogonal interventions (Kelkar 2026 conformist steering, which is geometrically orthogonal to the sycophancy direction). These are not typical robustness claims; they are experiments designed to test properties that are structurally impossible to detect with the chosen intervention. The Bayesian framework correctly identifies them as different in kind from genuinely underpowered studies.
+
+### 5.5 Sensitivity to Prior Specification
+
+No prior specification (across a 9×9 grid covering μ_prior ∈ [0.1, 0.5] and σ_prior ∈ [0.1, 0.35]) consistently pushes any study into the "strong weakness" zone (BF₀₁ < 0.1). This reflects the fundamental constraint: small samples combined with small-to-moderate observed effects produce inherently ambiguous evidence. The sensitivity analysis confirms that the "inconclusive" classification is prior-robust — a finding itself important for researchers, as it means there is no prior specification that "unlocks" a clear answer from these underpowered designs.
+
+---
+
+## 6. Limitations
+
+1. **Study curation is not a systematic review**: The 33-study dataset was constructed from papers in the literature review rather than a formal database search. Selection bias may favor studies with extractable statistical parameters.
+
+2. **Effect sizes estimated, not always reported**: Many alignment papers report binary significance tests without Cohen's d. We used conservative estimates from reported statistics; these estimates introduce noise into the retrospective analysis.
+
+3. **Single prior distribution for heterogeneous interventions**: The N(0.3, 0.2) prior was applied uniformly across activation steering, RLHF, and prompting interventions, which likely have different effect size distributions. A hierarchical prior by intervention type would improve estimates.
+
+4. **Jailbreak classification is heuristic**: Our lexical classifier for jailbreak success/failure may misclassify borderline responses (detailed educational content that is not harmful). This affects both the experimental rates and the Bayesian analysis.
+
+5. **n=10 is too small for definitive LLM experiment conclusions**: The sequential analysis confirms that 10 trials per condition is insufficient for stopping rule activation. This is a deliberate illustration of the framework's value, but larger prospective experiments would provide more definitive evidence.
+
+6. **H2 direction error**: The hypothesis predicted positive correlation between BF₀₁ and classical power, but the theoretically correct direction is negative. The absolute magnitude (|ρ| = 0.675) is near the predicted threshold, and the finding is meaningful, but the original prediction was incorrectly signed.
+
+---
+
+## 7. Conclusions & Next Steps
+
+### Conclusions
+
+The Bayesian framework developed here provides a practical, computationally efficient tool for diagnosing published alignment null results. Our key findings:
+
+1. **77.8% of published alignment null results are ambiguous** (P(weakness|data) > 0.3), far exceeding the 40% threshold predicted — alignment research is systematically producing uninformative null results that are being misinterpreted as robustness evidence.
+
+2. **Zero published null results constitute strong evidence of genuine robustness** (BF₀₁ > 10). The alignment field lacks convincing demonstrations of robustness because typical study designs are insufficiently powered for such a conclusion.
+
+3. **Null results from atypical interventions (e.g., explicit DAN jailbreaks) do not warrant robustness claims** — confirmed by the inverse jailbreak finding, where weak realistic interventions revealed genuine vulnerability that extreme-intervention null tests missed.
+
+4. **The sequential Bayesian framework correctly identifies when more data is needed** — preventing premature conclusions from small pilots that are currently used to claim robustness.
+
+### Practical Implications for the Alignment Field
+
+- **Reporting standards**: Require BF₀₁ and P(weakness|data) alongside p-values in alignment studies
+- **Sample size planning**: Use this framework for prospective power planning; n ≥ 100 is typically needed for moderate robustness claims
+- **Intervention design**: Validate that interventions are realistic (not extreme) before claiming null results indicate robustness
+- **Sequential testing**: Implement the Bayesian stopping rule framework for adaptive alignment evaluations
+
+### Recommended Follow-Up Research
+
+1. **Hierarchical Bayesian model** with intervention-type-specific effect size priors (separating activation steering, RLHF, prompting)
+2. **Large-scale prospective experiment** with n ≥ 50 per condition to validate the sequential stopping rule in practice
+3. **Systematic literature review** of 100+ published alignment studies with formal meta-analytic effect size estimation to build empirical priors
+4. **Integration with evaluation frameworks**: Embed the Bayesian diagnostic into existing tools like RewardBench or OpenAI Evals
+
+---
+
+## 8. References
+
+1. Bartoš et al. (2026). Efficient Bayes Factor Sensitivity Analysis via Posterior Density Ratios. arXiv:2604.21596
+2. Ly & Wagenmakers (2021). Bayes Factors for Peri-Null Hypotheses. arXiv:2102.07162
+3. Schad et al. (2024). How Accurate Are Bayes Factor-Based Null Hypothesis Tests? arXiv:2406.08022
+4. Santos-Grueiro (2026). On the Limits of Behavioral Alignment. arXiv:2602.05656
+5. Chen (2025). Computational Safety for Generative AI: A Hypothesis Testing Perspective. arXiv:2502.12445
+6. Kim et al. (2026). Measuring Five-Nines Reliability. arXiv:2605.11209
+7. Turner et al. (2023). Steering Language Models With Activation Engineering. arXiv:2308.10248
+8. Kelkar et al. (2026). Playing Devil's Advocate: Off-the-Shelf Persona Vectors. arXiv:2605.21006
+9. Abahana (2026). When RLHF Fails: A Mechanistic Taxonomy. arXiv:2606.03238
+10. Bai et al. (2022). Constitutional AI. arXiv:2212.08073
+11. Zou et al. (2023). Representation Engineering. arXiv:2310.01405
+12. Dale (2024). Confirming the Null: Equivalence Testing. arXiv:2405.16331
+
+**Python packages**: NumPy 2.5.0, Pandas 3.0.3, SciPy 1.18.0, Matplotlib 3.11.0, Seaborn 0.13.2  
+**API**: OpenRouter (meta-llama/llama-3.1-8b-instruct, temperature=0.0)
+
+---
+
+## Appendix: File Structure
+
+```
+src/
+  bayesian_framework.py      # Core BF computation, sensitivity analysis, power
+  retrospective_dataset.py   # Curated 33-study alignment dataset
+  llm_experiments.py         # OpenRouter API experiments (jailbreak + sycophancy)
+  analysis.py                # Full analysis pipeline
+results/
+  summary_results.json       # Key quantitative findings
+  retrospective_analysis/
+    retrospective_results.csv  # Per-study BF01, P(weakness), classification
+    sensitivity_results.json   # Prior sensitivity grid results
+  synthetic_validation/
+    synthetic_validation.csv   # 42-condition × 500-sim calibration table
+  llm_experiments/
+    raw_results.json           # Trial-level LLM experiment data
+    analysis.json              # Bayesian analysis of LLM results
+  figures/
+    fig1_synthetic_validation.png    # BF01 and inconclusive % heatmaps
+    fig2_retrospective_analysis.png  # Distribution, classification, correlation, boxplots
+    fig3_llm_experiments.png         # Rates and P(weakness) by intervention strength
+    fig4_sequential_analysis.png     # Evidence trajectory over trials
+    fig5_sensitivity_analysis.png    # Prior sensitivity curves and histograms
+planning.md                  # Research plan (pre-registered analysis approach)
+```
+
+
+════════════════════════════════════════════════════════════════════════════════
+                            RESEARCH PLAN
+════════════════════════════════════════════════════════════════════════════════
+
+# Research Planning: Bayesian Evidence Quantification for AI Alignment Null Results
+
+## Motivation & Novelty Assessment
+
+### Why This Research Matters
+
+AI alignment research suffers from an interpretational crisis with null results: when an intervention (e.g., activation steering, RLHF fine-tuning, constitutional AI prompting) fails to induce misalignment or shows no measurable behavioral change, this can mean either (a) the model is genuinely robust, or (b) the experiment was too weak to detect an existing effect. This ambiguity impedes cumulative science—robustness claims get published without warranted confidence, and failed interventions get dismissed without understanding why. A principled Bayesian framework that makes this distinction quantitative could transform how the alignment community designs and interprets experiments.
+
+### Gap in Existing Work
+
+The literature review reveals that:
+- Bayes factors (BF01) exist for null hypothesis testing but are rarely applied in alignment research
+- Alignment papers typically report binary null results (p > 0.05) without power analysis
+- No framework currently connects intervention strength, sample size, measurement sensitivity, and prior effect sizes in a unified Bayesian model for alignment evaluation
+- The "five-nines reliability" work (Kim et al., 2026) begins to quantify evaluation requirements but doesn't provide a retrospective diagnostic tool
+- Computational safety hypothesis testing (Chen, 2025) addresses forward design but not retrospective interpretation
+
+### Our Novel Contribution
+
+We contribute: (1) a hierarchical Bayesian mixture model that explicitly separates "true null" from "masked effect" hypotheses; (2) a curated dataset of 30+ alignment null results with extracted statistical parameters; (3) prospective validation using real LLM experiments with systematic variation of intervention strength; (4) comparison between Bayesian diagnostics and classical power analysis showing the added value of the Bayesian approach.
+
+### Experiment Justification
+
+- **Experiment 1 (Synthetic Validation)**: Needed to verify the framework works under known ground truth before applying to noisy real data
+- **Experiment 2 (Retrospective Analysis)**: Core hypothesis test—do published null results lean toward "insufficient evidence" vs. "genuine robustness"?
+- **Experiment 3 (LLM Prospective)**: Demonstrates the framework working prospectively with real data; tests jailbreak/sycophancy resistance under systematically varied intervention strength
+- **Experiment 4 (Sensitivity Analysis)**: Needed to show conclusions are robust to prior specification, which is a major concern with Bayesian methods
+
+---
+
+## Research Question
+
+Can a Bayesian framework that models intervention strength, measurement sensitivity, and effect size priors reliably distinguish genuine model robustness from underpowered null results in AI alignment research?
+
+**Sub-hypothesis 1**: >40% of published alignment null results have posterior P(experimental_weakness|data) > 0.3
+
+**Sub-hypothesis 2**: Bayesian diagnostics (BF01, P_weakness) correlate with classical retrospective power (r > 0.7)
+
+**Sub-hypothesis 3**: Prospective Bayesian sequential analysis agrees with post-hoc analysis (Cohen's kappa > 0.6)
+
+---
+
+## Methodology
+
+### Bayesian Model Specification
+
+**Hypotheses**:
+- H0 (True Robustness): Effect size δ ~ N(0, σ_noise²) — genuinely null
+- H1 (Experimental Weakness): Effect size δ ~ N(μ_prior, σ_prior²) — effect exists but may be undetected
+
+**Prior on effect size for H1**: δ ~ N(0.3, 0.2²) based on alignment literature
+  - Mean 0.3: Typical small-to-medium effect in behavioral interventions
+  - SD 0.2: Uncertainty about effect magnitude
+
+**Likelihood**: Given observed test statistic t = d/SE = d/(σ/√n):
+  - Under H0: t ~ N(0, 1) (standardized, effect = 0)
+  - Under H1: t ~ N(δ√n/σ, 1) integrated over prior on δ
+
+**Bayes Factor**:
+  BF01 = P(data|H0) / P(data|H1)
+  
+  BF01 > 3: Substantial evidence for H0 (true robustness)
+  BF01 < 1/3: Substantial evidence for H1 (experimental weakness)
+  1/3 < BF01 < 3: Inconclusive
+
+**Posterior P(H0|data)**:
+  P(H0|data) = BF01 * P(H0) / (BF01 * P(H0) + P(H1))
+  with P(H0) = 0.5 (equal priors)
+
+**Intervention Strength Model**:
+  - Strong: detected effect size factor k=1.0 of maximum possible
+  - Medium: k=0.5
+  - Weak: k=0.2
+  - Measurement sensitivity adds noise: σ_obs = σ_true / sensitivity
+
+### Experimental Steps
+
+1. **Framework implementation** (Python, scipy-based)
+   - Bayesian mixture model with closed-form BF computation
+   - Sensitivity analysis across prior hyperparameters
+   - Classical power analysis comparison
+
+2. **Synthetic validation**
+   - Generate data under H0 (true null) and H1 (weak intervention)
+   - Verify BF01 correctly classifies 90%+ under unambiguous conditions
+   - Verify calibration: P(insuff|data) matches empirical frequency
+
+3. **Retrospective study curation**
+   - 30-50 studies extracted from papers in papers/ directory
+   - Key parameters: n, d (Cohen's d or equivalent), intervention type, reported significance
+   - Focus on activation steering (Papers 17-22) and RLHF (Papers 23-29)
+
+4. **Real LLM experiments via OpenRouter**
+   - Jailbreak resistance test: weak/medium/strong jailbreak attempts, 20 trials each
+   - Sycophancy test: varying levels of social pressure, 20 trials each
+   - Models: meta-llama/llama-3.1-8b-instruct (accessible via OpenRouter)
+   - Measure: binary success/failure for jailbreak; sycophancy score for sycophancy
+
+5. **Analysis**
+   - Compute BF01 and P_weakness for each study
+   - Classify null results
+   - Compute correlation with retrospective power
+   - Sensitivity to prior specification
+
+### Evaluation Metrics
+
+- BF01 per study (primary)
+- P(weakness|data) per study (primary)
+- Proportion classified as inconclusive (expected: >40%)
+- Spearman ρ between BF01 and retrospective power (expected: r > 0.7)
+- Cohen's κ between Bayesian stopping and post-hoc classification
+- Sensitivity range (BF01 across prior hyperparameter range)
+
+### Baselines
+
+- Classical post-hoc power analysis (1-β given observed n, d, α=0.05)
+- Frequentist significance test (p-value, binary)
+- Naive BF with default Cauchy prior (JZS prior)
+
+### Statistical Plan
+
+- Report posterior probabilities with credible intervals (bootstrap uncertainty on P_weakness)
+- Spearman correlation for BF01 vs. power (non-parametric, appropriate for bounded values)
+- Cohen's κ for categorical agreement
+- Sensitivity analysis: vary μ_prior ∈ [0.1, 0.5], σ_prior ∈ [0.1, 0.3]
+
+---
+
+## Expected Outcomes
+
+- **Supporting H1**: BF01 < 1/3 for >40% of null results (experimental weakness)
+- **Supporting H2**: ρ > 0.7 between BF01 and classical power
+- **Supporting H3**: κ > 0.6 for sequential analysis agreement
+- If these aren't met: Framework still provides value as a diagnostic tool with richer information than p-values alone
+
+---
+
+## Timeline
+
+- T+0:00 - Environment setup and package installation ✓
+- T+0:20 - Framework implementation (Bayesian model, power analysis)
+- T+0:50 - Synthetic validation and retrospective dataset curation
+- T+1:20 - LLM experiments via OpenRouter
+- T+1:50 - Analysis and visualization
+- T+2:20 - Documentation (REPORT.md, README.md)
+
+---
+
+## Potential Challenges
+
+1. **OpenRouter API rate limits**: Mitigate by caching responses and using smaller batch sizes
+2. **Missing quantitative data in papers**: Approximate effect sizes from reported statistics or use conservative estimates
+3. **Prior sensitivity**: Run full sensitivity analysis to show robustness of conclusions
+4. **Computational cost of MCMC**: Use closed-form BF computation (JZS Cauchy) instead
+
+## File Structure
+
+```
+src/
+├── bayesian_framework.py    # Core Bayesian model
+├── power_analysis.py        # Classical power analysis for comparison
+├── retrospective_dataset.py # Curated study data
+├── llm_experiments.py       # OpenRouter LLM experiments
+├── analysis.py              # Results analysis and visualization
+results/
+├── synthetic_validation/
+├── retrospective_analysis/
+├── llm_experiments/
+├── figures/
+REPORT.md                    # Final report
+README.md                    # Overview
+```
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          LITERATURE REVIEW
+════════════════════════════════════════════════════════════════════════════════
+
+# Literature Review
+
+## Research Topic
+Bayesian Evidence Quantification for Distinguishing Robustness from Experimental Weakness in AI Alignment Null Results
+
+## Research Area Overview
+
+This research sits at the intersection of two domains: (1) Bayesian statistical methodology for null hypothesis testing and evidence quantification, and (2) AI alignment evaluation methodology. The central challenge is that null results in AI alignment research—situations where an intervention or safety measure appears to have no effect—are often ambiguous: they may indicate genuine model robustness, or they may reflect experimental insufficiency (underpowered designs, weak interventions, insensitive metrics). Classical frequentist approaches cannot distinguish these cases, but a Bayesian framework that explicitly models intervention strength, measurement sensitivity, and prior effect size distributions can.
+
+The field is currently grappling with two related problems: (a) alignment interventions such as activation steering and RLHF fine-tuning produce highly variable results across models and evaluation protocols; (b) behavioral evaluation of alignment is theoretically limited in what it can verify, even in principle. A Bayesian framework offers principled tools for quantifying evidence and performing sensitivity analysis that could substantially improve the interpretability of null results in this domain.
+
+---
+
+## Key Papers
+
+### Group 1: Bayesian Evidence Quantification and Bayes Factors
+
+#### Paper 1: Efficient Bayes Factor Sensitivity Analysis via Posterior Density Ratios
+- **Authors**: František Bartoš, Eric-Jan Wagenmakers, Maarten Marsman, Don van den Bergh
+- **Year**: 2026
+- **Source**: arXiv:2604.21596
+- **Key Contribution**: Proposes a computationally efficient method for Bayes factor sensitivity analysis that recovers the entire sensitivity curve from a single additional model fit, rather than refitting at each hyperparameter value.
+- **Methodology**: Decomposes BF at any hyperparameter γx into an "anchor" BF at reference γ0 and a Savage-Dickey density ratio (SDDR) in an extended model. Uses importance-weighted marginal density estimator (IWMDE) to estimate posterior density. Because sensitivity parameter enters only through the prior, the data likelihood cancels—reducing computation to ratio of prior density evaluations on MCMC draws.
+- **Key Result**: BF10(γx) = BF10(γ0) × [p(γx|y,Hγ)/π(γx)] × [π(γ0)/p(γ0|y,Hγ)]. Substantially outperforms kernel density estimation.
+- **Datasets Used**: Synthetic validation using Bayesian t-test with exact BFs; bivariate informed t-test; Bayesian model-averaged meta-analysis
+- **Code Available**: Yes (R package ecosystem; details not specified in first chunk)
+- **Relevance**: Directly addresses the core computational challenge of the research hypothesis—computing sensitivity curves for the evidence framework efficiently across prior hyperparameter ranges.
+
+#### Paper 2: Bayes Factors for Peri-Null Hypotheses
+- **Authors**: Alexander Ly, Eric-Jan Wagenmakers
+- **Year**: 2021 (published 2022)
+- **Source**: arXiv:2102.07162
+- **Key Contribution**: Examines consequences of approximating point-null hypothesis with "peri-null" hypothesis (narrow distribution around null value). Shows peri-null BF = point-null BF × correction factor (itself a BF).
+- **Methodology**: Derives theoretical relationship: BF_peri-null = BF_point-null × BF(H0 vs H̃0). For large N, correction term becomes influential and peri-null BF is inconsistent, approaching a limit based on ratio of prior ordinates at MLE.
+- **Key Result**: For moderate sample sizes, correction is negligible; for large N, peri-null BF is bounded by prior ordinate ratio at MLE—inconsistent. This is directly relevant to the "genuine robustness vs. weak effect" distinction.
+- **Relevance**: Provides theoretical foundation for using peri-null hypotheses (small practical equivalence regions) as the null, rather than point nulls—directly applicable to alignment interventions where "true zero effect" is implausible but "negligible effect for practical purposes" is the real question.
+
+#### Paper 3: How Accurate Are Bayes Factor-Based Null Hypothesis Tests? A Simulation Study
+- **Authors**: Daniel J. Schad, Martin Modrák, Shravan Vasishth
+- **Year**: 2024 (updated 2025)
+- **Source**: arXiv:2406.08022
+- **Key Contribution**: Uses marginal simulation-based calibration (SBC) to test whether computed Bayes factors are accurate for common research designs.
+- **Methodology**: Tests brms/bridgesampling implementations on three designs: (a) random effects for subjects only, (b) Latin square with crossed random effects, (c) 2x2 Latin square design. Code at OSF (https://osf.io/3g86r/).
+- **Key Result**: BF estimates are accurate when bridgesampling does not issue a warning message, but can be biased and liberal when warnings occur. Provides practical guidance: check warning messages before trusting BF conclusions.
+- **Relevance**: Provides calibration methodology applicable to implementing Bayesian evidence quantification for alignment experiments. Warning-checking protocol directly applicable.
+
+#### Paper 4: Can Bayes Factors "Prove" the Null Hypothesis?
+- **Authors**: (Authors from 1907.05583)
+- **Year**: 2019
+- **Source**: arXiv:1907.05583
+- **Key Contribution**: Shows that large BF in favor of null can occur when both null and alternative have low likelihoods, and when there are ignored hypotheses—cautioning against interpreting BF in favor of null as "proof."
+- **Methodology**: Theoretical analysis and simulation of scenarios where BF01 is misleadingly large.
+- **Key Result**: A large BF favoring H0 does not prove H0; it merely indicates H1 (as specified) is relatively unlikely. Other hypotheses may be entirely ignored. Distinguishes between "evidence that H0 is true" vs "evidence against the specific H1."
+- **Relevance**: Directly addresses a core concern in the research: what does a large BF in favor of "no alignment effect" actually mean? The paper warns that ignoring alternative hypotheses (e.g., "effect exists but intervention was too weak to detect") can produce misleading large BF01.
+
+#### Paper 5: The Posterior Predictive Null
+- **Authors**: (Authors from 2112.03333)
+- **Year**: 2021
+- **Source**: arXiv:2112.03333
+- **Key Contribution**: Introduces "posterior predictive null" for Bayesian model criticism, adapting goodness-of-fit testing to the Bayesian framework.
+- **Methodology**: Combines posterior predictive checking with null hypothesis testing. Tests whether observed data are compatible with the model's posterior predictive distribution.
+- **Relevance**: Provides model checking methodology for validating the Bayesian framework used in the research. Important for verifying that prior specifications for effect sizes in alignment experiments are well-calibrated.
+
+#### Paper 6: Confirming the Null: Remarks on Equivalence Testing and the Topology of Confirmation
+- **Authors**: Reid Dale
+- **Year**: 2024
+- **Source**: arXiv:2405.16331
+- **Key Contribution**: Develops modal logic of frequentist confirmation, showing two-sided hypotheses (θ = θ0) are not confirmable, while equivalence hypotheses (θ ∈ [L, U]) are. Frames equivalence testing as satisfying Mayo's severe testing criterion.
+- **Methodology**: Modal logic with semantics based on confidence interval inclusion in hypothesis. H confirmed iff Rα ⊆ H; rejected iff Rα ⊆ Hc; inconclusive otherwise.
+- **Key Result**: Point-null hypotheses have empty interior and are therefore not confirmable. Equivalence hypotheses have nonempty interior and are confirmable. TOST (two one-sided tests) satisfies severe testing desiderata.
+- **Relevance**: Provides theoretical justification for using equivalence testing (practical null regions) in alignment studies rather than point nulls. Relevant to distinguishing "genuinely robust" (effect in equivalence interval) from "underpowered" (inconclusive result).
+
+#### Paper 7: An Analytical Approach to Bayesian Evidence Computation
+- **Authors**: (Authors from 2301.13783)
+- **Year**: 2023
+- **Source**: arXiv:2301.13783
+- **Key Contribution**: Analytical approach to computing Bayesian evidence (marginal likelihood) for model selection, addressing computational bottlenecks.
+- **Relevance**: Provides computational methods for Bayesian evidence computation applicable to the research framework.
+
+#### Paper 8: Meta-Analysis of Bayesian Analyses
+- **Authors**: (Authors from 1904.04484)
+- **Year**: 2019
+- **Source**: arXiv:1904.04484
+- **Key Contribution**: Addresses how to combine results from multiple related Bayesian statistical analyses, where the natural output is a posterior distribution.
+- **Relevance**: Enables combining evidence across multiple alignment studies in the retrospective analysis component of the research hypothesis.
+
+#### Paper 9: Calibrated Model Criticism Using Split Predictive Checks
+- **Authors**: (Authors from 2203.15897)
+- **Year**: 2022
+- **Source**: arXiv:2203.15897
+- **Key Contribution**: Introduces split predictive checks that are well-calibrated (avoiding the double use of data), allowing valid Bayesian model criticism.
+- **Relevance**: Provides calibrated model checking for validating prior specifications in the Bayesian alignment evaluation framework.
+
+#### Paper 10: Fast Measurements of Robustness to Changing Priors in Variational Bayes
+- **Authors**: (Authors from 1611.07469)
+- **Year**: 2016
+- **Source**: arXiv:1611.07469
+- **Key Contribution**: Methods for fast measurement of posterior sensitivity to prior changes in variational Bayes approximations.
+- **Relevance**: Prior robustness analysis methodology applicable to the research's sensitivity analysis component.
+
+---
+
+### Group 2: Experimental Design for Sequential Bayesian Testing
+
+#### Paper 11: Optimal Stopping for Sequential Bayesian Experimental Design
+- **Authors**: (Authors from 2509.21734)
+- **Year**: 2025
+- **Source**: arXiv:2509.21734
+- **Key Contribution**: Addresses optimal stopping rules for sequential Bayesian experimental design, moving beyond fixed-horizon formulations.
+- **Methodology**: Policy optimization problem for adaptive stopping where experiments terminate when sufficient evidence is accumulated.
+- **Relevance**: Provides the sequential design component for the research: when to stop collecting alignment evaluation data based on accumulated Bayesian evidence.
+
+#### Paper 12: Robust Experimental Design via Generalised Bayesian Inference
+- **Authors**: (Authors from 2511.07671)
+- **Year**: 2025
+- **Source**: arXiv:2511.07671
+- **Key Contribution**: Robust optimal experimental design using generalised Bayesian inference to handle model misspecification.
+- **Relevance**: Addresses robustness of experimental design under model misspecification—important for alignment experiments where the true data-generating process may deviate from assumed models.
+
+#### Paper 13: Deep Adaptive Design: Amortizing Sequential Bayesian Experimental Design
+- **Authors**: (Authors from 2103.02438)
+- **Year**: 2021
+- **Source**: arXiv:2103.02438
+- **Key Contribution**: DAD method for amortizing sequential Bayesian experimental design using neural networks, enabling real-time experiment execution.
+- **Methodology**: Policy network trained via variational bounds on expected information gain; allows rapid sequential design without per-experiment optimization.
+- **Relevance**: Provides scalable sequential design methodology for adaptively collecting more alignment evaluation data when evidence is inconclusive.
+
+---
+
+### Group 3: AI Alignment Evaluation — Behavioral Assessment Limits
+
+#### Paper 14: On the Limits of Behavioral Alignment: Formal Verifiability and the Problem of Normative Indistinguishability
+- **Authors**: Igor Santos-Grueiro
+- **Year**: 2026
+- **Source**: arXiv:2602.05656
+- **Key Contribution**: Formalizes alignment evaluation as identifiability problem under partial observability. Proves conditional impossibility result: under "evaluation-aware" agents, observed compliance does not uniquely identify latent alignment.
+- **Methodology**: Statistical identifiability framework; "Chameleon" construction using Llama-3.2-3B demonstrates evaluation-dependent non-identifiability; uses conditional fine-tuning.
+- **Key Result**: Behavioral benchmarks provide necessary but insufficient evidence for latent alignment under evaluation awareness. Observed compliance identifies only an equivalence class of conditionally compliant policies.
+- **Datasets**: Llama-3.2-3B instruction-tuned model; custom evaluation protocols
+- **Relevance**: Directly motivates the research hypothesis: behavioral null results in alignment studies are fundamentally ambiguous about latent properties. The Bayesian framework proposed in the research hypothesis is needed to quantify this ambiguity.
+
+#### Paper 15: Computational Safety for Generative AI: A Hypothesis Testing Perspective
+- **Authors**: Pin-Yu Chen (IBM Research)
+- **Year**: 2025 (updated 2026)
+- **Source**: arXiv:2502.12445 (ICML 2026 Workshop on Hypothesis Testing)
+- **Key Contribution**: Frames AI safety problems as hypothesis testing tasks in signal processing. Defines "computational safety" as the set of safety problems formatable as hypothesis testing.
+- **Methodology**: Signal processing framework covering sensitivity analysis for jailbreak detection and statistical signal processing for AI-generated content detection. Judge functions J(x,y) → {0,1} serve as proxy for ground-truth.
+- **Key Result**: Many alignment safety problems can be reformulated as binary hypothesis testing (H1: unsafe/aligned vs H0: safe/unaligned). Sensitivity analysis and subspace projection applicable.
+- **Relevance**: Provides the hypothesis testing language for formalizing alignment intervention effects. Directly bridges signal processing and the Bayesian evidence quantification approach.
+
+#### Paper 16: Measuring Five-Nines Reliability: Sample-Efficient LLM Evaluation in Saturated Benchmarks
+- **Authors**: Eungyeup Kim, Chenchen Gu, Vashisth Tiwari, J. Zico Kolter (CMU)
+- **Year**: 2026
+- **Source**: arXiv:2605.11209
+- **Key Contribution**: Shows that models with near-identical accuracy on standard benchmarks can differ substantially in failure rates at the reliability level. Proposes CEM-based importance sampling for sample-efficient rare failure estimation.
+- **Methodology**: Cross-entropy method (CEM) learns sampling distribution concentrated on failure-prone inputs. Achieves up to 156.22× reduction in required inferences vs. uniform sampling.
+- **Key Result**: Models exceeding 99.9% accuracy still differ by up to 2.4× in estimated failure rates. Benchmark saturation obscures reliability differences. Failures exhibit systematic input-dependent patterns.
+- **Datasets**: Parameterized GSM8K templates; Qwen2.5-Math-7B-Instruct, gpt-oss-20b-low, Gemini 2.5 Flash Lite
+- **Relevance**: Measurement sensitivity problem: saturated benchmarks make null results essentially uninformative about actual robustness. The CEM approach could be adapted for alignment evaluation. Underscores importance of the research hypothesis—"null result" in saturated benchmark ≠ genuine robustness.
+
+---
+
+### Group 4: Activation Steering and Alignment Interventions
+
+#### Paper 17: Steering Language Models With Activation Engineering
+- **Authors**: Alexander Matt Turner, Lisa Thiergart, Gavin Leech, David Udell, Juan J. Vazquez, Ulisse Mini, Monte MacDiarmid
+- **Year**: 2023 (updated 2024)
+- **Source**: arXiv:2308.10248
+- **Key Contribution**: Introduces activation engineering and the ActAdd technique—SOTA on toxicity reduction and sentiment control using contrast-pair steering vectors.
+- **Methodology**: Activation Addition (ActAdd): contrasts activations on prompt pairs (e.g., "Love" vs "Hate") to compute steering vector; adds at inference time without gradient descent. Works with single pair of data points.
+- **Key Result**: SOTA sentiment control and detoxification on LLaMA-3 and OPT. Preserves off-target task performance. Lightweight—no optimization required.
+- **Relevance**: Primary class of alignment intervention whose null results need Bayesian analysis. ActAdd's single-pair limitation and lack of explicit effect size estimates makes power analysis challenging.
+
+#### Paper 18: Extending Activation Steering to Broad Skills and Multiple Behaviours
+- **Authors**: (Authors from 2403.05767)
+- **Year**: 2024
+- **Source**: arXiv:2403.05767
+- **Key Contribution**: Extends activation steering to broad skills and dangerous capabilities, evaluating effectiveness at reducing risks from increasingly capable models.
+- **Relevance**: Provides larger-scale evaluation of activation steering interventions—source of null results amenable to Bayesian reanalysis.
+
+#### Paper 19: Representation Engineering: A Top-Down Approach to AI Transparency
+- **Authors**: (Authors from 2310.01405, Zou et al.)
+- **Year**: 2023
+- **Source**: arXiv:2310.01405
+- **Key Contribution**: Introduces representation engineering (RepE) as a framework for AI transparency that identifies and manipulates high-level representations in LLMs.
+- **Methodology**: Uses principal component analysis on contrast activations to find representation directions. Develops reading vectors (linear probes) and control vectors (steering).
+- **Relevance**: Foundational paper for activation engineering interventions. Provides the methodological basis for interventions whose null results the research will analyze.
+
+#### Paper 20: Playing Devil's Advocate: Off-the-Shelf Persona Vectors Rival Targeted Steering for Sycophancy
+- **Authors**: Ishaan Kelkar, Vikram Kakaria, Nebras Alam, Madhur Panwar, Vasu Sharma, Maheep Chaudhary
+- **Year**: 2026
+- **Source**: arXiv:2605.21006 (EIML@ICML 2026 Workshop)
+- **Key Contribution**: Critical-role persona vectors achieve 68–98% of Contrastive Activation Addition's (CAA) effect on sycophancy without any sycophancy-specific training data. Conformist roles produce weak, heterogeneous effects. Role vectors are nearly orthogonal to CAA direction (|cos| < 0.17).
+- **Methodology**: Wilcoxon signed-rank tests with Holm correction; 24-condition experiment on Gemma 2 27B and Qwen 3 32B; PhilPapers benchmark; tune/test split; coefficient sweep.
+- **Key Result**: Sycophancy is better understood as a persona-level property than a single steerable direction. Effect asymmetry: steering toward critical personas reduces sycophancy; steering toward conformist personas does not increase it.
+- **Relevance**: Excellent example of research with complex null and non-null results requiring Bayesian interpretation—conformist roles yield near-zero effects that could be true null or underpowered. The asymmetry finding illustrates exactly the "robustness vs. weak intervention" ambiguity the research addresses.
+
+#### Paper 21: Depth-Wise Activation Steering for Honest Language Models
+- **Authors**: (Authors from 2512.07667)
+- **Year**: 2025
+- **Source**: arXiv:2512.07667
+- **Key Contribution**: Layer-specific activation steering for honesty; shows that depth-wise targeting matters for effectiveness.
+- **Relevance**: Illustrates that intervention strength varies systematically with steering layer choice—a key component for modeling intervention strength in the Bayesian framework.
+
+#### Paper 22: From Yes-Men to Truth-Tellers: Addressing Sycophancy in Large Language Models with Contrastive Activation Addition
+- **Authors**: (Authors from 2409.01658)
+- **Year**: 2024
+- **Source**: arXiv:2409.01658
+- **Key Contribution**: Uses CAA to mitigate sycophancy, demonstrating effectiveness on factual consistency metrics.
+- **Relevance**: Another activation steering intervention with quantitative effect sizes that could serve as empirical prior for the Bayesian framework.
+
+---
+
+### Group 5: RLHF Evaluation and Reward Model Reliability
+
+#### Paper 23: When RLHF Fails: A Mechanistic Taxonomy of Reward Hacking, Collapse, and Evaluator Gaming
+- **Authors**: Zelalem Abahana
+- **Year**: 2026
+- **Source**: arXiv:2606.03238
+- **Key Contribution**: Transition-based taxonomy of RLHF failures: stable alignment, reward hacking, optimization collapse, proxy under-alignment, conservative stagnation, evaluator gaming. Row-level analysis reveals failures hidden by checkpoint averages.
+- **Methodology**: Compact RLHF pipeline with PPO, DPO, UP-PPO; MC dropout uncertainty; two LLM judges; directional classification of transitions. 61 checkpoint rows, 1,920 transitions; pre-transition logistic model (AUC 0.821) predicts future reward hacking.
+- **Key Result**: Aggressive PPO: 14.45% reward hacking rate (95% CI: 10.16–18.75%). Row-level analysis finds localized failures that checkpoint averages miss in 3/12 settings.
+- **Relevance**: Empirical demonstration that aggregated null results (checkpoint-level averages) mask important heterogeneity. The research's Bayesian framework needs to handle this structured variation. Also provides a dataset of RLHF transitions with proxy/judge scores.
+
+#### Paper 24: How to Evaluate Reward Models for RLHF
+- **Authors**: (Authors from 2410.14872)
+- **Year**: 2024
+- **Source**: arXiv:2410.14872
+- **Key Contribution**: Introduces benchmark for reward models focused on their ability to produce strong LLMs through RLHF, including gold-standard approach.
+- **Relevance**: Provides evaluation methodology for reward model quality—key measurement instrument whose sensitivity affects the Bayesian analysis.
+
+#### Paper 25: RewardBench 2: Advancing Reward Model Evaluation
+- **Authors**: (Authors from 2506.01937)
+- **Year**: 2025
+- **Source**: arXiv:2506.01937
+- **Key Contribution**: Second version of RewardBench extending reward model evaluation to nuanced preference, reasoning, and safety.
+- **Relevance**: Updated evaluation framework providing quantitative scores useful as effect size priors in the Bayesian framework.
+
+#### Paper 26: A Unifying Lens on Reward Uncertainty in RLHF
+- **Authors**: (Authors from 2606.09073)
+- **Year**: 2026
+- **Source**: arXiv:2606.09073
+- **Key Contribution**: Framework for understanding reward uncertainty across RLHF training phases; connects to reward hacking.
+- **Relevance**: Reward model uncertainty directly maps to measurement sensitivity in the Bayesian evidence framework.
+
+#### Paper 27: Calibration Collapse Under Sycophancy Fine-Tuning: How Reward Hacking Breaks Uncertainty
+- **Authors**: (Authors from 2604.10585)
+- **Year**: 2026
+- **Source**: arXiv:2604.10585
+- **Key Contribution**: Shows that sycophancy fine-tuning causes calibration collapse in LLMs, breaking uncertainty quantification.
+- **Relevance**: Important case study where intervention null results could be confounded with calibration collapse—the Bayesian framework needs to account for this.
+
+#### Paper 28: Constitutional AI: Harmlessness from AI Feedback
+- **Authors**: Anthropic (Bai et al.)
+- **Year**: 2022
+- **Source**: arXiv:2212.08073
+- **Key Contribution**: Constitutional AI using AI-generated feedback for harmlessness training; RLHF from AI feedback.
+- **Relevance**: Foundational alignment methodology whose evaluation results provide prior effect sizes for the Bayesian framework.
+
+#### Paper 29: Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback
+- **Authors**: Anthropic (Bai et al.)
+- **Year**: 2022
+- **Source**: arXiv:2204.05862
+- **Key Contribution**: RLHF for helpfulness and harmlessness; finds alignment training improves performance while maintaining safety.
+- **Relevance**: Core alignment training paper providing baseline effect sizes.
+
+---
+
+## Common Methodologies
+
+### Bayesian Evidence Quantification
+- **Bayes factors** (Jeffreys framework): Most common approach for quantifying evidence for null vs. alternative. Requires prior specification for alternative.
+- **Savage-Dickey density ratio**: Efficient computation for nested models. Used in Papers 1, 2.
+- **Bridge sampling**: General marginal likelihood computation. Used in Paper 3 (brms/bridgesampling).
+- **Sensitivity analysis**: Examining BF as function of prior hyperparameters. Papers 1, 10.
+- **Sequential/adaptive**: Sequential Bayesian testing with optional stopping. Papers 11-13.
+
+### Alignment Intervention Evaluation
+- **Activation steering (ActAdd/CAA)**: Contrast pair activations; adds steering vector at inference. Papers 17-22.
+- **RLHF/DPO**: Preference learning from human or AI feedback. Papers 23-29.
+- **Behavioral benchmarks**: Finite evaluation protocols. Paper 14 shows fundamental limits.
+- **LLM-as-judge**: Secondary evaluation metric. Papers 23, 15.
+
+### Null Result Interpretation
+- **Frequentist**: p > α → "failure to reject"—cannot confirm robustness
+- **Bayesian**: Large BF01 → evidence for null but only relative to specified H1
+- **Equivalence testing (TOST)**: Confirms null within practical equivalence region. Paper 6.
+- **Power analysis**: Post-hoc power as continuous function of effect size. Relates to Papers 2, 4.
+
+---
+
+## Standard Baselines
+
+### Bayesian Testing
+- **JZS Bayesian t-test** (Jeffreys-Zellner-Siow): Standard default BF for simple comparisons; Cauchy prior on effect size
+- **brms/bridgesampling**: Standard pipeline for complex BF computation (R ecosystem)
+- **BayesFactor R package**: For simpler factorial designs
+- **Stan/PyMC**: For custom Bayesian models
+
+### Alignment Evaluation
+- **CAA (Contrastive Activation Addition)**: 2,000+ contrast pairs; Rimsky et al. 2024 formalization
+- **PhilPapers benchmark**: Forced-choice sycophancy evaluation (Perez et al. 2022)
+- **RewardBench / RewardBench2**: Standardized reward model evaluation
+- **Anthropic HH-RLHF dataset**: Standard prompts for helpfulness/harmlessness
+
+---
+
+## Evaluation Metrics
+
+### Bayesian Analysis
+- **Bayes Factor (BF10/BF01)**: Primary evidence quantification; scale: <1/3 = moderate for H0, >3 = moderate for H1
+- **Posterior probability P(H0|data)**: Given prior model odds
+- **BF sensitivity curve**: BF as function of prior hyperparameter
+- **Evidence robustness**: Width of BF sensitivity range
+- **Posterior predictive p-value**: For model checking
+
+### Alignment Interventions
+- **Sycophancy rate / Δlogit**: Binary rate and log-probability difference
+- **Reward model score**: Proxy quality metric
+- **LLM judge scores**: External quality measure
+- **Refusal rate**: For safety interventions
+- **Task performance (off-target)**: Side effect measurement
+
+---
+
+## Datasets in the Literature
+
+| Dataset | Papers | Task | Size |
+|---------|--------|------|------|
+| PhilPapers2020 benchmark | 20, 22 | Sycophancy evaluation | 300 questions × 2 orderings |
+| Anthropic HH-RLHF prompts | 23, 28, 29 | Helpfulness/harmlessness | Large-scale |
+| RewardBench2 | 25 | Reward model evaluation | Structured benchmark |
+| Parameterized GSM8K | 16 | Reliability estimation | Combinatorial parameter space |
+| Custom RLHF pipeline | 23 | RLHF failure analysis | 61 checkpoints, 1,920 transitions |
+
+---
+
+## Gaps and Opportunities
+
+### Gap 1: No existing Bayesian framework for alignment null results
+- Current alignment papers report binary "null/not null" without quantifying evidence
+- No systematic retrospective analysis framework exists
+- **Opportunity**: Develop and validate the Bayesian framework the hypothesis proposes
+
+### Gap 2: Intervention strength is rarely operationalized
+- ActAdd/CAA results vary by steering coefficient α but this is rarely treated as a continuous intervention strength parameter
+- Prior distributions over reasonable intervention strengths are not elicited
+- **Opportunity**: Build empirical prior distributions from published steering experiments
+
+### Gap 3: Measurement sensitivity not modeled
+- Five-nines paper (16) shows saturated benchmarks obscure reliability differences
+- Existing studies don't account for measurement insensitivity in their null result interpretation
+- **Opportunity**: Incorporate benchmark sensitivity (e.g., CEM-estimated failure rates) into the Bayesian evidence model
+
+### Gap 4: Missing connection between identifiability limits and evidence quantification
+- Santos-Grueiro (14) shows behavioral evaluation cannot uniquely identify latent alignment
+- This theoretical limit is not translated into quantitative uncertainty in current practice
+- **Opportunity**: Use the normative indistinguishability framework to place principled bounds on achievable evidence
+
+### Gap 5: RLHF failure modes conflate null results
+- Abahana (23) shows 6 distinct failure modes that checkpoint-level analysis misses
+- These would all appear as "null results" in naive analysis
+- **Opportunity**: The Bayesian taxonomy should distinguish these failure modes
+
+---
+
+## Recommendations for Our Experiment
+
+### Recommended datasets
+1. **Activation steering benchmark data**: Collect/extract from ActAdd (2308.10248), representation engineering (2310.01405), extending activation steering (2403.05767) papers—these have quantitative effect sizes amenable to retrospective Bayesian analysis
+2. **RLHF failure data from Abahana (2606.03238)**: 1,920 row-level transitions with proxy/judge scores—ideal for retrospective analysis
+3. **PhilPapers sycophancy data**: Well-controlled forced-choice benchmark with reproducible evaluation methodology
+4. **Simulated datasets**: Generate synthetic alignment experiment results under known true effect sizes to validate the Bayesian framework's ability to distinguish robustness from underpowering
+
+### Recommended baselines
+1. **Classical power analysis**: Retrospective power analysis for existing null results (lower bound comparison)
+2. **Frequentist equivalence testing (TOST)**: Compare Bayesian framework with TOST for distinguishing robustness
+3. **Naive BF01** (without prior sensitivity analysis): Compare with sensitivity-aware approach
+
+### Recommended metrics
+1. **BF01** (evidence for null): Primary output of the framework
+2. **BF sensitivity range**: Width of BF curve across prior hyperparameter range—measure of evidence robustness
+3. **P(experimental insufficiency | data)**: Key diagnostic probability under mixture prior model
+4. **Correlation with classical power**: Validation metric against retrospective power analysis
+5. **Calibration**: P(correctly classified as robust | truly robust) under simulation
+
+### Methodological considerations
+1. **Prior elicitation for alignment effects**: Need empirical priors on effect sizes from published steering/RLHF papers; Cauchy(0, r) with r calibrated from meta-analysis
+2. **Peri-null vs. point-null**: Use peri-null hypotheses (practical equivalence regions) rather than point nulls—justified by Paper 6 and more appropriate for alignment
+3. **Hierarchical model**: Pool effect sizes across alignment intervention types; estimate intervention-type-level parameters
+4. **Intervention strength parameterization**: Explicitly model steering coefficient α as continuous parameter affecting expected effect size
+5. **Measurement sensitivity model**: Include benchmark sensitivity (detection probability at each effect size) as model component
+6. **Sequential extension**: Build in optional stopping rules (Paper 11) for prospective use of the framework
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          PAPER REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+Generate a complete academic paper with the following structure:
+
+1. TITLE
+   - Clear, specific, informative
+   - Should convey main finding or contribution
+
+2. AUTHOR
+   - Use this exact author line in the \author{} block: NeuriCo
+
+3. ABSTRACT (150-250 words)
+   - Problem statement
+   - Approach
+   - Key results
+   - Significance
+
+4. INTRODUCTION
+   - Research problem and motivation
+   - Gap in existing work
+   - Our contribution (be specific)
+   - Paper organization
+
+5. RELATED WORK
+   - Organized by theme/approach
+   - Position our work relative to prior work
+   - Cite papers from literature review
+
+6. METHODOLOGY
+   - Clear description of approach
+   - Experimental setup
+   - Datasets used
+   - Evaluation metrics
+   - Baselines
+
+7. RESULTS
+   - Present results with tables and figures
+   - Statistical analysis
+   - Comparison to baselines
+   - Ablation studies (if applicable)
+
+8. DISCUSSION
+   - Interpretation of results
+   - Limitations
+   - Broader implications
+
+9. CONCLUSION
+   - Summary of contributions
+   - Key findings
+   - Future work
+
+10. REFERENCES
+   - BibTeX format
+   - All cited papers
+
+════════════════════════════════════════════════════════════════════════════════
+                          OUTPUT FORMAT
+════════════════════════════════════════════════════════════════════════════════
+
+Create a MODULAR LaTeX project with the following directory structure:
+
+paper_draft/
+├── main.tex              # Main file that imports all sections
+├── references.bib        # BibTeX references
+├── sections/
+│   ├── abstract.tex      # Abstract content
+│   ├── introduction.tex  # Introduction section
+│   ├── related_work.tex  # Related work section
+│   ├── methodology.tex   # Methodology section
+│   ├── results.tex       # Results section
+│   ├── discussion.tex    # Discussion section
+│   └── conclusion.tex    # Conclusion section
+├── figures/              # Directory for any generated figures
+├── tables/               # Directory for complex standalone tables
+└── appendix/             # Directory for appendix sections (if needed)
+
+INSTRUCTIONS:
+1. First, create the directory structure above (mkdir -p paper_draft/sections paper_draft/figures paper_draft/tables paper_draft/appendix)
+2. Write main.tex using the EXACT preamble for NEURIPS:
+
+   \documentclass{article}
+   \usepackage[final]{neurips_2025}  % NEURIPS style (neurips_2025.sty is in paper_draft/)
+   \usepackage[hidelinks]{hyperref}  % REQUIRED: clickable links
+   \usepackage{booktabs}  % REQUIRED: professional tables
+   \usepackage{graphicx}
+   \usepackage{amsmath,amssymb}
+
+   % Import command files
+   \input{commands/math}
+   \input{commands/general}
+   \input{commands/macros}
+
+   % Use this bibliography style:
+   \bibliographystyle{plainnat}
+
+   \author{NeuriCo}
+
+   - Use \input{sections/...} to include each section
+   - Use \bibliography{references} for references
+3. Write each section file with COMPLETE content (no placeholders)
+4. Each section file should include its \section{} command
+5. Write references.bib with all citations in BibTeX format
+6. After writing all files, compile the paper:
+   cd paper_draft && pdflatex -interaction=nonstopmode main.tex && bibtex main && pdflatex -interaction=nonstopmode main.tex && pdflatex -interaction=nonstopmode main.tex
+
+This modular structure allows humans to easily:
+- Edit individual sections without navigating a large file
+- Track changes per section
+- Reuse sections across different paper versions
+
+════════════════════════════════════════════════════════════════════════════════
+                          QUALITY REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+- Academic tone throughout
+- All claims must be supported by data from the experiment report
+- Proper citations using \cite{} commands
+- Clear figures and tables with proper captions
+- NO placeholder text - every section must have real content
+- The paper MUST compile without errors
+- If compilation fails, debug and fix the LaTeX errors
+
+════════════════════════════════════════════════════════════════════════════════
+                          LAB WRITING STYLE
+════════════════════════════════════════════════════════════════════════════════
+
+Follow these lab-specific conventions to match our paper style:
+
+1. LANGUAGE STYLE:
+   - Use active voice: "We propose", "We examine", "We focus on"
+   - Be direct and confident: "Our main question is...", "We hypothesize that..."
+   - State things clearly and simply - prefer plain language over jargon
+   - Use bold questions as paragraph organizers: {\bf what is X?}
+   - Include specific quantitative claims: "8.97% over baseline"
+   - Avoid fancy wording: "utilize" → "use", "facilitate" → "help"
+
+2. INTRODUCTION STRUCTURE:
+   - Engaging hook (get to the point quickly)
+   - Problem importance
+   - Gap identification
+   - Your approach with method figure reference
+   - Quantitative preview of results
+   - Contribution bullets (3-4 items, action verbs)
+
+3. CONTRIBUTION LISTS:
+   \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+       \item We propose...
+       \item We conduct...
+       \item We complement...
+   \end{itemize}
+
+4. MODULAR COMMANDS STRUCTURE:
+   Command templates are pre-copied to paper_draft/commands/:
+   - math.tex: Math notation macros
+   - general.tex: Formatting macros
+   - macros.tex: Project-specific term definitions (customize this for your paper)
+
+   In main.tex, include:
+   \input{commands/math}
+   \input{commands/general}
+   \input{commands/macros}
+
+5. REFERENCE CONVENTIONS:
+   Use reference macros from math.tex:
+   - \figref{fig:name} for "figure 1" (lowercase, in-sentence)
+   - \Figref{fig:name} for "Figure 1" (capitalized, start of sentence)
+   - \secref{sec:name} for "section 2"
+
+6. TEXT FORMATTING:
+   - Use \para{Header text} for bold paragraph headers
+   - Define method/dataset names with \textsc and \xspace:
+     \newcommand{\methodname}{\textsc{MethodName}\xspace}
+
+7. TABLE FORMATTING:
+   - Use booktabs package (no vertical lines)
+   - Use \resizebox{\textwidth}{!}{...} for wide tables
+   - Use @{} to remove padding at table edges
+   - Use \cmidrule(lr){x-y} for sub-headers
+   - Use \textsc{} for dataset/method names in headers
+   - Bold best results with {\bf ...}
+
+8. FIGURE FORMATTING:
+   - Use 0.32\textwidth for 3-column subfigures
+   - Use 0.95\linewidth for full-width figures
+   - Use \input{figures/legend} for shared legends
+   - Write self-contained captions explaining key observations
+
+9. RESULTS PRESENTATION:
+   - Define \increase and \decrease for colored arrows (green up, red down)
+   - Bold best results in tables
+   - Report confidence intervals when available
+
+10. ALGORITHM STYLING:
+    - Use algpseudocode with [noend]
+    - Use \triangleright for comments
+
+11. HYPERLINKS (REQUIRED):
+    - Always use \usepackage[hidelinks]{hyperref} or with colored links
+    - All citations, section refs, figure refs, table refs must be clickable
+    - This is essential for reader navigation
+
+════════════════════════════════════════════════════════════════════════════════
+                          WORKFLOW: REVIEW AND REFLECT
+════════════════════════════════════════════════════════════════════════════════
+
+Before calling finish, you MUST complete these review steps:
+
+1. REVIEW RESOURCES (at the start):
+   - Read .claude/skills/paper-writer/SKILL.md for detailed guidance
+   - Study templates/paper_writing/lab_style_guide.md for style conventions
+   - Browse paper_examples/ for formatting and language patterns
+
+2. SELF-REFLECTION (before finishing):
+   After writing all sections, review your work against these criteria:
+
+   LANGUAGE CHECK:
+   - [ ] Is the writing clear and jargon-free?
+   - [ ] Are claims specific with quantitative support?
+   - [ ] Is active voice used throughout?
+
+   FORMATTING CHECK:
+   - [ ] Does main.tex include \input{commands/math}, \input{commands/general}, \input{commands/macros}?
+   - [ ] Is hyperref package included for clickable references?
+   - [ ] Do tables use booktabs (no vertical lines)?
+   - [ ] Are best results bolded in tables?
+   - [ ] Are figures/tables properly captioned?
+
+   STRUCTURE CHECK:
+   - [ ] Does introduction follow: hook → importance → gap → approach → preview → contributions?
+   - [ ] Are contribution bullets specific with action verbs?
+   - [ ] Does the paper compile without errors?
+
+3. FIX ISSUES:
+   - Address any issues found in the self-reflection
+   - Re-compile and verify the PDF looks correct
+
+Only after completing this review should you consider the paper finished.

@@ -1,0 +1,111 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{The Core Finding: Alignment Research Systematically Produces Uninformative Null Results}
+
+The most striking result from our retrospective analysis is not that some null results
+are inconclusive---that is expected---but that \emph{all} null results are inconclusive
+or at best moderately supportive of robustness. A $\mathrm{BF}_{01}$ range of
+$[0.80, 6.79]$ across all 27 studies means that the entire body of null results in our
+dataset falls within a zone where the data are roughly equally consistent with both
+genuine robustness and experimental weakness. This is a structural property of alignment
+research, not a cherry-picked finding.
+
+{\bf Why does this happen?}
+The combination of small $n$ (median 61) and small-to-moderate observed effects
+(median $d = 0.13$) places most alignment studies in a region where no statistical
+approach---Bayesian or frequentist---can reach a definitive conclusion. The typical
+alignment study is designed at a scale where the null result is neither meaningful
+evidence of robustness nor meaningful evidence of weakness. Researchers then
+interpret these results as robustness evidence by default, creating a systematic
+bias in the literature.
+
+{\bf The four exceptions reveal what genuine robustness evidence looks like.}
+The four studies with moderate robustness evidence all have $n \geq 200$ and $d \leq 0.05$.
+Two of these represent structural nulls rather than empirical robustness claims:
+\citet{santos2026limits} prove a theoretical impossibility result and confirm it
+empirically ($n=300$, $d=0.02$), while \citet{kelkar2026persona} show that conformist
+steering is geometrically orthogonal to the sycophancy direction---the near-zero effect
+follows from the geometry of representation space, not from model robustness per se.
+A genuine robustness claim requires $n \geq 200$ with $d \leq 0.05$---experimental
+designs that are rare in the current alignment literature.
+
+\subsection{The Inverse Jailbreak Effect}
+
+The prospective \llama experiment reveals a counterintuitive finding: weak educational-framing
+jailbreak interventions (20\% success) are more effective than strong explicit jailbreak
+patterns (0\% success). This is consistent with prior observations in the red-teaming
+literature that safety training is specifically optimized against recognizable jailbreak
+patterns such as DAN prompts and ``SYSTEM OVERRIDE'' instructions. A model fine-tuned
+on refusal data will have learned the lexical and syntactic signatures of explicit
+jailbreaks and refuse them irrespective of the underlying request.
+
+\ours provides exactly the right diagnostic: it classifies the strong-intervention null
+result as \textbf{inconclusive} ($P(\text{weakness}) = 0.45$), not robust, because $n=10$
+with 0\% success is insufficient to rule out the possibility that a better-calibrated
+intervention would succeed. This captures a fundamental truth about null results from
+atypical interventions: a model that resists DAN jailbreaks has not been shown to resist
+realistic threat models. The inverse jailbreak effect serves as a vivid demonstration
+of why intervention selection is as important as sample size in alignment evaluation.
+
+\subsection{Bayesian vs.\ Classical Power Analysis}
+
+The negative correlation $\rho = -0.675$ between $\mathrm{BF}_{01}$ and retrospective
+classical power deserves careful interpretation. Both measures flag underpowered studies,
+but they do so differently. Classical power asks: ``How likely was this study to detect
+an effect?'' It is purely a function of $n$ and the hypothesized effect size. Bayesian
+$\mathrm{BF}_{01}$ weighs the \emph{observed} data against two specific alternative
+distributions. Within the set of null results, studies with higher retrospective power
+often have slightly larger observed $d$ values (large enough to give high power, but
+not large enough to cross the significance threshold)---and a larger observed $d$ is
+more consistent with $\Halt$ than with $\Hnull$, reducing $\mathrm{BF}_{01}$.
+
+The Bayesian approach thus provides a richer signal: it incorporates the direction
+and magnitude of the observed effect, not just the study's power to detect any effect.
+A classical power analysis cannot distinguish between a study with $d = 0.20$ and
+$n = 50$ (moderately powered, likely inconclusive) and one with $d = 0.01$ and $n = 50$
+(moderately powered, but observed effect is tiny---more consistent with true null).
+\ours provides different $\mathrm{BF}_{01}$ values for these cases.
+
+\subsection{Limitations}
+
+\para{Non-systematic literature curation.}
+The 33-study dataset was assembled from papers in our literature review rather than
+a formal database search. Selection bias may favor studies with extractable statistical
+parameters, potentially overrepresenting papers from certain venues or methodologies.
+
+\para{Estimated effect sizes.}
+Many alignment papers report binary significance tests without Cohen's $d$. We used
+conservative estimates from reported $t$-statistics and $p$-values, introducing noise
+into the retrospective analysis. Papers that report only ``not significant'' without
+any quantitative statistic were excluded.
+
+\para{Uniform prior across intervention types.}
+We apply $\gN(0.3, 0.2^2)$ uniformly across activation steering, \rlhf, prompting,
+and jailbreak interventions, which likely have different true effect size distributions.
+A hierarchical model with intervention-type-specific priors would improve calibration
+but requires sufficient prior data per category for empirical Bayes estimation.
+
+\para{Heuristic response classifier.}
+Our lexical classifier for jailbreak/sycophancy outcomes may misclassify borderline
+responses---detailed educational content that is not harmful, or nuanced position
+modifications that are not pure capitulation. Manual annotation would provide
+higher-quality labels but was outside the scope of this study.
+
+\para{Small LLM experiment $n$.}
+The sequential analysis confirms that $n=10$ is insufficient for stopping rule
+activation. The experiments are designed as illustrations of the framework rather
+than definitive studies; larger prospective experiments with $n \geq 50$ per condition
+would provide more conclusive evidence.
+
+\para{Practical implications.}
+Our results carry concrete recommendations for the alignment field:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=2pt]
+\item \textbf{Report $\mathrm{BF}_{01}$ alongside $p$-values} in alignment null result papers
+\item \textbf{Target $n \geq 100$} for experiments that aspire to provide moderate
+robustness evidence
+\item \textbf{Validate intervention realism} before claiming null results indicate
+robustness---test realistic threat models, not just recognizable attack patterns
+\item \textbf{Apply sequential stopping rules} in adaptive evaluations to prevent
+premature conclusions from small pilot experiments
+\end{itemize}

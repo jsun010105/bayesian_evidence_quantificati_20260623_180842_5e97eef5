@@ -1,0 +1,491 @@
+[
+  {
+    "arxiv_id": "0910.5060v3",
+    "title": "Two-sample Bayesian Nonparametric Hypothesis Testing",
+    "authors": [
+      "Chris C. Holmes",
+      "Fran\u00e7ois Caron",
+      "Jim E. Griffin"
+    ],
+    "year": 2009,
+    "abstract": "In this article we describe Bayesian nonparametric procedures for two-sample hypothesis testing. Namely, given two sets of samples $\\mathbf{y}^{\\scriptscriptstyle(1)}\\;$\\stackrel{\\scriptscriptstyle{iid}}{\\s im}$\\;F^{\\scriptscriptstyle(1)}$ and $\\mathbf{y}^{\\scriptscriptstyle(2 )}\\;$\\stackrel{\\scriptscriptstyle{iid}}{\\sim}$\\;F^{\\scriptscriptstyle( 2)}$, with $F^{\\scriptscriptstyle(1)},F^{\\scriptscriptstyle(2)}$ unknown, we wish to evaluate the evidence for the null hypothesis $H_0:F^{\\scriptscrip",
+    "url": "https://arxiv.org/pdf/0910.5060v3",
+    "query": "Bayesian hypothesis testing AI alignment null results power analysis"
+  },
+  {
+    "arxiv_id": "2403.16981v2",
+    "title": "The Sample Complexity of Simple Binary Hypothesis Testing",
+    "authors": [
+      "Ankit Pensia",
+      "Varun Jog",
+      "Po-Ling Loh"
+    ],
+    "year": 2024,
+    "abstract": "The sample complexity of simple binary hypothesis testing is the smallest number of i.i.d.\\ samples required to distinguish between two distributions $p$ and $q$ in either: (i) the prior-free setting, with type-I error at most $\u03b1$ and type-II error at most $\u03b2$; or (ii) the Bayesian setting, with Bayes error at most $\u03b4$ and prior distribution $(\u03c0, 1-\u03c0)$. This problem has only been studied when $\u03b1= \u03b2$ (prior-free) or $\u03c0= 1/2$ (Bayesian), and the sample complexity is known to be characterized by th",
+    "url": "https://arxiv.org/pdf/2403.16981v2",
+    "query": "Bayesian hypothesis testing AI alignment null results power analysis"
+  },
+  {
+    "arxiv_id": "2502.12445v2",
+    "title": "Computational Safety for Generative AI: A Hypothesis Testing Perspective",
+    "authors": [
+      "Pin-Yu Chen"
+    ],
+    "year": 2025,
+    "abstract": "AI safety is a rapidly growing area of research that seeks to prevent the harm and misuse of frontier AI technology, particularly with respect to generative AI (GenAI) tools that are capable of creating realistic and high-quality content through text prompts. Examples of such tools include large language models (LLMs) and text-to-image (T2I) diffusion models. As the performance of various leading GenAI models approaches saturation due to similar training data sources and neural network architect",
+    "url": "https://arxiv.org/pdf/2502.12445v2",
+    "query": "Bayesian hypothesis testing AI alignment null results power analysis"
+  },
+  {
+    "arxiv_id": "1512.00969v1",
+    "title": "Posterior Belief Assessment: Extracting Meaningful Subjective Judgements from Bayesian Analyses with Complex Statistical Models",
+    "authors": [
+      "Daniel Williamson",
+      "Michael Goldstein"
+    ],
+    "year": 2015,
+    "abstract": "In this paper, we are concerned with attributing meaning to the results of a Bayesian analysis for a problem which is sufficiently complex that we are unable to assert a precise correspondence between the expert probabilistic judgements of the analyst and the particular forms chosen for the prior specification and the likelihood for the analysis. In order to do this, we propose performing a finite collection of additional Bayesian analyses under alternative collections of prior and likelihood mo",
+    "url": "https://arxiv.org/pdf/1512.00969v1",
+    "query": "Bayesian hypothesis testing AI alignment null results power analysis"
+  },
+  {
+    "arxiv_id": "1402.5723v5",
+    "title": "Smoothing and mean-covariance estimation of functional data with a Bayesian hierarchical model",
+    "authors": [
+      "Jingjing Yang",
+      "Hongxiao Zhu",
+      "Taeryon Choi"
+    ],
+    "year": 2014,
+    "abstract": "Functional data, with basic observational units being functions (e.g., curves, surfaces) varying over a continuum, are frequently encountered in various applications. While many statistical tools have been developed for functional data analysis, the issue of smoothing all functional observations simultaneously is less studied. Existing methods often focus on smoothing each individual function separately, at the risk of removing important systematic patterns common across functions. We propose a ",
+    "url": "https://arxiv.org/pdf/1402.5723v5",
+    "query": "Bayesian hypothesis testing AI alignment null results power analysis"
+  },
+  {
+    "arxiv_id": "2601.16513v1",
+    "title": "Competing Visions of Ethical AI: A Case Study of OpenAI",
+    "authors": [
+      "Melissa Wilfley",
+      "Mengting Ai",
+      "Madelyn Rose Sanfilippo"
+    ],
+    "year": 2026,
+    "abstract": "Introduction. AI Ethics is framed distinctly across actors and stakeholder groups. We report results from a case study of OpenAI analysing ethical AI discourse. Method. Research addressed: How has OpenAI's public discourse leveraged 'ethics', 'safety', 'alignment' and adjacent related concepts over time, and what does discourse signal about framing in practice? A structured corpus, differentiating between communication for a general audience and communication with an academic audience, was assem",
+    "url": "https://arxiv.org/pdf/2601.16513v1",
+    "query": "Bayesian hypothesis testing AI alignment null results power analysis"
+  },
+  {
+    "arxiv_id": "2603.28944v1",
+    "title": "AI prediction leads people to forgo guaranteed rewards",
+    "authors": [
+      "Aoi Naito",
+      "Hirokazu Shirado"
+    ],
+    "year": 2026,
+    "abstract": "Artificial intelligence (AI) is understood to affect the content of people's decisions. Here, using a behavioral implementation of the classic Newcomb's paradox in 1,305 participants, we show that AI can also change how people decide. In this paradigm, belief in predictive authority can lead individuals to constrain decision-making, forgoing a guaranteed reward. Over 40% of participants treated AI as such a predictive authority. This significantly increased the odds of forgoing the guaranteed re",
+    "url": "https://arxiv.org/pdf/2603.28944v1",
+    "query": "Bayesian hypothesis testing AI alignment null results power analysis"
+  },
+  {
+    "arxiv_id": "2501.02842v1",
+    "title": "Foundations of GenIR",
+    "authors": [
+      "Qingyao Ai",
+      "Jingtao Zhan",
+      "Yiqun Liu"
+    ],
+    "year": 2025,
+    "abstract": "The chapter discusses the foundational impact of modern generative AI models on information access (IA) systems. In contrast to traditional AI, the large-scale training and superior data modeling of generative AI models enable them to produce high-quality, human-like responses, which brings brand new opportunities for the development of IA paradigms. In this chapter, we identify and introduce two of them in details, i.e., information generation and information synthesis. Information generation a",
+    "url": "https://arxiv.org/pdf/2501.02842v1",
+    "query": "Bayesian hypothesis testing AI alignment null results power analysis"
+  },
+  {
+    "arxiv_id": "1503.07791v1",
+    "title": "Sequential Monte Carlo with Adaptive Weights for Approximate Bayesian Computation",
+    "authors": [
+      "Fernando V. Bonassi",
+      "Mike West"
+    ],
+    "year": 2015,
+    "abstract": "Methods of approximate Bayesian computation (ABC) are increasingly used for analysis of complex models. A major challenge for ABC is over-coming the often inherent problem of high rejection rates in the accept/reject methods based on prior:predictive sampling. A number of recent developments aim to address this with extensions based on sequential Monte Carlo (SMC) strategies. We build on this here, introducing an ABC SMC method that uses data-based adaptive weights. This easily implemented and c",
+    "url": "https://arxiv.org/pdf/1503.07791v1",
+    "query": "Bayesian hypothesis testing AI alignment null results power analysis"
+  },
+  {
+    "arxiv_id": "2312.03893v1",
+    "title": "Deliberative Technology for Alignment",
+    "authors": [
+      "Andrew Konya",
+      "Deger Turan",
+      "Aviv Ovadya"
+    ],
+    "year": 2023,
+    "abstract": "For humanity to maintain and expand its agency into the future, the most powerful systems we create must be those which act to align the future with the will of humanity. The most powerful systems today are massive institutions like governments, firms, and NGOs. Deliberative technology is already being used across these institutions to help align governance and diplomacy with human will, and modern AI is poised to make this technology significantly better. At the same time, the race to superhuma",
+    "url": "https://arxiv.org/pdf/2312.03893v1",
+    "query": "Bayesian hypothesis testing AI alignment null results power analysis"
+  },
+  {
+    "arxiv_id": "2301.13783v1",
+    "title": "An analytical approach to Bayesian evidence computation",
+    "authors": [
+      "Juan Garcia-Bellido"
+    ],
+    "year": 2023,
+    "abstract": "The Bayesian evidence is a key tool in model selection, allowing a comparison of models with different numbers of parameters. Its use in analysis of cosmological models has been limited by difficulties in calculating it, with current numerical algorithms requiring supercomputers. In this paper we give exact formulae for the Bayesian evidence in the case of Gaussian likelihoods with arbitrary correlations and top-hat priors, and approximate formulae for the case of likelihood distributions with l",
+    "url": "https://arxiv.org/pdf/2301.13783v1",
+    "query": "Bayesian evidence factor experimental design null results robustness"
+  },
+  {
+    "arxiv_id": "1903.05480v3",
+    "title": "Variational Bayesian Optimal Experimental Design",
+    "authors": [
+      "Adam Foster",
+      "Martin Jankowiak",
+      "Eli Bingham"
+    ],
+    "year": 2019,
+    "abstract": "Bayesian optimal experimental design (BOED) is a principled framework for making efficient use of limited experimental resources. Unfortunately, its applicability is hampered by the difficulty of obtaining accurate estimates of the expected information gain (EIG) of an experiment. To address this, we introduce several classes of fast EIG estimators by building on ideas from amortized variational inference. We show theoretically and empirically that these estimators can provide significant gains ",
+    "url": "https://arxiv.org/pdf/1903.05480v3",
+    "query": "Bayesian evidence factor experimental design null results robustness"
+  },
+  {
+    "arxiv_id": "1309.1799v4",
+    "title": "Bayesian Nonparametric Weighted Sampling Inference",
+    "authors": [
+      "Yajuan Si",
+      "Natesh S. Pillai",
+      "Andrew Gelman"
+    ],
+    "year": 2013,
+    "abstract": "It has historically been a challenge to perform Bayesian inference in a design-based survey context. The present paper develops a Bayesian model for sampling inference in the presence of inverse-probability weights. We use a hierarchical approach in which we model the distribution of the weights of the nonsampled units in the population and simultaneously include them as predictors in a nonparametric Gaussian process regression. We use simulation studies to evaluate the performance of our proced",
+    "url": "https://arxiv.org/pdf/1309.1799v4",
+    "query": "Bayesian evidence factor experimental design null results robustness"
+  },
+  {
+    "arxiv_id": "0910.5060v3",
+    "title": "Two-sample Bayesian Nonparametric Hypothesis Testing",
+    "authors": [
+      "Chris C. Holmes",
+      "Fran\u00e7ois Caron",
+      "Jim E. Griffin"
+    ],
+    "year": 2009,
+    "abstract": "In this article we describe Bayesian nonparametric procedures for two-sample hypothesis testing. Namely, given two sets of samples $\\mathbf{y}^{\\scriptscriptstyle(1)}\\;$\\stackrel{\\scriptscriptstyle{iid}}{\\s im}$\\;F^{\\scriptscriptstyle(1)}$ and $\\mathbf{y}^{\\scriptscriptstyle(2 )}\\;$\\stackrel{\\scriptscriptstyle{iid}}{\\sim}$\\;F^{\\scriptscriptstyle( 2)}$, with $F^{\\scriptscriptstyle(1)},F^{\\scriptscriptstyle(2)}$ unknown, we wish to evaluate the evidence for the null hypothesis $H_0:F^{\\scriptscrip",
+    "url": "https://arxiv.org/pdf/0910.5060v3",
+    "query": "Bayesian evidence factor experimental design null results robustness"
+  },
+  {
+    "arxiv_id": "1508.00279v1",
+    "title": "Efficient computation of Bayesian optimal discriminating designs",
+    "authors": [
+      "Holger Dette",
+      "Roman Guchenko",
+      "Viatcheslav B. Melas"
+    ],
+    "year": 2015,
+    "abstract": "An efficient algorithm for the determination of Bayesian optimal discriminating designs for competing regression models is developed, where the main focus is on models with general distributional assumptions beyond the \"classical\" case of normally distributed homoscedastic errors. For this purpose we consider a Bayesian version of the Kullback- Leibler (KL) optimality criterion introduced by L\u00f3pez-Fidalgo et al. (2007). Discretizing the prior distribution leads to local KL-optimal discriminating",
+    "url": "https://arxiv.org/pdf/1508.00279v1",
+    "query": "Bayesian evidence factor experimental design null results robustness"
+  },
+  {
+    "arxiv_id": "2511.07671v1",
+    "title": "Robust Experimental Design via Generalised Bayesian Inference",
+    "authors": [
+      "Yasir Zubayr Barlas",
+      "Sabina J. Sloman",
+      "Samuel Kaski"
+    ],
+    "year": 2025,
+    "abstract": "Bayesian optimal experimental design is a principled framework for conducting experiments that leverages Bayesian inference to quantify how much information one can expect to gain from selecting a certain design. However, accurate Bayesian inference relies on the assumption that one's statistical model of the data-generating process is correctly specified. If this assumption is violated, Bayesian methods can lead to poor inference and estimates of information gain. Generalised Bayesian (or Gibbs",
+    "url": "https://arxiv.org/pdf/2511.07671v1",
+    "query": "Bayesian evidence factor experimental design null results robustness"
+  },
+  {
+    "arxiv_id": "1512.00969v1",
+    "title": "Posterior Belief Assessment: Extracting Meaningful Subjective Judgements from Bayesian Analyses with Complex Statistical Models",
+    "authors": [
+      "Daniel Williamson",
+      "Michael Goldstein"
+    ],
+    "year": 2015,
+    "abstract": "In this paper, we are concerned with attributing meaning to the results of a Bayesian analysis for a problem which is sufficiently complex that we are unable to assert a precise correspondence between the expert probabilistic judgements of the analyst and the particular forms chosen for the prior specification and the likelihood for the analysis. In order to do this, we propose performing a finite collection of additional Bayesian analyses under alternative collections of prior and likelihood mo",
+    "url": "https://arxiv.org/pdf/1512.00969v1",
+    "query": "Bayesian evidence factor experimental design null results robustness"
+  },
+  {
+    "arxiv_id": "1512.01013v1",
+    "title": "Bayesian Variable Selection and Estimation for Group Lasso",
+    "authors": [
+      "Xiaofan Xu",
+      "Malay Ghosh"
+    ],
+    "year": 2015,
+    "abstract": "The paper revisits the Bayesian group lasso and uses spike and slab priors for group variable selection. In the process, the connection of our model with penalized regression is demonstrated, and the role of posterior median for thresholding is pointed out. We show that the posterior median estimator has the oracle property for group variable selection and estimation under orthogonal designs, while the group lasso has suboptimal asymptotic estimation rate when variable selection consistency is a",
+    "url": "https://arxiv.org/pdf/1512.01013v1",
+    "query": "Bayesian evidence factor experimental design null results robustness"
+  },
+  {
+    "arxiv_id": "1402.5723v5",
+    "title": "Smoothing and mean-covariance estimation of functional data with a Bayesian hierarchical model",
+    "authors": [
+      "Jingjing Yang",
+      "Hongxiao Zhu",
+      "Taeryon Choi"
+    ],
+    "year": 2014,
+    "abstract": "Functional data, with basic observational units being functions (e.g., curves, surfaces) varying over a continuum, are frequently encountered in various applications. While many statistical tools have been developed for functional data analysis, the issue of smoothing all functional observations simultaneously is less studied. Existing methods often focus on smoothing each individual function separately, at the risk of removing important systematic patterns common across functions. We propose a ",
+    "url": "https://arxiv.org/pdf/1402.5723v5",
+    "query": "Bayesian evidence factor experimental design null results robustness"
+  },
+  {
+    "arxiv_id": "1512.00976v1",
+    "title": "Sequential Bayesian Model Selection of Regular Vine Copulas",
+    "authors": [
+      "Lutz Gruber",
+      "Claudia Czado"
+    ],
+    "year": 2015,
+    "abstract": "Regular vine copulas can describe a wider array of dependency patterns than the multivariate Gaussian copula or the multivariate Student's t copula. This paper presents two contributions related to model selection of regular vine copulas. First, our pair copula family selection procedure extends existing Bayesian family selection methods by allowing pair families to be chosen from an arbitrary set of candidate families. Second, our method represents the first Bayesian model selection approach to",
+    "url": "https://arxiv.org/pdf/1512.00976v1",
+    "query": "Bayesian evidence factor experimental design null results robustness"
+  },
+  {
+    "arxiv_id": "2503.04743v1",
+    "title": "AI Safety is Stuck in Technical Terms -- A System Safety Response to the International AI Safety Report",
+    "authors": [
+      "Roel Dobbe"
+    ],
+    "year": 2025,
+    "abstract": "Safety has become the central value around which dominant AI governance efforts are being shaped. Recently, this culminated in the publication of the International AI Safety Report, written by 96 experts of which 30 nominated by the Organisation for Economic Co-operation and Development (OECD), the European Union (EU), and the United Nations (UN). The report focuses on the safety risks of general-purpose AI and available technical mitigation approaches. In this response, informed by a system saf",
+    "url": "https://arxiv.org/pdf/2503.04743v1",
+    "query": "AI safety alignment evaluation statistical power null result"
+  },
+  {
+    "arxiv_id": "2601.16513v1",
+    "title": "Competing Visions of Ethical AI: A Case Study of OpenAI",
+    "authors": [
+      "Melissa Wilfley",
+      "Mengting Ai",
+      "Madelyn Rose Sanfilippo"
+    ],
+    "year": 2026,
+    "abstract": "Introduction. AI Ethics is framed distinctly across actors and stakeholder groups. We report results from a case study of OpenAI analysing ethical AI discourse. Method. Research addressed: How has OpenAI's public discourse leveraged 'ethics', 'safety', 'alignment' and adjacent related concepts over time, and what does discourse signal about framing in practice? A structured corpus, differentiating between communication for a general audience and communication with an academic audience, was assem",
+    "url": "https://arxiv.org/pdf/2601.16513v1",
+    "query": "AI safety alignment evaluation statistical power null result"
+  },
+  {
+    "arxiv_id": "2506.22183v1",
+    "title": "A Different Approach to AI Safety: Proceedings from the Columbia Convening on Openness in Artificial Intelligence and AI Safety",
+    "authors": [
+      "Camille Fran\u00e7ois",
+      "Ludovic P\u00e9ran",
+      "Ayah Bdeir"
+    ],
+    "year": 2025,
+    "abstract": "The rapid rise of open-weight and open-source foundation models is intensifying the obligation and reshaping the opportunity to make AI systems safe. This paper reports outcomes from the Columbia Convening on AI Openness and Safety (San Francisco, 19 Nov 2024) and its six-week preparatory programme involving more than forty-five researchers, engineers, and policy leaders from academia, industry, civil society, and government. Using a participatory, solutions-oriented process, the working groups ",
+    "url": "https://arxiv.org/pdf/2506.22183v1",
+    "query": "AI safety alignment evaluation statistical power null result"
+  },
+  {
+    "arxiv_id": "2603.28944v1",
+    "title": "AI prediction leads people to forgo guaranteed rewards",
+    "authors": [
+      "Aoi Naito",
+      "Hirokazu Shirado"
+    ],
+    "year": 2026,
+    "abstract": "Artificial intelligence (AI) is understood to affect the content of people's decisions. Here, using a behavioral implementation of the classic Newcomb's paradox in 1,305 participants, we show that AI can also change how people decide. In this paradigm, belief in predictive authority can lead individuals to constrain decision-making, forgoing a guaranteed reward. Over 40% of participants treated AI as such a predictive authority. This significantly increased the odds of forgoing the guaranteed re",
+    "url": "https://arxiv.org/pdf/2603.28944v1",
+    "query": "AI safety alignment evaluation statistical power null result"
+  },
+  {
+    "arxiv_id": "2501.02842v1",
+    "title": "Foundations of GenIR",
+    "authors": [
+      "Qingyao Ai",
+      "Jingtao Zhan",
+      "Yiqun Liu"
+    ],
+    "year": 2025,
+    "abstract": "The chapter discusses the foundational impact of modern generative AI models on information access (IA) systems. In contrast to traditional AI, the large-scale training and superior data modeling of generative AI models enable them to produce high-quality, human-like responses, which brings brand new opportunities for the development of IA paradigms. In this chapter, we identify and introduce two of them in details, i.e., information generation and information synthesis. Information generation a",
+    "url": "https://arxiv.org/pdf/2501.02842v1",
+    "query": "AI safety alignment evaluation statistical power null result"
+  },
+  {
+    "arxiv_id": "2602.05656v2",
+    "title": "Alignment Verifiability in Large Language Models: Normative Indistinguishability under Behavioral Evaluation",
+    "authors": [
+      "Igor Santos-Grueiro"
+    ],
+    "year": 2026,
+    "abstract": "Behavioral evaluation is the dominant paradigm for assessing alignment in large language models (LLMs). In current practice, observed compliance under finite evaluation protocols is treated as evidence of latent alignment. However, the inference from bounded behavioral evidence to claims about global latent properties is rarely analyzed as an identifiability problem. In this paper, we study alignment evaluation through the lens of statistical identifiability under partial observability. We allow",
+    "url": "https://arxiv.org/pdf/2602.05656v2",
+    "query": "AI safety alignment evaluation statistical power null result"
+  },
+  {
+    "arxiv_id": "2506.10217v3",
+    "title": "Data-Centric Safety and Ethical Measures for Data and AI Governance",
+    "authors": [
+      "Srija Chakraborty"
+    ],
+    "year": 2025,
+    "abstract": "Datasets play a key role in imparting advanced capabilities to artificial intelligence (AI) foundation models that can be adapted to various downstream tasks. These downstream applications can introduce both beneficial and harmful capabilities -- resulting in dual use AI foundation models, with various technical and regulatory approaches to monitor and manage these risks. However, despite the crucial role of datasets, responsible dataset design and ensuring data-centric safety and ethical practi",
+    "url": "https://arxiv.org/pdf/2506.10217v3",
+    "query": "AI safety alignment evaluation statistical power null result"
+  },
+  {
+    "arxiv_id": "2312.03893v1",
+    "title": "Deliberative Technology for Alignment",
+    "authors": [
+      "Andrew Konya",
+      "Deger Turan",
+      "Aviv Ovadya"
+    ],
+    "year": 2023,
+    "abstract": "For humanity to maintain and expand its agency into the future, the most powerful systems we create must be those which act to align the future with the will of humanity. The most powerful systems today are massive institutions like governments, firms, and NGOs. Deliberative technology is already being used across these institutions to help align governance and diplomacy with human will, and modern AI is poised to make this technology significantly better. At the same time, the race to superhuma",
+    "url": "https://arxiv.org/pdf/2312.03893v1",
+    "query": "AI safety alignment evaluation statistical power null result"
+  },
+  {
+    "arxiv_id": "2603.03074v1",
+    "title": "Design Generative AI for Practitioners: Exploring Interaction Approaches Aligned with Creative Practice",
+    "authors": [
+      "Xiaohan Peng",
+      "Wendy E. Mackay",
+      "Janin Koch"
+    ],
+    "year": 2026,
+    "abstract": "Design is a non-linear, reflective process in which practitioners engage with visual, semantic, and other expressive materials to explore, iterate, and refine ideas. As Generative AI (GenAI) becomes integrated into professional design practice, traditional interaction approaches focusing on prompts or whole-image manipulation can misalign AI output with designers' intent, forcing visual thinkers into verbal reasoning or post-hoc adjustments. We present three interaction approaches from DesignPro",
+    "url": "https://arxiv.org/pdf/2603.03074v1",
+    "query": "AI safety alignment evaluation statistical power null result"
+  },
+  {
+    "arxiv_id": "1907.00430v1",
+    "title": "Requisite Variety in Ethical Utility Functions for AI Value Alignment",
+    "authors": [
+      "Nadisha-Marie Aliman",
+      "Leon Kester"
+    ],
+    "year": 2019,
+    "abstract": "Being a complex subject of major importance in AI Safety research, value alignment has been studied from various perspectives in the last years. However, no final consensus on the design of ethical utility functions facilitating AI value alignment has been achieved yet. Given the urgency to identify systematic solutions, we postulate that it might be useful to start with the simple fact that for the utility function of an AI not to violate human ethical intuitions, it trivially has to be a model",
+    "url": "https://arxiv.org/pdf/1907.00430v1",
+    "query": "AI safety alignment evaluation statistical power null result"
+  },
+  {
+    "arxiv_id": "1506.08292v2",
+    "title": "The expected demise of the Bayes factor",
+    "authors": [
+      "Christian P. Robert"
+    ],
+    "year": 2015,
+    "abstract": "This note is a discussion commenting on the paper by Ly et al. on \"Harold Jeffreys's Default Bayes Factor Hypothesis Tests: Explanation, Extension, and Application in Psychology\" and on the perceived shortcomings of the classical Bayesian approach to testing, while reporting on an alternative approach advanced by Kamary, Mengersen, Robert and Rousseau (2014. arxiv:1412.2044) as a solution to this quintessential inference problem.",
+    "url": "https://arxiv.org/pdf/1506.08292v2",
+    "query": "Bayes factor null result interpretation experimental weakness"
+  },
+  {
+    "arxiv_id": "2102.07162v2",
+    "title": "Bayes Factors for Peri-Null Hypotheses",
+    "authors": [
+      "Alexander Ly",
+      "Eric-Jan Wagenmakers"
+    ],
+    "year": 2021,
+    "abstract": "A perennial objection against Bayes factor point-null hypothesis tests is that the point-null hypothesis is known to be false from the outset. We examine the consequences of approximating the sharp point-null hypothesis by a hazy `peri-null' hypothesis instantiated as a narrow prior distribution centered on the point of interest. The peri-null Bayes factor then equals the point-null Bayes factor multiplied by a correction term which is itself a Bayes factor. For moderate sample sizes, the correc",
+    "url": "https://arxiv.org/pdf/2102.07162v2",
+    "query": "Bayes factor null result interpretation experimental weakness"
+  },
+  {
+    "arxiv_id": "2205.05897v1",
+    "title": "CAGI, the Critical Assessment of Genome Interpretation, establishes progress and prospects for computational genetic variant interpretation methods",
+    "authors": [
+      "The Critical Assessment of Genome Interpretation Consortium"
+    ],
+    "year": 2022,
+    "abstract": "The Critical Assessment of Genome Interpretation (CAGI) aims to advance the state of the art for computational prediction of genetic variant impact, particularly those relevant to disease. The five complete editions of the CAGI community experiment comprised 50 challenges, in which participants made blind predictions of phenotypes from genetic data, and these were evaluated by independent assessors. Overall, results show that while current methods are imperfect, they have major utility for resea",
+    "url": "https://arxiv.org/pdf/2205.05897v1",
+    "query": "Bayes factor null result interpretation experimental weakness"
+  },
+  {
+    "arxiv_id": "1810.09909v3",
+    "title": "Bayes Factor Asymptotics for Variable Selection in the Gaussian Process Framework",
+    "authors": [
+      "Minerva Mukhopadhyay",
+      "Sourabh Bhattacharya"
+    ],
+    "year": 2018,
+    "abstract": "Although variable selection is one of the most popular areas of modern statistical research, much of its development has taken place in the classical paradigm compared to the Bayesian counterpart. Somewhat surprisingly, both the paradigms have focussed almost completely on linear models, in spite of the vast scope offered by the model liberation movement brought about by modern advancements in studying real, complex phenomena.\n  In this article, we investigate general Bayesian variable selection",
+    "url": "https://arxiv.org/pdf/1810.09909v3",
+    "query": "Bayes factor null result interpretation experimental weakness"
+  },
+  {
+    "arxiv_id": "2406.08022v2",
+    "title": "How accurate are Bayes factor-based null hypothesis tests? A simulation study",
+    "authors": [
+      "Daniel J. Schad",
+      "Martin Modr\u00e1k",
+      "Shravan Vasishth"
+    ],
+    "year": 2024,
+    "abstract": "Bayes factor null hypothesis tests provide a viable alternative to frequentist measures of evidence quantification. Bayes factors for realistic data sets in areas like psychology cannot be calculated exactly and require numerical approximations to complex integrals. Crucially, the accuracy of these approximations, i.e., whether an approximate Bayes factor corresponds to the exact Bayes factor, is unknown, and may depend on data, prior, and likelihood. We have recently developed a novel statistic",
+    "url": "https://arxiv.org/pdf/2406.08022v2",
+    "query": "Bayes factor null result interpretation experimental weakness"
+  },
+  {
+    "arxiv_id": "1907.05583v1",
+    "title": "Can Bayes Factors \"Prove\" the Null Hypothesis?",
+    "authors": [
+      "Michael Smithson"
+    ],
+    "year": 2019,
+    "abstract": "It is possible to obtain a large Bayes Factor (BF) favoring the null hypothesis when both the null and alternative hypotheses have low likelihoods, and there are other hypotheses being ignored that are much more strongly supported by the data. As sample sizes become large it becomes increasingly probable that a strong BF favouring a point null against a conventional Bayesian vague alternative co-occurs with a BF favouring various specific alternatives against the null. For any BF threshold q and",
+    "url": "https://arxiv.org/pdf/1907.05583v1",
+    "query": "Bayes factor null result interpretation experimental weakness"
+  },
+  {
+    "arxiv_id": "1903.03153v2",
+    "title": "Connecting Bayes factor and the Region of Practical Equivalence (ROPE) Procedure for testing interval null hypothesis",
+    "authors": [
+      "J. G. Liao",
+      "Vishal Midya",
+      "Arthur Berg"
+    ],
+    "year": 2019,
+    "abstract": "There has been strong recent interest in testing interval null hypothesis for improved scientific inference. For example, Lakens et al (2018) and Lakens and Harms (2017) use this approach to study if there is a pre-specified meaningful treatment effect in gerontology and clinical trials, which is different from the more traditional point null hypothesis that tests for any treatment effect. Two popular Bayesian approaches are available for interval null hypothesis testing. One is the standard Bay",
+    "url": "https://arxiv.org/pdf/1903.03153v2",
+    "query": "Bayes factor null result interpretation experimental weakness"
+  },
+  {
+    "arxiv_id": "1503.01884v3",
+    "title": "Null-null components of the generalized Einstein tensor for Lovelock models",
+    "authors": [
+      "Alessandro Pesci"
+    ],
+    "year": 2015,
+    "abstract": "For spherical symmetry, we provide expressions for the radial null-null components of the generalized Einstein tensor $E_{ab}$ for Lovelock models for diagonal $E_{ab}$ in terms of the metric and of the radial null-null components of the Ricci tensor. We show they can be usefully employed for example in obtaining the Birkhoff-like theorem for Lovelock models, as well as in providing a relation between the null energy and null convergence conditions for the same models.",
+    "url": "https://arxiv.org/pdf/1503.01884v3",
+    "query": "Bayes factor null result interpretation experimental weakness"
+  },
+  {
+    "arxiv_id": "1711.00822v3",
+    "title": "Scattering from infinity for semilinear wave equations satisfying the null condition or the weak null condition",
+    "authors": [
+      "Hans Lindblad",
+      "Volker Schlue"
+    ],
+    "year": 2017,
+    "abstract": "We show global existence backwards from scattering data at infinity for semilinear wave equations satisfying the null condition or the weak null condition. Semilinear terms satisfying the weak null condition appear in many equations in physics. The scattering data is given in terms of the radiation field, although in the case of the weak null condition there is an additional logarithmic term in the asymptotic behaviour that has to be taken into account. Our results are sharp in the sense that th",
+    "url": "https://arxiv.org/pdf/1711.00822v3",
+    "query": "Bayes factor null result interpretation experimental weakness"
+  },
+  {
+    "arxiv_id": "2203.02569v1",
+    "title": "Coverage Properties of Empirical Bayes Intervals",
+    "authors": [
+      "Peter Hoff"
+    ],
+    "year": 2022,
+    "abstract": "This note is an invited discussion of the article \"Confidence Intervals for Nonparametric Empirical Bayes Analysis\" by Ignatiadis and Wager. In this discussion, I review some goals of empirical Bayes data analysis and the contribution of Ignatiadis and Wager. Differences between across-group inference and group-specific inference are discussed. Standard empirical Bayes interval procedures focus on controlling the across-group average coverage rate. However, if group-specific inferences are of pr",
+    "url": "https://arxiv.org/pdf/2203.02569v1",
+    "query": "Bayes factor null result interpretation experimental weakness"
+  }
+]

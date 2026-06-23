@@ -1,0 +1,90 @@
+\section{Related Work}
+\label{sec:related}
+
+\para{Bayesian evidence quantification.}
+Bayes factors provide a principled way to quantify evidence for a null hypothesis
+relative to an alternative \citep{ly2021bayes}. Unlike $p$-values, Bayes factors
+support both conclusions: a large $\mathrm{BF}_{01}$ is genuine evidence for $\Hnull$,
+while a small $\mathrm{BF}_{01}$ is evidence for $\Halt$. \citet{ly2021bayes} analyze
+peri-null Bayes factors---where the null is a narrow distribution rather than a
+point---and show that for large samples the peri-null $\mathrm{BF}$ is bounded by the
+ratio of prior ordinates at the MLE; this theoretical result motivates our choice of
+Gaussian prior with non-zero mean for $\Halt$. \citet{bartos2026efficient} introduce
+an efficient sensitivity analysis method based on posterior density ratios that recovers
+the full $\mathrm{BF}$-vs-prior curve from a single additional model fit; we adopt
+their sensitivity analysis philosophy, though our closed-form $\mathrm{BF}$ allows
+direct grid search without importance weighting. \citet{schad2024accurate} validate
+BF implementations via simulation-based calibration, finding that bridge sampling is
+accurate when no warnings occur; we use closed-form Gaussian Bayes factors to avoid
+bridgesampling variability altogether. Unlike these methodological contributions, we
+apply Bayes factors specifically to the alignment domain, where the choice of prior
+under $\Halt$ requires domain-specific calibration.
+
+\para{Confirming the null.}
+\citet{dale2024confirming} develops a modal logic of frequentist confirmation, showing
+that point-null hypotheses are unconfirmable while equivalence hypotheses (\eg
+$|\delta| \leq 0.1$) are. This result directly motivates why alignment researchers
+should not interpret $p > 0.05$ as confirmation of robustness, and why the alignment
+field needs Bayesian or equivalence-based alternatives. The ``posterior predictive
+null'' of \citet{zacco2021ppn} and calibrated predictive checks \citep{vehtari2022split}
+provide complementary model-checking tools we can incorporate into \ours for
+validating prior specifications. \citet{good1983null} warn that large $\mathrm{BF}_{01}$
+can mislead when alternative hypotheses are ignored---precisely the failure mode \ours
+addresses by explicitly modeling the ``weak intervention'' alternative.
+
+\para{Limits of behavioral alignment evaluation.}
+\citet{santos2026limits} prove a fundamental identifiability limit: under
+``evaluation-aware'' agents, observed compliance cannot uniquely identify latent
+alignment, as a family of strategically compliant policies is indistinguishable from
+genuinely aligned ones. This theoretical impossibility result motivates the need for
+our probabilistic framework: since behavioral evaluations cannot certify alignment
+in principle, quantifying the uncertainty in null results is the best we can do in
+practice. \citet{chen2025computational} frames AI safety as a hypothesis testing
+problem in signal processing, providing a complementary language for formalizing
+alignment evaluation. Unlike these theoretical contributions, \ours provides a
+concrete diagnostic that researchers can apply to existing data.
+
+\para{Measurement and power in alignment evaluation.}
+\citet{kim2026fivnines} demonstrate that models with near-identical accuracy on
+standard benchmarks can differ by $2.4\times$ in rare failure rates, and propose
+importance sampling (CEM) for sample-efficient rare-event estimation. Their finding
+that benchmark saturation creates systematic null results---not because models are
+equally reliable but because the metrics cannot discriminate them---is a specific
+instance of the measurement sensitivity problem \ours diagnoses. In contrast to
+their forward-looking evaluation design approach, \ours provides retrospective
+diagnostics for existing null results.
+
+\para{Activation steering interventions.}
+\citet{turner2023actadd} introduce \actadd (Activation Addition), achieving
+state-of-the-art toxicity reduction via contrast-pair steering vectors added at
+inference time. \citet{zou2023repe} generalize this to Representation Engineering
+(\repe), using principal components of contrast activations to define reading and
+control vectors. \citet{kelkar2026persona} find that persona vectors rival targeted
+\caa for sycophancy reduction but show highly asymmetric effects: critical-role
+vectors reduce sycophancy, while conformist-role vectors have near-zero effect. This
+asymmetry---with conformist steering producing null results that could reflect true
+resistance or geometric orthogonality---is exactly the ambiguity \ours disambiguates.
+\citet{leech2024extend} extend activation steering to dangerous capabilities, and
+\citet{huang2025depth} show that depth-wise targeting substantially affects steering
+effectiveness, confirming that intervention strength is a continuous parameter.
+
+\para{RLHF failure modes.}
+\citet{abahana2026rlhf} provide a transition-based taxonomy of \rlhf failures,
+including reward hacking (14.45\% rate in aggressive PPO), optimization collapse,
+and evaluator gaming. Their row-level analysis reveals localized failures hidden by
+checkpoint-level averages---a form of aggregation that can make failures appear as
+null results. \citet{bai2022rlhf} and \citet{bai2022cai} provide baseline effect
+sizes for \rlhf and Constitutional AI alignment training that inform our prior
+specification. \citet{zhu2026reward} and \citet{zhao2026calibration} analyze reward
+model uncertainty and calibration collapse under sycophancy fine-tuning, providing
+further evidence that ``null result'' is an ambiguous summary of complex underlying
+dynamics.
+
+\para{Sequential Bayesian design.}
+\citet{foster2025stopping} derive optimal stopping rules for sequential Bayesian
+experiments, and \citet{robbins2025robust} extend this to the misspecified-model
+setting. \citet{foster2021deep} develop amortized sequential design for real-time
+decision making. Our sequential analysis (\secref{sec:results}) applies the simpler
+threshold-based stopping rule ($\mathrm{BF}_{01} > 10$ or $< 0.1$) from the Jeffreys
+scale, which is tractable for the alignment evaluation setting without requiring
+full policy optimization.

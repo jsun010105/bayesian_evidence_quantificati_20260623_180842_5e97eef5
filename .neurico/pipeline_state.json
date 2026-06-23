@@ -2,13 +2,33 @@
   "created_at": "2026-06-23T18:09:00.453650",
   "stages": {
     "resource_finder": {
-      "status": "failed",
-      "started_at": "2026-06-23T18:17:49.752260",
-      "completed_at": "2026-06-23T18:17:55.952575",
-      "success": false,
-      "outputs": {}
+      "status": "completed",
+      "started_at": "2026-06-23T18:31:50.912559",
+      "completed_at": "2026-06-23T18:54:07.341940",
+      "success": true,
+      "outputs": {
+        "literature_review": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/literature_review.md",
+        "resources_catalog": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/resources.md",
+        "papers_dir": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/papers",
+        "datasets_dir": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/datasets",
+        "code_dir": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/code"
+      }
+    },
+    "experiment_runner": {
+      "status": "completed",
+      "started_at": "2026-06-23T18:54:07.344175",
+      "completed_at": "2026-06-23T19:10:59.900451",
+      "success": true,
+      "outputs": {
+        "success": true,
+        "return_code": 0,
+        "elapsed_time": 1012.5009093284607,
+        "log_file": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/logs/execution_claude.log",
+        "transcript_file": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/logs/execution_claude_transcript.jsonl"
+      }
     }
   },
   "current_stage": null,
-  "completed": false
+  "completed": true,
+  "completed_at": "2026-06-23T19:11:00.025520"
 }

@@ -1,0 +1,34 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We develop \ours, a Bayesian evidence quantification framework for diagnosing null
+results in AI alignment research. \ours computes a closed-form Bayes factor
+$\mathrm{BF}_{01}$ from observed effect sizes and sample sizes, directly addressing
+the fundamental ambiguity between genuine model robustness and experimental
+insufficiency.
+
+Applied to 27 published alignment null results, \ours finds that zero studies provide
+strong robustness evidence, 85\% are inconclusive, and \mainresult have $P(\text{weakness}) > 0.3$.
+The field is systematically producing uninformative null results that researchers
+interpret as safety evidence. The four studies with genuine (moderate) robustness
+evidence are either structural nulls or geometrically constrained---not typical
+empirical demonstrations of robustness.
+
+Prospective validation with real \llama experiments confirms the framework's practical
+value through the inverse jailbreak effect: strong explicit jailbreak patterns achieve
+0\% success while weak educational framing achieves 20\%. \ours correctly classifies
+the strong-intervention null as inconclusive ($P(\text{weakness}) = 0.45$), preventing
+a false safety claim that a naive reading of ``0 jailbreaks succeeded'' would license.
+
+{\bf Key takeaway.} The alignment field needs higher sample sizes, more realistic
+intervention designs, and principled evidence quantification. The typical alignment
+study, at its current scale, cannot demonstrate robustness---it can only fail to
+detect vulnerability, which is not the same thing.
+
+{\bf Future work.} The most impactful extensions are: (1) a hierarchical Bayesian
+model with intervention-type-specific effect size priors, calibrated from a formal
+meta-analysis of $100+$ alignment studies; (2) large-scale prospective experiments
+with $n \geq 50$ per condition to validate sequential stopping rules in practice;
+and (3) integration with existing evaluation frameworks such as RewardBench
+\citep{lambert2024rewardbench} and OpenAI Evals, embedding the \ours diagnostic
+as a post-hoc analysis layer.

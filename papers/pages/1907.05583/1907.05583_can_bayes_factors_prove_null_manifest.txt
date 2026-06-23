@@ -1,0 +1,11 @@
+PDF: papers/1907.05583_can_bayes_factors_prove_null.pdf
+Total pages: 17
+Pages per chunk: 3
+
+Chunks:
+  1907.05583_can_bayes_factors_prove_null_chunk_001.pdf: pages 1-3
+  1907.05583_can_bayes_factors_prove_null_chunk_002.pdf: pages 4-6
+  1907.05583_can_bayes_factors_prove_null_chunk_003.pdf: pages 7-9
+  1907.05583_can_bayes_factors_prove_null_chunk_004.pdf: pages 10-12
+  1907.05583_can_bayes_factors_prove_null_chunk_005.pdf: pages 13-15
+  1907.05583_can_bayes_factors_prove_null_chunk_006.pdf: pages 16-17

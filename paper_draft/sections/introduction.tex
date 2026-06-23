@@ -1,0 +1,97 @@
+\section{Introduction}
+\label{sec:intro}
+
+When an AI alignment intervention fails to produce a measurable effect, what does that
+mean? A team testing whether activation steering can elicit harmful outputs observes
+$p > 0.05$ and concludes the model is robust. A safety evaluation shows no statistically
+significant difference between a fine-tuned and base model and reports a clean bill
+of health. These conclusions are drawn hundreds of times per year across the alignment
+literature---and they may be wrong in the majority of cases.
+
+The core problem is that classical null hypothesis significance testing (NHST) is
+epistemically asymmetric: failing to reject the null tells us only ``we could not
+detect an effect,'' not that the effect is absent. For alignment research, this
+asymmetry has practical consequences. Teams stop investigating a potential vulnerability
+after an inconclusive null test. Papers claim ``no jailbreak succeeded'' after testing
+one class of prompts with $n=15$ trials. Safety evaluations declare robustness based
+on benchmarks that \citet{kim2026fivnines} show are systematically saturated. Each
+of these decisions treats experimental weakness as evidence of genuine safety.
+
+{\bf Why this matters.} AI alignment research is accumulating a literature of null
+results, and those null results are actively shaping deployment decisions, capability
+evaluations, and research priorities. If the majority of those null results are
+inconclusive rather than informative, the field is building on a shaky empirical
+foundation. The inability to distinguish ``this model is robust'' from ``our experiment
+was too weak to detect the vulnerability'' is not merely a statistical nuance---it is
+a potential safety risk.
+
+{\bf What existing work provides.} Bayesian methods for null hypothesis testing are
+well-developed \citep{ly2021bayes,bartos2026efficient,schad2024accurate} and
+equivalence testing frameworks provide principled tools for confirming
+nulls in appropriate settings \citep{dale2024confirming}. The alignment literature
+has begun addressing measurement challenges: \citet{kim2026fivnines} propose
+importance sampling to estimate rare failure rates in saturated benchmarks, and
+\citet{santos2026limits} formally prove that behavioral evaluation cannot uniquely
+identify latent alignment under evaluation-aware agents. Sequential Bayesian
+experimental design provides adaptive stopping rules for data collection
+\citep{foster2025stopping,robbins2025robust}.
+
+{\bf What is missing.} No existing framework connects these threads for alignment null
+results specifically. Alignment papers rarely report effect sizes or retrospective
+power. Intervention strength---the steering coefficient $\alpha$ in activation
+engineering, the KL penalty in \rlhf, the specificity of a jailbreak prompt---is
+treated as a binary ``we applied the intervention'' rather than as a continuous
+parameter with implications for the expected effect size. Measurement sensitivity
+is assumed rather than modeled. The result is that researchers lack a practical tool
+to ask: ``given what we observed and how we designed this experiment, is this null
+result evidence of robustness or evidence of an underpowered test?''
+
+{\bf Our approach.} We develop \ours, a Bayesian framework that addresses this gap
+directly. \ours formalizes two competing hypotheses for any alignment null result:
+$\Hnull$ (true robustness: the effect size $\delta \approx 0$) and $\Halt$ (experimental
+weakness: $\delta > 0$ but undetected due to insufficient power). For $\Halt$ we place
+a calibrated Gaussian prior $\delta \sim \gN(0.3, 0.2^2)$ based on effect sizes
+reported in the activation steering and \rlhf literatures. We derive a closed-form
+Bayes factor $\mathrm{BF}_{01}$ exploiting Gaussian conjugacy, enabling rapid
+retrospective analysis without MCMC. We then provide a $9 \times 9$ sensitivity
+analysis over prior hyperparameters to verify that conclusions are not artifacts of
+prior choice.
+
+We validate \ours in three settings: \textbf{(1)} synthetic experiments where the
+true effect size is known, confirming calibration under both $\Hnull$ and $\Halt$;
+\textbf{(2)} retrospective analysis of 27 published alignment null results, testing
+our central hypothesis that the majority are inconclusive; and \textbf{(3)}
+prospective experiments with real \llama API calls under systematically varied
+intervention strength, including a sequential Bayesian stopping analysis.
+
+{\bf Main findings.} Applied to 27 published null results, \ours finds:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=4pt]
+    \item \mainresult of null results have $P(\text{weakness} \mid \text{data}) > 0.3$,
+    far exceeding our pre-registered 40\% threshold.
+    \item \emph{Zero} published null results constitute strong evidence of genuine
+    robustness ($\mathrm{BF}_{01} > 10$); even the four best-supported studies only
+    reach moderate evidence.
+    \item Prospective \llama experiments reveal an ``inverse jailbreak'' effect:
+    weak educational-framing interventions yield 20\% success while strong explicit
+    jailbreak patterns yield 0\%---and \ours correctly classifies the strong-intervention
+    null as inconclusive (not robust), preventing a false safety claim.
+    \item Sequential analysis shows perfect agreement with post-hoc analysis
+    ($\kappa = 1.000$), confirming the framework's prospective utility.
+\end{itemize}
+
+{\bf Contributions.} We make the following contributions:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=4pt]
+    \item We propose \ours, the first Bayesian framework specifically designed to
+    diagnose whether alignment null results reflect genuine robustness or
+    experimental insufficiency (\secref{sec:method}).
+    \item We curate a dataset of 27 published alignment null results with extracted
+    effect sizes and apply \ours retrospectively, finding systematic underpowering
+    across the literature (\secref{sec:results}).
+    \item We conduct prospective LLM experiments demonstrating the framework's
+    practical value, including the discovery of an inverse jailbreak effect where
+    stronger interventions produce null results that weaker interventions do not
+    (\secref{sec:results}).
+    \item We provide a prior sensitivity analysis showing that the ``inconclusive''
+    classification is robust across a wide range of prior specifications, ruling out
+    prior-sensitivity as an alternative explanation (\secref{sec:results}).
+\end{itemize}

@@ -1,0 +1,17 @@
+{
+  "n_studies_total": 33,
+  "n_null_results": 27,
+  "pct_weakness_above_threshold": 0.7777777777777778,
+  "h1_supported": true,
+  "spearman_corr_bf01_power": -0.6746031746031745,
+  "h2_supported": false,
+  "sequential_kappa": 1.0,
+  "h3_supported": true,
+  "classification_breakdown": {
+    "inconclusive": 23,
+    "moderate_robustness": 4
+  },
+  "mean_p_weakness_null": 0.3768931740892449,
+  "sensitivity_robust_all_priors": 27,
+  "sensitivity_weak_all_priors": 0
+}

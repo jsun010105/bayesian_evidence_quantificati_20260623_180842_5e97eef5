@@ -1,13 +1,26 @@
 {
-  "success": false,
+  "success": true,
   "stages": {
     "resource_finder": {
-      "success": false,
-      "completion_marker": null,
-      "outputs": {},
+      "success": true,
+      "completion_marker": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/.resource_finder_complete",
+      "outputs": {
+        "literature_review": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/literature_review.md",
+        "resources_catalog": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/resources.md",
+        "papers_dir": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/papers",
+        "datasets_dir": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/datasets",
+        "code_dir": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/code"
+      },
       "log_file": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/logs/resource_finder_claude.log",
       "transcript_file": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/logs/resource_finder_claude_transcript.jsonl",
-      "elapsed_time": 6.1934473514556885
+      "elapsed_time": 1336.4179332256317
+    },
+    "experiment_runner": {
+      "success": true,
+      "return_code": 0,
+      "elapsed_time": 1012.5009093284607,
+      "log_file": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/logs/execution_claude.log",
+      "transcript_file": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5/logs/execution_claude_transcript.jsonl"
     }
   },
   "work_dir": "/workspaces/bayesian_evidence_quantificati_20260623_180842_5e97eef5"

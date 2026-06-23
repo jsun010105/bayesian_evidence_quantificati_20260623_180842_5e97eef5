@@ -1,0 +1,602 @@
+[
+  {
+    "arxiv_id": "1512.00969v1",
+    "title": "Posterior Belief Assessment: Extracting Meaningful Subjective Judgements from Bayesian Analyses with Complex Statistical Models",
+    "authors": [
+      "Daniel Williamson",
+      "Michael Goldstein"
+    ],
+    "year": 2015,
+    "abstract": "In this paper, we are concerned with attributing meaning to the results of a Bayesian analysis for a problem which is sufficiently complex that we are unable to assert a precise correspondence between the expert probabilistic judgements of the analyst and the particular forms chosen for the prior specification and the likelihood for the analysis. In order to do this, we propose performing a finite collection of additional Bayesian analyses under alternative collections of prior and likelihood modelling judgements that we may also view as representative of our prior knowledge and the problem st",
+    "url": "https://arxiv.org/pdf/1512.00969v1",
+    "query": "Bayesian predictive model adequacy posterior null value"
+  },
+  {
+    "arxiv_id": "2112.03333v2",
+    "title": "The Posterior Predictive Null",
+    "authors": [
+      "Gemma E. Moran",
+      "John P. Cunningham",
+      "David M. Blei"
+    ],
+    "year": 2021,
+    "abstract": "Bayesian model criticism is an important part of the practice of Bayesian statistics. Traditionally, model criticism methods have been based on the predictive check, an adaptation of goodness-of-fit testing to Bayesian modeling and an effective method to understand how well a model captures the distribution of the data. In modern practice, however, researchers iteratively build and develop many models, exploring a space of models to help solve the problem at hand. While classical predictive checks can help assess each one, they cannot help the researcher understand how the models relate to eac",
+    "url": "https://arxiv.org/pdf/2112.03333v2",
+    "query": "Bayesian predictive model adequacy posterior null value"
+  },
+  {
+    "arxiv_id": "1503.07643v1",
+    "title": "Asymptotic Properties of Bayesian Predictive Densities When the Distributions of Data and Target Variables are Different",
+    "authors": [
+      "Fumiyasu Komaki"
+    ],
+    "year": 2015,
+    "abstract": "Bayesian predictive densities when the observed data $x$ and the target variable $y$ to be predicted have different distributions are investigated by using the framework of information geometry. The performance of predictive densities is evaluated by the Kullback--Leibler divergence. The parametric models are formulated as Riemannian manifolds. In the conventional setting in which $x$ and $y$ have the same distribution, the Fisher--Rao metric and the Jeffreys prior play essential roles. In the present setting in which $x$ and $y$ have different distributions, a new metric, which we call the pr",
+    "url": "https://arxiv.org/pdf/1503.07643v1",
+    "query": "Bayesian predictive model adequacy posterior null value"
+  },
+  {
+    "arxiv_id": "1512.01013v1",
+    "title": "Bayesian Variable Selection and Estimation for Group Lasso",
+    "authors": [
+      "Xiaofan Xu",
+      "Malay Ghosh"
+    ],
+    "year": 2015,
+    "abstract": "The paper revisits the Bayesian group lasso and uses spike and slab priors for group variable selection. In the process, the connection of our model with penalized regression is demonstrated, and the role of posterior median for thresholding is pointed out. We show that the posterior median estimator has the oracle property for group variable selection and estimation under orthogonal designs, while the group lasso has suboptimal asymptotic estimation rate when variable selection consistency is achieved. Next we consider bi-level selection problem and propose the Bayesian sparse group selection",
+    "url": "https://arxiv.org/pdf/1512.01013v1",
+    "query": "Bayesian predictive model adequacy posterior null value"
+  },
+  {
+    "arxiv_id": "2606.21080v1",
+    "title": "Bayesian Model Averaging under Predictor Redundancy via Density-Ratio Posterior Compression",
+    "authors": [
+      "Hanqing Li",
+      "Xuewen Lu",
+      "Yuting Chen"
+    ],
+    "year": 2026,
+    "abstract": "Bayesian model averaging in support-indexed regression induces a posterior distribution over active predictor supports. Under predictor redundancy, posterior mass can spread across many nearly interchangeable supports, making exact-support summaries unstable or hard to interpret even when prediction is stable. We study how to report an already fitted Bayesian model averaging posterior without changing the Bayesian target. A report uses hard or soft regions of support space, and its compressed reporting law is compared with the reference posterior through an explicit density ratio. This ratio g",
+    "url": "https://arxiv.org/pdf/2606.21080v1",
+    "query": "Bayesian predictive model adequacy posterior null value"
+  },
+  {
+    "arxiv_id": "1505.03350v1",
+    "title": "Approximate Bayesian Computation by Modelling Summary Statistics in a Quasi-likelihood Framework",
+    "authors": [
+      "Stefano Cabras",
+      "Maria Eugenia Castellanos Nueda",
+      "Erlis Ruli"
+    ],
+    "year": 2015,
+    "abstract": "Approximate Bayesian Computation (ABC) is a useful class of methods for Bayesian inference when the likelihood function is computationally intractable. In practice, the basic ABC algorithm may be inefficient in the presence of discrepancy between prior and posterior. Therefore, more elaborate methods, such as ABC with the Markov chain Monte Carlo algorithm (ABC-MCMC), should be used. However, the elaboration of a proposal density for MCMC is a sensitive issue and very difficult in the ABC setting, where the likelihood is intractable. We discuss an automatic proposal distribution useful for ABC",
+    "url": "https://arxiv.org/pdf/1505.03350v1",
+    "query": "Bayesian predictive model adequacy posterior null value"
+  },
+  {
+    "arxiv_id": "1402.5723v5",
+    "title": "Smoothing and mean-covariance estimation of functional data with a Bayesian hierarchical model",
+    "authors": [
+      "Jingjing Yang",
+      "Hongxiao Zhu",
+      "Taeryon Choi"
+    ],
+    "year": 2014,
+    "abstract": "Functional data, with basic observational units being functions (e.g., curves, surfaces) varying over a continuum, are frequently encountered in various applications. While many statistical tools have been developed for functional data analysis, the issue of smoothing all functional observations simultaneously is less studied. Existing methods often focus on smoothing each individual function separately, at the risk of removing important systematic patterns common across functions. We propose a nonparametric Bayesian approach to smooth all functional observations simultaneously and nonparametr",
+    "url": "https://arxiv.org/pdf/1402.5723v5",
+    "query": "Bayesian predictive model adequacy posterior null value"
+  },
+  {
+    "arxiv_id": "1504.06523v1",
+    "title": "Objective Bayesian Inference for Bilateral Data",
+    "authors": [
+      "Cyr Emile M'lan",
+      "Ming-Hui Chen"
+    ],
+    "year": 2015,
+    "abstract": "This paper presents three objective Bayesian methods for analyzing bilateral data under Dallal's model and the saturated model. Three parameters are of interest, namely, the risk difference, the risk ratio, and the odds ratio. We derive Jeffreys' prior and Bernardo's reference prior associated with the three parameters that characterize Dallal's model. We derive the functional forms of the posterior distributions of the risk difference and the risk ratio and discuss how to sample from their posterior distributions. We demonstrate the use of the proposed methodology with two real data examples.",
+    "url": "https://arxiv.org/pdf/1504.06523v1",
+    "query": "Bayesian predictive model adequacy posterior null value"
+  },
+  {
+    "arxiv_id": "1506.08292v2",
+    "title": "The expected demise of the Bayes factor",
+    "authors": [
+      "Christian P. Robert"
+    ],
+    "year": 2015,
+    "abstract": "This note is a discussion commenting on the paper by Ly et al. on \"Harold Jeffreys's Default Bayes Factor Hypothesis Tests: Explanation, Extension, and Application in Psychology\" and on the perceived shortcomings of the classical Bayesian approach to testing, while reporting on an alternative approach advanced by Kamary, Mengersen, Robert and Rousseau (2014. arxiv:1412.2044) as a solution to this quintessential inference problem.",
+    "url": "https://arxiv.org/pdf/1506.08292v2",
+    "query": "sensitivity analysis Bayes factor prior influence robustness"
+  },
+  {
+    "arxiv_id": "2604.21596v1",
+    "title": "Efficient Bayes Factor Sensitivity Analysis via Posterior Density Ratios",
+    "authors": [
+      "Franti\u0161ek Barto\u0161",
+      "Eric-Jan Wagenmakers",
+      "Maarten Marsman"
+    ],
+    "year": 2026,
+    "abstract": "Bayes factor sensitivity analysis examines how the evidence for one hypothesis over another depends on the prior distribution. In complex models, the standard approach refits the model at each hyper-parameter value, and the total computational cost scales linearly in the grid size. We propose a method that recovers the entire sensitivity curve from a single additional model fit. The key identity decomposes the Bayes factor at any hyper-parameter value $\u03b3_x$ into an ``anchor'' Bayes factor at a fixed reference $\u03b3_0$ and a Savage--Dickey density ratio in an extended model that places a hyper-pri",
+    "url": "https://arxiv.org/pdf/2604.21596v1",
+    "query": "sensitivity analysis Bayes factor prior influence robustness"
+  },
+  {
+    "arxiv_id": "2309.06305v3",
+    "title": "Sensitivity Analysis for Linear Estimators",
+    "authors": [
+      "Jacob Dorn",
+      "Luther Yap"
+    ],
+    "year": 2023,
+    "abstract": "We propose a novel sensitivity analysis framework for linear estimators with identification failures that can be viewed as seeing the wrong outcome distribution. Our approach measures the degree of identification failure through the change in measure between the observed distribution and a hypothetical target distribution that would identify the causal parameter of interest. The framework yields a sensitivity analysis that generalizes existing bounds for Average Potential Outcome (APO), Regression Discontinuity (RD), and instrumental variables (IV) exclusion failure designs. Our partial identi",
+    "url": "https://arxiv.org/pdf/2309.06305v3",
+    "query": "sensitivity analysis Bayes factor prior influence robustness"
+  },
+  {
+    "arxiv_id": "1810.09909v3",
+    "title": "Bayes Factor Asymptotics for Variable Selection in the Gaussian Process Framework",
+    "authors": [
+      "Minerva Mukhopadhyay",
+      "Sourabh Bhattacharya"
+    ],
+    "year": 2018,
+    "abstract": "Although variable selection is one of the most popular areas of modern statistical research, much of its development has taken place in the classical paradigm compared to the Bayesian counterpart. Somewhat surprisingly, both the paradigms have focussed almost completely on linear models, in spite of the vast scope offered by the model liberation movement brought about by modern advancements in studying real, complex phenomena.\n  In this article, we investigate general Bayesian variable selection in models driven by Gaussian processes, which allows us to treat linear, non-linear and nonparametr",
+    "url": "https://arxiv.org/pdf/1810.09909v3",
+    "query": "sensitivity analysis Bayes factor prior influence robustness"
+  },
+  {
+    "arxiv_id": "2203.02569v1",
+    "title": "Coverage Properties of Empirical Bayes Intervals",
+    "authors": [
+      "Peter Hoff"
+    ],
+    "year": 2022,
+    "abstract": "This note is an invited discussion of the article \"Confidence Intervals for Nonparametric Empirical Bayes Analysis\" by Ignatiadis and Wager. In this discussion, I review some goals of empirical Bayes data analysis and the contribution of Ignatiadis and Wager. Differences between across-group inference and group-specific inference are discussed. Standard empirical Bayes interval procedures focus on controlling the across-group average coverage rate. However, if group-specific inferences are of primary interest, confidence intervals with group-specific coverage control may be preferable.",
+    "url": "https://arxiv.org/pdf/2203.02569v1",
+    "query": "sensitivity analysis Bayes factor prior influence robustness"
+  },
+  {
+    "arxiv_id": "2203.01435v2",
+    "title": "A general approximation to nested Bayes factors with informed priors",
+    "authors": [
+      "Franti\u0161ek Barto\u0161",
+      "Eric-Jan Wagenmakers"
+    ],
+    "year": 2022,
+    "abstract": "A staple of Bayesian model comparison and hypothesis testing, Bayes factors are often used to quantify the relative predictive performance of two rival hypotheses. The computation of Bayes factors can be challenging, however, and this has contributed to the popularity of convenient approximations such as the BIC. Unfortunately, these approximations can fail in the case of informed prior distributions. Here we address this problem by outlining an approximation to informed Bayes factors for a focal parameter $\u03b8$. The approximation is computationally simple and requires only the maximum likelihoo",
+    "url": "https://arxiv.org/pdf/2203.01435v2",
+    "query": "sensitivity analysis Bayes factor prior influence robustness"
+  },
+  {
+    "arxiv_id": "1611.07469v2",
+    "title": "Fast Measurements of Robustness to Changing Priors in Variational Bayes",
+    "authors": [
+      "Ryan Giordano",
+      "Tamara Broderick",
+      "Michael Jordan"
+    ],
+    "year": 2016,
+    "abstract": "In Bayesian analysis, the posterior follows from the data and a choice of a prior and a likelihood. One hopes that the posterior is robust to reasonable variation in the choice of prior, since this choice is made by the modeler and is often somewhat subjective. A different, equally subjectively plausible choice of prior may result in a substantially different posterior, and so different conclusions drawn from the data. Were this to be the case, our conclusions would not be robust to the choice of prior. To determine whether our model is robust, we must quantify how sensitive our posterior is t",
+    "url": "https://arxiv.org/pdf/1611.07469v2",
+    "query": "sensitivity analysis Bayes factor prior influence robustness"
+  },
+  {
+    "arxiv_id": "1501.05788v1",
+    "title": "Simulation-based Sensitivity Analysis for Non-ignorable Missing Data",
+    "authors": [
+      "Peng Yin",
+      "Jian Qing Shi"
+    ],
+    "year": 2015,
+    "abstract": "Sensitivity analysis is popular in dealing with missing data problems particularly for non-ignorable missingness. It analyses how sensitively the conclusions may depend on assumptions about missing data e.g. missing data mechanism (MDM). We called models under certain assumptions sensitivity models. To make sensitivity analysis useful in practice we need to define some simple and interpretable statistical quantities to assess the sensitivity models. However, the assessment is difficult when the missing data mechanism is missing not at random (MNAR). We propose a novel approach in this paper on",
+    "url": "https://arxiv.org/pdf/1501.05788v1",
+    "query": "sensitivity analysis Bayes factor prior influence robustness"
+  },
+  {
+    "arxiv_id": "2406.12845v1",
+    "title": "Interpretable Preferences via Multi-Objective Reward Modeling and Mixture-of-Experts",
+    "authors": [
+      "Haoxiang Wang",
+      "Wei Xiong",
+      "Tengyang Xie"
+    ],
+    "year": 2024,
+    "abstract": "Reinforcement learning from human feedback (RLHF) has emerged as the primary method for aligning large language models (LLMs) with human preferences. The RLHF process typically starts by training a reward model (RM) using human preference data. Conventional RMs are trained on pairwise responses to the same user request, with relative ratings indicating which response humans prefer. The trained RM serves as a proxy for human preferences. However, due to the black-box nature of RMs, their outputs lack interpretability, as humans cannot intuitively understand why an RM thinks a response is good o",
+    "url": "https://arxiv.org/pdf/2406.12845v1",
+    "query": "reward model uncertainty calibration LLM RLHF"
+  },
+  {
+    "arxiv_id": "2410.09724v2",
+    "title": "Taming Overconfidence in LLMs: Reward Calibration in RLHF",
+    "authors": [
+      "Jixuan Leng",
+      "Chengsong Huang",
+      "Banghua Zhu"
+    ],
+    "year": 2024,
+    "abstract": "Language model calibration refers to the alignment between the confidence of the model and the actual performance of its responses. While previous studies point out the overconfidence phenomenon in Large Language Models (LLMs) and show that LLMs trained with Reinforcement Learning from Human Feedback (RLHF) are overconfident with a more sharpened output probability, in this study, we reveal that RLHF tends to lead models to express verbalized overconfidence in their own responses. We investigate the underlying cause of this overconfidence and demonstrate that reward models used for Proximal Po",
+    "url": "https://arxiv.org/pdf/2410.09724v2",
+    "query": "reward model uncertainty calibration LLM RLHF"
+  },
+  {
+    "arxiv_id": "1012.2631v2",
+    "title": "Monte Carlo uncertainty estimation for wavelength calibration",
+    "authors": [
+      "Thang H. L.",
+      "Nguyen D. D.",
+      "Dung D. N."
+    ],
+    "year": 2010,
+    "abstract": "CIPM published the Supplement I for GUM in 2008 as not only an alternative approach to estimate the uncertainty for a given calibration measurement but also as a proper uncertainty estimation one, whenever any of the conditions imposed in GUM which must be satisfied does not hold [1, 2]. Before the introduction of the new approach in the Supplement I, namely Monte Carlo (MC) method, the GUM rules have been always applied even if in cases where the mentioned conditions were not fulfilled. After or even before the official introduction of this MC method, a number of published papers in uncertain",
+    "url": "https://arxiv.org/pdf/1012.2631v2",
+    "query": "reward model uncertainty calibration LLM RLHF"
+  },
+  {
+    "arxiv_id": "2604.10585v1",
+    "title": "Calibration Collapse Under Sycophancy Fine-Tuning: How Reward Hacking Breaks Uncertainty Quantification in LLMs",
+    "authors": [
+      "Subramanyam Sahoo"
+    ],
+    "year": 2026,
+    "abstract": "Modern large language models (LLMs) are increasingly fine-tuned via reinforcement learning from human feedback (RLHF) or related reward optimisation schemes. While such procedures improve perceived helpfulness, we investigate whether sycophantic reward signals degrade calibration -- a property essential for reliable uncertainty quantification. We fine-tune Qwen3-8B under three regimes: no fine-tuning (base), neutral supervised fine-tuning (SFT) on TriviaQA, and sycophancy-inducing Group Relative Policy Optimisation (GRPO) that rewards agreement with planted wrong answers. Evaluating on $1{,}00",
+    "url": "https://arxiv.org/pdf/2604.10585v1",
+    "query": "reward model uncertainty calibration LLM RLHF"
+  },
+  {
+    "arxiv_id": "2301.09126v2",
+    "title": "Propagation of Linear Uncertainties through Multiline Thru-Reflect-Line Calibration",
+    "authors": [
+      "Ziad Hatab",
+      "Michael Ernst Gadringer",
+      "Wolfgang B\u00f6sch"
+    ],
+    "year": 2023,
+    "abstract": "This study proposes a linear approach for propagating uncertainties in the multiline thru-reflect-line (TRL) calibration method for vector network analyzers. The multiline TRL formulation we are proposing applies the law of uncertainty propagation as outlined in the ISO Guide to the Expression of Uncertainty in Measurement (GUM) to both measurement and model uncertainties. In addition, we conducted a Monte Carlo analysis using a combination of measured and synthetic data to model various uncertainties, such as additive noise, reflect asymmetry, line mismatch, and line length offset. The result",
+    "url": "https://arxiv.org/pdf/2301.09126v2",
+    "query": "reward model uncertainty calibration LLM RLHF"
+  },
+  {
+    "arxiv_id": "2409.15360v3",
+    "title": "Reward-Robust RLHF in LLMs",
+    "authors": [
+      "Yuzi Yan",
+      "Xingzhou Lou",
+      "Jialian Li"
+    ],
+    "year": 2024,
+    "abstract": "As Large Language Models (LLMs) continue to progress toward more advanced forms of intelligence, Reinforcement Learning from Human Feedback (RLHF) is increasingly seen as a key pathway toward achieving Artificial General Intelligence (AGI). However, the reliance on reward-model-based (RM-based) alignment methods introduces significant challenges due to the inherent instability and imperfections of Reward Models (RMs), which can lead to critical issues such as reward hacking and misalignment with human intentions. In this paper, we introduce a reward-robust RLHF framework aimed at addressing th",
+    "url": "https://arxiv.org/pdf/2409.15360v3",
+    "query": "reward model uncertainty calibration LLM RLHF"
+  },
+  {
+    "arxiv_id": "2606.06673v1",
+    "title": "Uncertainty-Aware LLM-Guided Policy Shaping for Sparse-Reward Reinforcement Learning",
+    "authors": [
+      "Ujjwal Bhatta",
+      "Utsabi Dangol",
+      "Sumaly Bajracharya"
+    ],
+    "year": 2026,
+    "abstract": "Sparse rewards and heterogeneous task sequences remain persistent challenges in Reinforcement Learning (RL), often resulting in slow convergence, weak generalization, and inefficient exploration. We propose Uncertainty-Aware LLM-Guided Policy Shaping (ULPS), a novel framework that integrates a calibrated Large Language Model (LLM) into the RL training loop to provide structured, uncertainty-modulated behavioral guidance. ULPS employs an A*-based oracle to synthesize optimal symbolic trajectories, which are used to fine-tune a BERT-based language model. During training, this model supplies acti",
+    "url": "https://arxiv.org/pdf/2606.06673v1",
+    "query": "reward model uncertainty calibration LLM RLHF"
+  },
+  {
+    "arxiv_id": "2206.10209v2",
+    "title": "Propagation of Measurement and Model Uncertainties through Multiline TRL Calibration",
+    "authors": [
+      "Ziad Hatab",
+      "Michael Gadringer",
+      "Wolfgang B\u00f6sch"
+    ],
+    "year": 2022,
+    "abstract": "In this work, we present a linear uncertainty (LU) propagation treatment of measurement and model uncertainties in multiline thru-reflect-line (TRL) calibration. The proposed method is in accordance with the ISO Guide to the Expression of Uncertainty in Measurement (GUM). We demonstrate with numerical simulation based on the Monte Carlo (MC) method that our proposed LU method delivers identical uncertainty as the MC method but in a more efficient way.",
+    "url": "https://arxiv.org/pdf/2206.10209v2",
+    "query": "reward model uncertainty calibration LLM RLHF"
+  },
+  {
+    "arxiv_id": "2505.10399v1",
+    "title": "Evaluating Model Explanations without Ground Truth",
+    "authors": [
+      "Kaivalya Rawal",
+      "Zihao Fu",
+      "Eoin Delaney"
+    ],
+    "year": 2025,
+    "abstract": "There can be many competing and contradictory explanations for a single model prediction, making it difficult to select which one to use. Current explanation evaluation frameworks measure quality by comparing against ideal \"ground-truth\" explanations, or by verifying model sensitivity to important inputs. We outline the limitations of these approaches, and propose three desirable principles to ground the future development of explanation evaluation strategies for local feature importance explanations. We propose a ground-truth Agnostic eXplanation Evaluation framework (AXE) for evaluating and ",
+    "url": "https://arxiv.org/pdf/2505.10399v1",
+    "query": "alignment evaluation methodology ground truth annotation"
+  },
+  {
+    "arxiv_id": "2512.03932v3",
+    "title": "Beyond the Ground Truth: Enhanced Supervision for Image Restoration",
+    "authors": [
+      "Donghun Ryou",
+      "Inju Ha",
+      "Sanghyeok Chu"
+    ],
+    "year": 2025,
+    "abstract": "Deep learning-based image restoration has achieved significant success. However, when addressing real-world degradations, model performance is limited by the quality of groundtruth images in datasets due to practical constraints in data acquisition. To address this limitation, we propose a novel framework that enhances existing ground truth images to provide higher-quality supervision for real-world restoration. Our framework generates perceptually enhanced ground truth images using super-resolution by incorporating adaptive frequency masks, which are learned by a conditional frequency mask ge",
+    "url": "https://arxiv.org/pdf/2512.03932v3",
+    "query": "alignment evaluation methodology ground truth annotation"
+  },
+  {
+    "arxiv_id": "2602.05656v2",
+    "title": "Alignment Verifiability in Large Language Models: Normative Indistinguishability under Behavioral Evaluation",
+    "authors": [
+      "Igor Santos-Grueiro"
+    ],
+    "year": 2026,
+    "abstract": "Behavioral evaluation is the dominant paradigm for assessing alignment in large language models (LLMs). In current practice, observed compliance under finite evaluation protocols is treated as evidence of latent alignment. However, the inference from bounded behavioral evidence to claims about global latent properties is rarely analyzed as an identifiability problem. In this paper, we study alignment evaluation through the lens of statistical identifiability under partial observability. We allow agent policies to condition their behavior on observable signals correlated with the evaluation reg",
+    "url": "https://arxiv.org/pdf/2602.05656v2",
+    "query": "alignment evaluation methodology ground truth annotation"
+  },
+  {
+    "arxiv_id": "2312.03893v1",
+    "title": "Deliberative Technology for Alignment",
+    "authors": [
+      "Andrew Konya",
+      "Deger Turan",
+      "Aviv Ovadya"
+    ],
+    "year": 2023,
+    "abstract": "For humanity to maintain and expand its agency into the future, the most powerful systems we create must be those which act to align the future with the will of humanity. The most powerful systems today are massive institutions like governments, firms, and NGOs. Deliberative technology is already being used across these institutions to help align governance and diplomacy with human will, and modern AI is poised to make this technology significantly better. At the same time, the race to superhuman AGI is already underway, and the AI systems it gives rise to may become the most powerful systems ",
+    "url": "https://arxiv.org/pdf/2312.03893v1",
+    "query": "alignment evaluation methodology ground truth annotation"
+  },
+  {
+    "arxiv_id": "2312.15561v5",
+    "title": "README: Bridging Medical Jargon and Lay Understanding for Patient Education through Data-Centric NLP",
+    "authors": [
+      "Zonghai Yao",
+      "Nandyala Siddharth Kantu",
+      "Guanghao Wei"
+    ],
+    "year": 2023,
+    "abstract": "The advancement in healthcare has shifted focus toward patient-centric approaches, particularly in self-care and patient education, facilitated by access to Electronic Health Records (EHR). However, medical jargon in EHRs poses significant challenges in patient comprehension. To address this, we introduce a new task of automatically generating lay definitions, aiming to simplify complex medical terms into patient-friendly lay language. We first created the README dataset, an extensive collection of over 50,000 unique (medical term, lay definition) pairs and 300,000 mentions, each offering cont",
+    "url": "https://arxiv.org/pdf/2312.15561v5",
+    "query": "alignment evaluation methodology ground truth annotation"
+  },
+  {
+    "arxiv_id": "1809.08888v1",
+    "title": "Empirical Methodology for Crowdsourcing Ground Truth",
+    "authors": [
+      "Anca Dumitrache",
+      "Oana Inel",
+      "Benjamin Timmermans"
+    ],
+    "year": 2018,
+    "abstract": "The process of gathering ground truth data through human annotation is a major bottleneck in the use of information extraction methods for populating the Semantic Web. Crowdsourcing-based approaches are gaining popularity in the attempt to solve the issues related to volume of data and lack of annotators. Typically these practices use inter-annotator agreement as a measure of quality. However, in many domains, such as event detection, there is ambiguity in the data, as well as a multitude of perspectives of the information examples. We present an empirically derived methodology for efficiently",
+    "url": "https://arxiv.org/pdf/1809.08888v1",
+    "query": "alignment evaluation methodology ground truth annotation"
+  },
+  {
+    "arxiv_id": "1902.05255v1",
+    "title": "Computed tomography data collection of the complete human mandible and valid clinical ground truth models",
+    "authors": [
+      "J\u00fcrgen Wallner",
+      "Irene Mischak",
+      "Jan Egger"
+    ],
+    "year": 2019,
+    "abstract": "Image-based algorithmic software segmentation is an increasingly important topic in many medical fields. Algorithmic segmentation is used for medical three-dimensional visualization, diagnosis or treatment support, especially in complex medical cases. However, accessible medical databases are limited, and valid medical ground truth databases for the evaluation of algorithms are rare and usually comprise only a few images. Inaccuracy or invalidity of medical ground truth data and image-based artefacts also limit the creation of such databases, which is especially relevant for CT data sets of th",
+    "url": "https://arxiv.org/pdf/1902.05255v1",
+    "query": "alignment evaluation methodology ground truth annotation"
+  },
+  {
+    "arxiv_id": "2309.15217v2",
+    "title": "Ragas: Automated Evaluation of Retrieval Augmented Generation",
+    "authors": [
+      "Shahul Es",
+      "Jithin James",
+      "Luis Espinosa-Anke"
+    ],
+    "year": 2023,
+    "abstract": "We introduce Ragas (Retrieval Augmented Generation Assessment), a framework for reference-free evaluation of Retrieval Augmented Generation (RAG) pipelines. RAG systems are composed of a retrieval and an LLM based generation module, and provide LLMs with knowledge from a reference textual database, which enables them to act as a natural language layer between a user and textual databases, reducing the risk of hallucinations. Evaluating RAG architectures is, however, challenging because there are several dimensions to consider: the ability of the retrieval system to identify relevant and focuse",
+    "url": "https://arxiv.org/pdf/2309.15217v2",
+    "query": "alignment evaluation methodology ground truth annotation"
+  },
+  {
+    "arxiv_id": "2306.04338v1",
+    "title": "Changing Data Sources in the Age of Machine Learning for Official Statistics",
+    "authors": [
+      "Cedric De Boom",
+      "Michael Reusens"
+    ],
+    "year": 2023,
+    "abstract": "Data science has become increasingly essential for the production of official statistics, as it enables the automated collection, processing, and analysis of large amounts of data. With such data science practices in place, it enables more timely, more insightful and more flexible reporting. However, the quality and integrity of data-science-driven statistics rely on the accuracy and reliability of the data sources and the machine learning techniques that support them. In particular, changes in data sources are inevitable to occur and pose significant risks that are crucial to address in the c",
+    "url": "https://arxiv.org/pdf/2306.04338v1",
+    "query": "null hypothesis significance testing machine learning critique"
+  },
+  {
+    "arxiv_id": "2006.16189v4",
+    "title": "DOME: Recommendations for supervised machine learning validation in biology",
+    "authors": [
+      "Ian Walsh",
+      "Dmytro Fishman",
+      "Dario Garcia-Gasulla"
+    ],
+    "year": 2020,
+    "abstract": "Modern biology frequently relies on machine learning to provide predictions and improve decision processes. There have been recent calls for more scrutiny on machine learning performance and possible limitations. Here we present a set of community-wide recommendations aiming to help establish standards of supervised machine learning validation in biology. Adopting a structured methods description for machine learning based on data, optimization, model, evaluation (DOME) will aim to help both reviewers and readers to better understand and assess the performance and limitations of a method or ou",
+    "url": "https://arxiv.org/pdf/2006.16189v4",
+    "query": "null hypothesis significance testing machine learning critique"
+  },
+  {
+    "arxiv_id": "2201.12150v2",
+    "title": "Learning Curves for Decision Making in Supervised Machine Learning: A Survey",
+    "authors": [
+      "Felix Mohr",
+      "Jan N. van Rijn"
+    ],
+    "year": 2022,
+    "abstract": "Learning curves are a concept from social sciences that has been adopted in the context of machine learning to assess the performance of a learning algorithm with respect to a certain resource, e.g., the number of training examples or the number of training iterations. Learning curves have important applications in several machine learning contexts, most notably in data acquisition, early stopping of model training, and model selection. For instance, learning curves can be used to model the performance of the combination of an algorithm and its hyperparameter configuration, providing insights ",
+    "url": "https://arxiv.org/pdf/2201.12150v2",
+    "query": "null hypothesis significance testing machine learning critique"
+  },
+  {
+    "arxiv_id": "2302.08893v4",
+    "title": "Active learning for data streams: a survey",
+    "authors": [
+      "Davide Cacciarelli",
+      "Murat Kulahci"
+    ],
+    "year": 2023,
+    "abstract": "Online active learning is a paradigm in machine learning that aims to select the most informative data points to label from a data stream. The problem of minimizing the cost associated with collecting labeled observations has gained a lot of attention in recent years, particularly in real-world applications where data is only available in an unlabeled form. Annotating each observation can be time-consuming and costly, making it difficult to obtain large amounts of labeled data. To overcome this issue, many active learning strategies have been proposed in the last decades, aiming to select the ",
+    "url": "https://arxiv.org/pdf/2302.08893v4",
+    "query": "null hypothesis significance testing machine learning critique"
+  },
+  {
+    "arxiv_id": "2304.02381v2",
+    "title": "Physics-Inspired Interpretability Of Machine Learning Models",
+    "authors": [
+      "Maximilian P Niroomand",
+      "David J Wales"
+    ],
+    "year": 2023,
+    "abstract": "The ability to explain decisions made by machine learning models remains one of the most significant hurdles towards widespread adoption of AI in highly sensitive areas such as medicine, cybersecurity or autonomous driving. Great interest exists in understanding which features of the input data prompt model decision making. In this contribution, we propose a novel approach to identify relevant features of the input data, inspired by methods from the energy landscapes field, developed in the physical sciences. By identifying conserved weights within groups of minima of the loss landscapes, we c",
+    "url": "https://arxiv.org/pdf/2304.02381v2",
+    "query": "null hypothesis significance testing machine learning critique"
+  },
+  {
+    "arxiv_id": "2602.11092v2",
+    "title": "MerLin: A Discovery Engine for Photonic and Hybrid Quantum Machine Learning",
+    "authors": [
+      "Cassandre Notton",
+      "Benjamin Stott",
+      "Philippe Schoeb"
+    ],
+    "year": 2026,
+    "abstract": "Identifying where quantum models may offer practical benefits in near term quantum machine learning (QML) requires moving beyond isolated algorithmic proposals toward systematic and empirical exploration across models, datasets, and hardware constraints. We introduce MerLin, an open-source framework designed as a discovery engine for photonic and hybrid quantum machine learning. MerLin integrates optimized strong simulation of linear optical circuits into standard PyTorch and scikit learn workflows, enabling end-to-end differentiable training of quantum layers.\n  MerLin is designed around syst",
+    "url": "https://arxiv.org/pdf/2602.11092v2",
+    "query": "null hypothesis significance testing machine learning critique"
+  },
+  {
+    "arxiv_id": "2303.15563v1",
+    "title": "Privacy-preserving machine learning for healthcare: open challenges and future perspectives",
+    "authors": [
+      "Alejandro Guerra-Manzanares",
+      "L. Julian Lechuga Lopez",
+      "Michail Maniatakos"
+    ],
+    "year": 2023,
+    "abstract": "Machine Learning (ML) has recently shown tremendous success in modeling various healthcare prediction tasks, ranging from disease diagnosis and prognosis to patient treatment. Due to the sensitive nature of medical data, privacy must be considered along the entire ML pipeline, from model training to inference. In this paper, we conduct a review of recent literature concerning Privacy-Preserving Machine Learning (PPML) for healthcare. We primarily focus on privacy-preserving training and inference-as-a-service, and perform a comprehensive review of existing trends, identify challenges, and disc",
+    "url": "https://arxiv.org/pdf/2303.15563v1",
+    "query": "null hypothesis significance testing machine learning critique"
+  },
+  {
+    "arxiv_id": "1907.04708v1",
+    "title": "Learning a Behavior Model of Hybrid Systems Through Combining Model-Based Testing and Machine Learning (Full Version)",
+    "authors": [
+      "Bernhard K. Aichernig",
+      "Roderick Bloem",
+      "Masoud Ebrahimi"
+    ],
+    "year": 2019,
+    "abstract": "Models play an essential role in the design process of cyber-physical systems. They form the basis for simulation and analysis and help in identifying design problems as early as possible. However, the construction of models that comprise physical and digital behavior is challenging. Therefore, there is considerable interest in learning such hybrid behavior by means of machine learning which requires sufficient and representative training data covering the behavior of the physical system adequately. In this work, we exploit a combination of automata learning and model-based testing to generate",
+    "url": "https://arxiv.org/pdf/1907.04708v1",
+    "query": "null hypothesis significance testing machine learning critique"
+  },
+  {
+    "arxiv_id": "2409.19389v1",
+    "title": "Co-design of a novel CMOS highly parallel, low-power, multi-chip neural network accelerator",
+    "authors": [
+      "W Hokenmaier",
+      "R Jurasek",
+      "E Bowen"
+    ],
+    "year": 2024,
+    "abstract": "Why do security cameras, sensors, and siri use cloud servers instead of on-board computation? The lack of very-low-power, high-performance chips greatly limits the ability to field untethered edge devices. We present the NV-1, a new low-power ASIC AI processor that greatly accelerates parallel processing (> 10X) with dramatic reduction in energy consumption (> 100X), via many parallel combined processor-memory units, i.e., a drastically non-von-Neumann architecture, allowing very large numbers of independent processing streams without bottlenecks due to typical monolithic memory. The current i",
+    "url": "https://arxiv.org/pdf/2409.19389v1",
+    "query": "prior predictive checking experimental design power"
+  },
+  {
+    "arxiv_id": "2010.16033v2",
+    "title": "Mixed-Integer Optimization for Bio-Inspired Robust Power Network Design",
+    "authors": [
+      "Hao Huang",
+      "Varuneswara Panyam",
+      "Mohammad Rasoul Narimani"
+    ],
+    "year": 2020,
+    "abstract": "Power systems are susceptible to natural threats including hurricanes and floods. Modern power grids are also increasingly threatened by cyber attacks. Existing approaches that help improve power system security and resilience may not be sufficient; this is evidenced by the continued challenge to supply energy to all customers during severe events. This paper presents an approach to address this challenge through bio-inspired power system network design to improve system reliability and resilience against disturbances. Inspired by naturally robust ecosystems, this paper considers the optimal e",
+    "url": "https://arxiv.org/pdf/2010.16033v2",
+    "query": "prior predictive checking experimental design power"
+  },
+  {
+    "arxiv_id": "1311.0835v1",
+    "title": "Optimal designs for nonlinear regression models with respect to non-informative priors",
+    "authors": [
+      "Ina Burghaus",
+      "Holger Dette"
+    ],
+    "year": 2013,
+    "abstract": "In nonlinear regression models the Fisher information depends on the parameters of the model. Consequently, optimal designs maximizing some functional of the information matrix cannot be implemented directly but require some preliminary knowledge about the unknown parameters. Bayesian optimality criteria provide an attractive solution to this problem. These criteria depend sensitively on a reasonable specification of a prior distribution for the model parameters which might not be available in all applications. In this paper we investigate Bayesian optimality criteria with non-informative prio",
+    "url": "https://arxiv.org/pdf/1311.0835v1",
+    "query": "prior predictive checking experimental design power"
+  },
+  {
+    "arxiv_id": "2203.15897v3",
+    "title": "Calibrated Model Criticism Using Split Predictive Checks",
+    "authors": [
+      "Jiawei Li",
+      "Jonathan H. Huggins"
+    ],
+    "year": 2022,
+    "abstract": "Checking how well a fitted model explains the data is one of the most fundamental parts of a Bayesian data analysis. However, existing model checking methods suffer from trade-offs between being well-calibrated, automated, and computationally efficient. To overcome these limitations, we propose split predictive checks (SPCs), which combine the ease-of-use and speed of posterior predictive checks with the good calibration properties of predictive checks that rely on model-specific derivations or inference schemes. We develop an asymptotic theory for two types of SPCs: single SPCs and the divide",
+    "url": "https://arxiv.org/pdf/2203.15897v3",
+    "query": "prior predictive checking experimental design power"
+  },
+  {
+    "arxiv_id": "1907.01069v1",
+    "title": "Development and high-power testing of an X-band dielectric-loaded power extractor",
+    "authors": [
+      "Jiahang Shao",
+      "Chunguang Jing",
+      "Eric Wisniewski"
+    ],
+    "year": 2019,
+    "abstract": "Dielectric loaded structures are promising candidates for use in the structure wakefield acceleration (SWFA) technique, for both the collinear wakefield and the two-beam acceleration (CWA and TBA respectively) approaches, due to their low fabrication cost, low rf losses, and the potential to withstand high gradient. A short pulse (<=20 ns) TBA program is under development at the Argonne Wakefield Accelerator (AWA) facility where dielectric loaded structures are being used for both the power extractor/transfer structure (PETS) and the accelerator. In this study, an X-band 11.7 GHz dielectric PE",
+    "url": "https://arxiv.org/pdf/1907.01069v1",
+    "query": "prior predictive checking experimental design power"
+  },
+  {
+    "arxiv_id": "1907.01117v2",
+    "title": "Exploring Feasible Design Spaces for Heterogeneous Constraints",
+    "authors": [
+      "Amir M. Mirzendehdel",
+      "Morad Behandish",
+      "Saigopal Nelaturi"
+    ],
+    "year": 2019,
+    "abstract": "We demonstrate an approach of exploring design spaces to simultaneously satisfy kinematics- and physics-based requirements. We present a classification of constraints and solvers to enable postponing optimization as far down the design workflow as possible. The solvers are organized into two broad classes of design space 'pruning' and 'exploration' by considering the types of constraints they can satisfy. We show that pointwise constraints define feasible design subspaces that can be represented and computed as first-class entities by their maximal feasible elements. The design space is pruned",
+    "url": "https://arxiv.org/pdf/1907.01117v2",
+    "query": "prior predictive checking experimental design power"
+  },
+  {
+    "arxiv_id": "1609.05801v1",
+    "title": "Asynchronous Splitting Design for Model Predictive Control",
+    "authors": [
+      "Laura Ferranti",
+      "Ye Pu",
+      "Colin N. Jones"
+    ],
+    "year": 2016,
+    "abstract": "This paper focuses on the design of an asynchronous dual solver suitable for embedded model predictive control (MPC) applications. The proposed solver relies on a state-of-the-art variance reduction (VR) scheme, previously used in the context of stochastic proximal gradient methods, and on the alternating minimization algorithm (AMA). The resultant algorithm, a stochastic AMA with VR, shows geometric convergence (in the expectation) to a suboptimal solution of the MPC problem and, compared to other state-of-the-art dual asynchronous algorithms, allows to tune the probability of the asynchronou",
+    "url": "https://arxiv.org/pdf/1609.05801v1",
+    "query": "prior predictive checking experimental design power"
+  },
+  {
+    "arxiv_id": "1811.10496v3",
+    "title": "hynet: An Optimal Power Flow Framework for Hybrid AC/DC Power Systems",
+    "authors": [
+      "Matthias Hotz",
+      "Wolfgang Utschick"
+    ],
+    "year": 2018,
+    "abstract": "High-voltage direct current (HVDC) systems are increasingly incorporated into today's AC power grids, necessitating optimal power flow (OPF) tools for the analysis, planning, and operation of such hybrid systems. To this end, we introduce hynet, a Python-based open-source OPF framework for hybrid AC/DC grids with point-to-point and radial multi-terminal HVDC systems. hynet's design promotes ease of use and extensibility, which is supported by the particular mathematical model and software design presented in this paper. The system model features a unified representation of AC and DC subgrids a",
+    "url": "https://arxiv.org/pdf/1811.10496v3",
+    "query": "prior predictive checking experimental design power"
+  }
+]

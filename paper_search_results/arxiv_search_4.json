@@ -1,0 +1,603 @@
+[
+  {
+    "arxiv_id": "2509.12382v1",
+    "title": "LLM-as-a-Judge: Rapid Evaluation of Legal Document Recommendation for Retrieval-Augmented Generation",
+    "authors": [
+      "Anu Pradhan",
+      "Alexandra Ortan",
+      "Apurv Verma"
+    ],
+    "year": 2025,
+    "abstract": "The evaluation bottleneck in recommendation systems has become particularly acute with the rise of Generative AI, where traditional metrics fall short of capturing nuanced quality dimensions that matter in specialized domains like legal research. Can we trust Large Language Models to serve as reliable judges of their own kind? This paper investigates LLM-as-a-Judge as a principled approach to evaluating Retrieval-Augmented Generation systems in legal contexts, where the stakes of recommendation quality are exceptionally high.\n  We tackle two fundamental questions that determine practical viabi",
+    "url": "https://arxiv.org/pdf/2509.12382v1",
+    "query": "evaluating alignment interventions language models statistical methodology"
+  },
+  {
+    "arxiv_id": "2309.02144v1",
+    "title": "Making Large Language Models Better Reasoners with Alignment",
+    "authors": [
+      "Peiyi Wang",
+      "Lei Li",
+      "Liang Chen"
+    ],
+    "year": 2023,
+    "abstract": "Reasoning is a cognitive process of using evidence to reach a sound conclusion. The reasoning capability is essential for large language models (LLMs) to serve as the brain of the artificial general intelligence agent. Recent studies reveal that fine-tuning LLMs on data with the chain of thought (COT) reasoning process can significantly enhance their reasoning capabilities. However, we find that the fine-tuned LLMs suffer from an \\textit{Assessment Misalignment} problem, i.e., they frequently assign higher scores to subpar COTs, leading to potential limitations in their reasoning abilities. To",
+    "url": "https://arxiv.org/pdf/2309.02144v1",
+    "query": "evaluating alignment interventions language models statistical methodology"
+  },
+  {
+    "arxiv_id": "2502.05945v3",
+    "title": "Head-Specific Intervention Can Induce Misaligned AI Coordination in Large Language Models",
+    "authors": [
+      "Paul Darm",
+      "Annalisa Riccardi"
+    ],
+    "year": 2025,
+    "abstract": "Robust alignment guardrails for large language models (LLMs) are becoming increasingly important with their widespread application. In contrast to previous studies, we demonstrate that inference-time activation interventions can bypass safety alignments and effectively steer model generations towards harmful AI coordination. Our method applies fine-grained interventions at specific attention heads, which we identify by probing each head in a simple binary choice task. We then show that interventions on these heads generalise to the open-ended generation setting, effectively circumventing safet",
+    "url": "https://arxiv.org/pdf/2502.05945v3",
+    "query": "evaluating alignment interventions language models statistical methodology"
+  },
+  {
+    "arxiv_id": "2602.10661v2",
+    "title": "Targeted Syntactic Evaluation of Language Models on Georgian Case Alignment",
+    "authors": [
+      "Daniel Gallagher",
+      "Gerhard Heyer"
+    ],
+    "year": 2026,
+    "abstract": "This paper evaluates the performance of transformer-based language models on split-ergative case alignment in Georgian, a particularly rare system for assigning grammatical cases to mark argument roles. We focus on subject and object marking determined through various permutations of nominative, ergative, and dative noun forms. A treebank-based approach for the generation of minimal pairs using the Grew query language is implemented. We create a dataset of 370 syntactic tests made up of seven tasks containing 50-70 samples each, where three noun forms are tested in any given sample. Five encod",
+    "url": "https://arxiv.org/pdf/2602.10661v2",
+    "query": "evaluating alignment interventions language models statistical methodology"
+  },
+  {
+    "arxiv_id": "1712.07519v2",
+    "title": "Statistical Inference for the Population Landscape via Moment Adjusted Stochastic Gradients",
+    "authors": [
+      "Tengyuan Liang",
+      "Weijie Su"
+    ],
+    "year": 2017,
+    "abstract": "Modern statistical inference tasks often require iterative optimization methods to compute the solution. Convergence analysis from an optimization viewpoint only informs us how well the solution is approximated numerically but overlooks the sampling nature of the data. In contrast, recognizing the randomness in the data, statisticians are keen to provide uncertainty quantification, or confidence, for the solution obtained using iterative optimization methods. This paper makes progress along this direction by introducing the moment-adjusted stochastic gradient descents, a new stochastic optimiz",
+    "url": "https://arxiv.org/pdf/1712.07519v2",
+    "query": "evaluating alignment interventions language models statistical methodology"
+  },
+  {
+    "arxiv_id": "2605.04999v2",
+    "title": "A Tutorial for Evaluating Cure Model Appropriateness",
+    "authors": [
+      "A Tutorial for Evaluating Cure Model Appropriateness Geethanjalee Mudunkotuwa",
+      "Durbadal Ghosh",
+      "Subodh Selukar"
+    ],
+    "year": 2026,
+    "abstract": "In survival analysis, traditional models assume all individuals will eventually experience the event of interest. However, advances in therapeutics have led to multiple clinical contexts with potentially curative therapies, and in these contexts, certain individuals may never experience the event. Statisticians have developed cure models as a methodology to address this challenge. Nonetheless, despite significant statistical advances in cure models, we have seen more limited uptake in biomedical applications, and we hypothesize that this is caused by limited guidance in the appropriate applica",
+    "url": "https://arxiv.org/pdf/2605.04999v2",
+    "query": "evaluating alignment interventions language models statistical methodology"
+  },
+  {
+    "arxiv_id": "2305.16960v3",
+    "title": "Training Socially Aligned Language Models on Simulated Social Interactions",
+    "authors": [
+      "Ruibo Liu",
+      "Ruixin Yang",
+      "Chenyan Jia"
+    ],
+    "year": 2023,
+    "abstract": "Social alignment in AI systems aims to ensure that these models behave according to established societal values. However, unlike humans, who derive consensus on value judgments through social interaction, current language models (LMs) are trained to rigidly replicate their training corpus in isolation, leading to subpar generalization in unfamiliar scenarios and vulnerability to adversarial attacks. This work presents a novel training paradigm that permits LMs to learn from simulated social interactions. In comparison to existing methodologies, our approach is considerably more scalable and ef",
+    "url": "https://arxiv.org/pdf/2305.16960v3",
+    "query": "evaluating alignment interventions language models statistical methodology"
+  },
+  {
+    "arxiv_id": "1701.07910v2",
+    "title": "Combining Envelope Methodology and Aster Models for Variance Reduction in Life History Analyses",
+    "authors": [
+      "Daniel J. Eck",
+      "Charles J. Geyer",
+      "R. Dennis Cook"
+    ],
+    "year": 2017,
+    "abstract": "Precise estimation of expected Darwinian fitness, the expected lifetime number of offspring of organism, is a central component of life history analysis. The aster model serves as a defensible statistical model for distributions of Darwinian fitness. The aster model is equipped to incorporate the major life stages an organism travels through which separately may effect Darwinian fitness. Envelope methodology reduces asymptotic variability by establishing a link between unknown parameters of interest and the asymptotic covariance matrices of their estimators. It is known both theoretically and ",
+    "url": "https://arxiv.org/pdf/1701.07910v2",
+    "query": "evaluating alignment interventions language models statistical methodology"
+  },
+  {
+    "arxiv_id": "0910.5060v3",
+    "title": "Two-sample Bayesian Nonparametric Hypothesis Testing",
+    "authors": [
+      "Chris C. Holmes",
+      "Fran\u00e7ois Caron",
+      "Jim E. Griffin"
+    ],
+    "year": 2009,
+    "abstract": "In this article we describe Bayesian nonparametric procedures for two-sample hypothesis testing. Namely, given two sets of samples $\\mathbf{y}^{\\scriptscriptstyle(1)}\\;$\\stackrel{\\scriptscriptstyle{iid}}{\\s im}$\\;F^{\\scriptscriptstyle(1)}$ and $\\mathbf{y}^{\\scriptscriptstyle(2 )}\\;$\\stackrel{\\scriptscriptstyle{iid}}{\\sim}$\\;F^{\\scriptscriptstyle( 2)}$, with $F^{\\scriptscriptstyle(1)},F^{\\scriptscriptstyle(2)}$ unknown, we wish to evaluate the evidence for the null hypothesis $H_0:F^{\\scriptscriptstyle(1)}\\equiv F^{\\scriptscriptstyle(2)}$ versus the alternative $H_1:F^{\\scriptscriptstyle(1)}\\ne",
+    "url": "https://arxiv.org/pdf/0910.5060v3",
+    "query": "evidence synthesis Bayesian model comparison hypothesis testing"
+  },
+  {
+    "arxiv_id": "2403.16981v2",
+    "title": "The Sample Complexity of Simple Binary Hypothesis Testing",
+    "authors": [
+      "Ankit Pensia",
+      "Varun Jog",
+      "Po-Ling Loh"
+    ],
+    "year": 2024,
+    "abstract": "The sample complexity of simple binary hypothesis testing is the smallest number of i.i.d.\\ samples required to distinguish between two distributions $p$ and $q$ in either: (i) the prior-free setting, with type-I error at most $\u03b1$ and type-II error at most $\u03b2$; or (ii) the Bayesian setting, with Bayes error at most $\u03b4$ and prior distribution $(\u03c0, 1-\u03c0)$. This problem has only been studied when $\u03b1= \u03b2$ (prior-free) or $\u03c0= 1/2$ (Bayesian), and the sample complexity is known to be characterized by the Hellinger divergence between $p$ and $q$, up to multiplicative constants. In this paper, we derive",
+    "url": "https://arxiv.org/pdf/2403.16981v2",
+    "query": "evidence synthesis Bayesian model comparison hypothesis testing"
+  },
+  {
+    "arxiv_id": "2005.08334v4",
+    "title": "Marginal likelihood computation for model selection and hypothesis testing: an extensive review",
+    "authors": [
+      "Fernando Llorente",
+      "Luca Martino",
+      "David Delgado"
+    ],
+    "year": 2020,
+    "abstract": "This is an up-to-date introduction to, and overview of, marginal likelihood computation for model selection and hypothesis testing. Computing normalizing constants of probability models (or ratio of constants) is a fundamental issue in many applications in statistics, applied mathematics, signal processing and machine learning. This article provides a comprehensive study of the state-of-the-art of the topic. We highlight limitations, benefits, connections and differences among the different techniques. Problems and possible solutions with the use of improper priors are also described. Some of ",
+    "url": "https://arxiv.org/pdf/2005.08334v4",
+    "query": "evidence synthesis Bayesian model comparison hypothesis testing"
+  },
+  {
+    "arxiv_id": "2301.13783v1",
+    "title": "An analytical approach to Bayesian evidence computation",
+    "authors": [
+      "Juan Garcia-Bellido"
+    ],
+    "year": 2023,
+    "abstract": "The Bayesian evidence is a key tool in model selection, allowing a comparison of models with different numbers of parameters. Its use in analysis of cosmological models has been limited by difficulties in calculating it, with current numerical algorithms requiring supercomputers. In this paper we give exact formulae for the Bayesian evidence in the case of Gaussian likelihoods with arbitrary correlations and top-hat priors, and approximate formulae for the case of likelihood distributions with leading non-Gaussianities (skewness and kurtosis). We apply these formulae to cosmological models wit",
+    "url": "https://arxiv.org/pdf/2301.13783v1",
+    "query": "evidence synthesis Bayesian model comparison hypothesis testing"
+  },
+  {
+    "arxiv_id": "1704.08347v1",
+    "title": "Hypothesis Testing under Mutual Information Privacy Constraints in the High Privacy Regime",
+    "authors": [
+      "Jiachun Liao",
+      "Lalitha Sankar",
+      "Vincent Y. F. Tan"
+    ],
+    "year": 2017,
+    "abstract": "Hypothesis testing is a statistical inference framework for determining the true distribution among a set of possible distributions for a given dataset. Privacy restrictions may require the curator of the data or the respondents themselves to share data with the test only after applying a randomizing privacy mechanism. This work considers mutual information (MI) as the privacy metric for measuring leakage. In addition, motivated by the Chernoff-Stein lemma, the relative entropy between pairs of distributions of the output (generated by the privacy mechanism) is chosen as the utility metric. Fo",
+    "url": "https://arxiv.org/pdf/1704.08347v1",
+    "query": "evidence synthesis Bayesian model comparison hypothesis testing"
+  },
+  {
+    "arxiv_id": "1609.07528v3",
+    "title": "Compressed Hypothesis Testing: To Mix or Not to Mix?",
+    "authors": [
+      "Myung Cho",
+      "Weiyu Xu",
+      "Lifeng Lai"
+    ],
+    "year": 2016,
+    "abstract": "In this paper, we study the problem of determining $k$ anomalous random variables that have different probability distributions from the rest $(n-k)$ random variables. Instead of sampling each individual random variable separately as in the conventional hypothesis testing, we propose to perform hypothesis testing using mixed observations that are functions of multiple random variables. We characterize the error exponents for correctly identifying the $k$ anomalous random variables under fixed time-invariant mixed observations, random time-varying mixed observations, and deterministic time-vary",
+    "url": "https://arxiv.org/pdf/1609.07528v3",
+    "query": "evidence synthesis Bayesian model comparison hypothesis testing"
+  },
+  {
+    "arxiv_id": "1402.5723v5",
+    "title": "Smoothing and mean-covariance estimation of functional data with a Bayesian hierarchical model",
+    "authors": [
+      "Jingjing Yang",
+      "Hongxiao Zhu",
+      "Taeryon Choi"
+    ],
+    "year": 2014,
+    "abstract": "Functional data, with basic observational units being functions (e.g., curves, surfaces) varying over a continuum, are frequently encountered in various applications. While many statistical tools have been developed for functional data analysis, the issue of smoothing all functional observations simultaneously is less studied. Existing methods often focus on smoothing each individual function separately, at the risk of removing important systematic patterns common across functions. We propose a nonparametric Bayesian approach to smooth all functional observations simultaneously and nonparametr",
+    "url": "https://arxiv.org/pdf/1402.5723v5",
+    "query": "evidence synthesis Bayesian model comparison hypothesis testing"
+  },
+  {
+    "arxiv_id": "2502.12445v2",
+    "title": "Computational Safety for Generative AI: A Hypothesis Testing Perspective",
+    "authors": [
+      "Pin-Yu Chen"
+    ],
+    "year": 2025,
+    "abstract": "AI safety is a rapidly growing area of research that seeks to prevent the harm and misuse of frontier AI technology, particularly with respect to generative AI (GenAI) tools that are capable of creating realistic and high-quality content through text prompts. Examples of such tools include large language models (LLMs) and text-to-image (T2I) diffusion models. As the performance of various leading GenAI models approaches saturation due to similar training data sources and neural network architecture designs, the development of reliable safety guardrails has become a key differentiator for respo",
+    "url": "https://arxiv.org/pdf/2502.12445v2",
+    "query": "evidence synthesis Bayesian model comparison hypothesis testing"
+  },
+  {
+    "arxiv_id": "2512.07667v1",
+    "title": "Depth-Wise Activation Steering for Honest Language Models",
+    "authors": [
+      "Gracjan G\u00f3ral",
+      "Marysia Winkels",
+      "Steven Basart"
+    ],
+    "year": 2025,
+    "abstract": "Large language models sometimes assert falsehoods despite internally representing the correct answer, failures of honesty rather than accuracy, which undermines auditability and safety. Existing approaches largely optimize factual correctness or depend on retraining and brittle single-layer edits, offering limited leverage over truthful reporting. We present a training-free activation steering method that weights steering strength across network depth using a Gaussian schedule. On the MASK benchmark, which separates honesty from knowledge, we evaluate seven models spanning the LLaMA, Qwen, and",
+    "url": "https://arxiv.org/pdf/2512.07667v1",
+    "query": "activation steering representation engineering model robustness"
+  },
+  {
+    "arxiv_id": "2605.10664v2",
+    "title": "Prompt-Activation Duality: Improving Activation Steering via Attention-Level Interventions",
+    "authors": [
+      "Diancheng Kang",
+      "Zheyuan Liu",
+      "Ningshan Ma"
+    ],
+    "year": 2026,
+    "abstract": "Activation steering controls language model behavior by adding directions to internal representations at inference time, but standard residual-stream steering can fail in stateful dialogue. We identify KV-cache contamination as a key failure mode: steered token states are stored and repeatedly reused, turning a local perturbation into cumulative coherence degradation. To address this challenge, we propose Gated Cropped Attention-Delta steering (GCAD), which extracts steering signals from system-prompt contributions to self-attention and applies them with token-level gating. Across persona-stee",
+    "url": "https://arxiv.org/pdf/2605.10664v2",
+    "query": "activation steering representation engineering model robustness"
+  },
+  {
+    "arxiv_id": "2601.22873v1",
+    "title": "EmoShift: Lightweight Activation Steering for Enhanced Emotion-Aware Speech Synthesis",
+    "authors": [
+      "Li Zhou",
+      "Hao Jiang",
+      "Junjie Li"
+    ],
+    "year": 2026,
+    "abstract": "Achieving precise and controllable emotional expression is crucial for producing natural and context-appropriate speech in text-to-speech (TTS) synthesis. However, many emotion-aware TTS systems, including large language model (LLM)-based designs, rely on scaling fixed emotion embeddings or external guidance, limiting their ability to model emotion-specific latent characteristics. To address this gap, we present EmoShift, a lightweight activation-steering framework incorporating a EmoSteer layer, which learns a steering vector for each target emotion in the output embedding space to capture it",
+    "url": "https://arxiv.org/pdf/2601.22873v1",
+    "query": "activation steering representation engineering model robustness"
+  },
+  {
+    "arxiv_id": "1606.05112v1",
+    "title": "Engineering Tagging Languages for DSLs",
+    "authors": [
+      "Timo Greifenberg",
+      "Markus Look",
+      "Sebastian Roidl"
+    ],
+    "year": 2016,
+    "abstract": "To keep a DSL clean, readable and reusable in different contexts, it is useful to define a separate tagging language. A tag model logically adds information to the tagged DSL model while technically keeping the artifacts separated. Using a generic tagging language leads to promiscuous tag models, whereas defining a target DSL-specific tag language has a high initial overhead. This paper presents a systematic approach to define a DSL-specific tag language and a corresponding schema language, combining the advantages of both worlds: (a) the tag language specifically fits to the DSL, (b) the arti",
+    "url": "https://arxiv.org/pdf/1606.05112v1",
+    "query": "activation steering representation engineering model robustness"
+  },
+  {
+    "arxiv_id": "2403.05767v1",
+    "title": "Extending Activation Steering to Broad Skills and Multiple Behaviours",
+    "authors": [
+      "Teun van der Weij",
+      "Massimo Poesio",
+      "Nandi Schoots"
+    ],
+    "year": 2024,
+    "abstract": "Current large language models have dangerous capabilities, which are likely to become more problematic in the future. Activation steering techniques can be used to reduce risks from these capabilities. In this paper, we investigate the efficacy of activation steering for broad skills and multiple behaviours. First, by comparing the effects of reducing performance on general coding ability and Python-specific ability, we find that steering broader skills is competitive to steering narrower skills. Second, we steer models to become more or less myopic and wealth-seeking, among other behaviours. ",
+    "url": "https://arxiv.org/pdf/2403.05767v1",
+    "query": "activation steering representation engineering model robustness"
+  },
+  {
+    "arxiv_id": "1101.2456v3",
+    "title": "Polynomial representations and categorifications of Fock Space",
+    "authors": [
+      "Jiuzu Hong",
+      "Oded Yacobi"
+    ],
+    "year": 2011,
+    "abstract": "The rings of symmetric polynomials form an inverse system whose limit, the ring of symmetric functions, is the model for the bosonic Fock space representation of the affine Lie algebra. We categorify this construction by considering an inverse limit of categories of polynomial representation of general linear groups. We show that this limit naturally carries an action of the affine Lie algebra (in the sense of Rouquier), thereby obtaining a famiy of categorifications of the bosonic Fock space representation.",
+    "url": "https://arxiv.org/pdf/1101.2456v3",
+    "query": "activation steering representation engineering model robustness"
+  },
+  {
+    "arxiv_id": "2308.10248v5",
+    "title": "Steering Language Models With Activation Engineering",
+    "authors": [
+      "Alexander Matt Turner",
+      "Lisa Thiergart",
+      "Gavin Leech"
+    ],
+    "year": 2023,
+    "abstract": "Prompt engineering and finetuning aim to maximize language model performance on a given metric (like toxicity reduction). However, these methods do not fully elicit a model's capabilities. To reduce this gap, we introduce activation engineering: the inference-time modification of activations in order to control (or steer) model outputs. Specifically, we introduce the Activation Addition (ActAdd) technique, which contrasts the intermediate activations on prompt pairs (such as \"Love\" versus \"Hate\") to compute a steering vector (Subramani et al. 2022). By tactically adding in e.g. the \"Love\" - \"H",
+    "url": "https://arxiv.org/pdf/2308.10248v5",
+    "query": "activation steering representation engineering model robustness"
+  },
+  {
+    "arxiv_id": "0711.0795v4",
+    "title": "Finite-Dimensional Representations of Hyper Loop Algebras Over Non-Algebraically Closed Fields",
+    "authors": [
+      "Dijana Jakelic",
+      "Adriano Moura"
+    ],
+    "year": 2007,
+    "abstract": "  We study finite-dimensional representations of hyper loop algebras over non-algebraically closed fields. The main results concern the classification of the irreducible representations, the construction of the Weyl modules, base change, tensor products of irreducible and Weyl modules, and the block decomposition of the underlying abelian category. Several results are interestingly related to the study of irreducible representations of polynomial algebras and Galois theory.",
+    "url": "https://arxiv.org/pdf/0711.0795v4",
+    "query": "activation steering representation engineering model robustness"
+  },
+  {
+    "arxiv_id": "2202.13695v1",
+    "title": "Taxpayer deductions and the endogenous probability of tax penalisation",
+    "authors": [
+      "Alex A. T. Rathke"
+    ],
+    "year": 2022,
+    "abstract": "We propose a parametric specification of the probability of tax penalisation faced by a taxpayer, based on the amount of deduction chosen by her to reduce total taxation. Comparative analyses lead to a closed-form solution for the optimum tax deduction, and provide the maximising conditions with respect to the probability parameters.",
+    "url": "https://arxiv.org/pdf/2202.13695v1",
+    "query": "safety fine-tuning alignment tax evaluation metrics"
+  },
+  {
+    "arxiv_id": "2506.15415v1",
+    "title": "Targeted Lexical Injection: Unlocking Latent Cross-Lingual Alignment in Lugha-Llama via Early-Layer LoRA Fine-Tuning",
+    "authors": [
+      "Stanley Ngugi"
+    ],
+    "year": 2025,
+    "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities, yet their performance in low-resource languages (LRLs), such as Swahili, often lags due to data scarcity and underrepresentation in pre-training. A key challenge is achieving robust cross-lingual lexical alignment, crucial for tasks like translation and cross-lingual information retrieval. This paper introduces Targeted Lexical Injection (TLI), a novel and efficient fine-tuning approach. We first demonstrate that Lugha-Llama-8B-wura, a Swahili-centric LLM, exhibits strong, near-perfect lexical alignment for Swahili-English",
+    "url": "https://arxiv.org/pdf/2506.15415v1",
+    "query": "safety fine-tuning alignment tax evaluation metrics"
+  },
+  {
+    "arxiv_id": "2408.07888v2",
+    "title": "Evaluating Fine-Tuning Efficiency of Human-Inspired Learning Strategies in Medical Question Answering",
+    "authors": [
+      "Yushi Yang",
+      "Andrew M. Bean",
+      "Robert McCraith"
+    ],
+    "year": 2024,
+    "abstract": "Fine-tuning Large Language Models (LLMs) incurs considerable training costs, driving the need for data-efficient training with optimised data ordering. Human-inspired strategies offer a solution by organising data based on human learning practices. This study evaluates the fine-tuning efficiency of five human-inspired strategies across four language models, three datasets, and both human- and LLM-labelled data in the context of medical question answering. These strategies achieve the best accuracy gain of 1.81% and an average gain of 1.02% across datasets, with interleaved strategies deliverin",
+    "url": "https://arxiv.org/pdf/2408.07888v2",
+    "query": "safety fine-tuning alignment tax evaluation metrics"
+  },
+  {
+    "arxiv_id": "2602.05656v2",
+    "title": "Alignment Verifiability in Large Language Models: Normative Indistinguishability under Behavioral Evaluation",
+    "authors": [
+      "Igor Santos-Grueiro"
+    ],
+    "year": 2026,
+    "abstract": "Behavioral evaluation is the dominant paradigm for assessing alignment in large language models (LLMs). In current practice, observed compliance under finite evaluation protocols is treated as evidence of latent alignment. However, the inference from bounded behavioral evidence to claims about global latent properties is rarely analyzed as an identifiability problem. In this paper, we study alignment evaluation through the lens of statistical identifiability under partial observability. We allow agent policies to condition their behavior on observable signals correlated with the evaluation reg",
+    "url": "https://arxiv.org/pdf/2602.05656v2",
+    "query": "safety fine-tuning alignment tax evaluation metrics"
+  },
+  {
+    "arxiv_id": "2605.15239v1",
+    "title": "Reducing the Safety Tax in LLM Safety Alignment with On-Policy Self-Distillation",
+    "authors": [
+      "Yu Fu",
+      "Longxuan Yu",
+      "Haz Sameen Shahgir"
+    ],
+    "year": 2026,
+    "abstract": "Safety alignment often improves robustness to harmful queries at the cost of reasoning ability, a tradeoff known as the safety tax. A common cause is distributional mismatch: supervised fine-tuning trains the target model on safety demonstrations produced by humans, external models, or fixed self-generated traces, rather than on trajectories sampled from its own policy. We identify off-policy training mismatch as a second source of this tax and study on-policy self-distillation for safety alignment, which we call OPSA. The model generates its own rollouts and receives dense per-token KL superv",
+    "url": "https://arxiv.org/pdf/2605.15239v1",
+    "query": "safety fine-tuning alignment tax evaluation metrics"
+  },
+  {
+    "arxiv_id": "2602.15799v1",
+    "title": "The Geometry of Alignment Collapse: When Fine-Tuning Breaks Safety",
+    "authors": [
+      "Max Springer",
+      "Chung Peng Lee",
+      "Blossom Metevier"
+    ],
+    "year": 2026,
+    "abstract": "Fine-tuning aligned language models on benign tasks unpredictably degrades safety guardrails, even when training data contains no harmful content and developers have no adversarial intent. We show that the prevailing explanation, that fine-tuning updates should be orthogonal to safety-critical directions in high-dimensional parameter space, offers false reassurance: we show this orthogonality is structurally unstable and collapses under the dynamics of gradient descent. We then resolve this through a novel geometric analysis, proving that alignment concentrates in low-dimensional subspaces wit",
+    "url": "https://arxiv.org/pdf/2602.15799v1",
+    "query": "safety fine-tuning alignment tax evaluation metrics"
+  },
+  {
+    "arxiv_id": "2506.17209v1",
+    "title": "Fine-Tuning Lowers Safety and Disrupts Evaluation Consistency",
+    "authors": [
+      "Kathleen C. Fraser",
+      "Hillary Dawkins",
+      "Isar Nejadgholi"
+    ],
+    "year": 2025,
+    "abstract": "Fine-tuning a general-purpose large language model (LLM) for a specific domain or task has become a routine procedure for ordinary users. However, fine-tuning is known to remove the safety alignment features of the model, even when the fine-tuning data does not contain any harmful content. We consider this to be a critical failure mode of LLMs due to the widespread uptake of fine-tuning, combined with the benign nature of the \"attack\". Most well-intentioned developers are likely unaware that they are deploying an LLM with reduced safety. On the other hand, this known vulnerability can be easil",
+    "url": "https://arxiv.org/pdf/2506.17209v1",
+    "query": "safety fine-tuning alignment tax evaluation metrics"
+  },
+  {
+    "arxiv_id": "2110.05457v1",
+    "title": "Legged Robots that Keep on Learning: Fine-Tuning Locomotion Policies in the Real World",
+    "authors": [
+      "Laura Smith",
+      "J. Chase Kew",
+      "Xue Bin Peng"
+    ],
+    "year": 2021,
+    "abstract": "Legged robots are physically capable of traversing a wide range of challenging environments, but designing controllers that are sufficiently robust to handle this diversity has been a long-standing challenge in robotics. Reinforcement learning presents an appealing approach for automating the controller design process and has been able to produce remarkably robust controllers when trained in a suitable range of environments. However, it is difficult to predict all likely conditions the robot will encounter during deployment and enumerate them at training-time. What if instead of training contr",
+    "url": "https://arxiv.org/pdf/2110.05457v1",
+    "query": "safety fine-tuning alignment tax evaluation metrics"
+  },
+  {
+    "arxiv_id": "0910.5060v3",
+    "title": "Two-sample Bayesian Nonparametric Hypothesis Testing",
+    "authors": [
+      "Chris C. Holmes",
+      "Fran\u00e7ois Caron",
+      "Jim E. Griffin"
+    ],
+    "year": 2009,
+    "abstract": "In this article we describe Bayesian nonparametric procedures for two-sample hypothesis testing. Namely, given two sets of samples $\\mathbf{y}^{\\scriptscriptstyle(1)}\\;$\\stackrel{\\scriptscriptstyle{iid}}{\\s im}$\\;F^{\\scriptscriptstyle(1)}$ and $\\mathbf{y}^{\\scriptscriptstyle(2 )}\\;$\\stackrel{\\scriptscriptstyle{iid}}{\\sim}$\\;F^{\\scriptscriptstyle( 2)}$, with $F^{\\scriptscriptstyle(1)},F^{\\scriptscriptstyle(2)}$ unknown, we wish to evaluate the evidence for the null hypothesis $H_0:F^{\\scriptscriptstyle(1)}\\equiv F^{\\scriptscriptstyle(2)}$ versus the alternative $H_1:F^{\\scriptscriptstyle(1)}\\ne",
+    "url": "https://arxiv.org/pdf/0910.5060v3",
+    "query": "Bayesian updating prior posterior predictive null hypothesis"
+  },
+  {
+    "arxiv_id": "1512.00969v1",
+    "title": "Posterior Belief Assessment: Extracting Meaningful Subjective Judgements from Bayesian Analyses with Complex Statistical Models",
+    "authors": [
+      "Daniel Williamson",
+      "Michael Goldstein"
+    ],
+    "year": 2015,
+    "abstract": "In this paper, we are concerned with attributing meaning to the results of a Bayesian analysis for a problem which is sufficiently complex that we are unable to assert a precise correspondence between the expert probabilistic judgements of the analyst and the particular forms chosen for the prior specification and the likelihood for the analysis. In order to do this, we propose performing a finite collection of additional Bayesian analyses under alternative collections of prior and likelihood modelling judgements that we may also view as representative of our prior knowledge and the problem st",
+    "url": "https://arxiv.org/pdf/1512.00969v1",
+    "query": "Bayesian updating prior posterior predictive null hypothesis"
+  },
+  {
+    "arxiv_id": "1503.07643v1",
+    "title": "Asymptotic Properties of Bayesian Predictive Densities When the Distributions of Data and Target Variables are Different",
+    "authors": [
+      "Fumiyasu Komaki"
+    ],
+    "year": 2015,
+    "abstract": "Bayesian predictive densities when the observed data $x$ and the target variable $y$ to be predicted have different distributions are investigated by using the framework of information geometry. The performance of predictive densities is evaluated by the Kullback--Leibler divergence. The parametric models are formulated as Riemannian manifolds. In the conventional setting in which $x$ and $y$ have the same distribution, the Fisher--Rao metric and the Jeffreys prior play essential roles. In the present setting in which $x$ and $y$ have different distributions, a new metric, which we call the pr",
+    "url": "https://arxiv.org/pdf/1503.07643v1",
+    "query": "Bayesian updating prior posterior predictive null hypothesis"
+  },
+  {
+    "arxiv_id": "2112.03333v2",
+    "title": "The Posterior Predictive Null",
+    "authors": [
+      "Gemma E. Moran",
+      "John P. Cunningham",
+      "David M. Blei"
+    ],
+    "year": 2021,
+    "abstract": "Bayesian model criticism is an important part of the practice of Bayesian statistics. Traditionally, model criticism methods have been based on the predictive check, an adaptation of goodness-of-fit testing to Bayesian modeling and an effective method to understand how well a model captures the distribution of the data. In modern practice, however, researchers iteratively build and develop many models, exploring a space of models to help solve the problem at hand. While classical predictive checks can help assess each one, they cannot help the researcher understand how the models relate to eac",
+    "url": "https://arxiv.org/pdf/2112.03333v2",
+    "query": "Bayesian updating prior posterior predictive null hypothesis"
+  },
+  {
+    "arxiv_id": "1509.01060v1",
+    "title": "Necessary and Sufficient Conditions for High-Dimensional Posterior Consistency under $g$-Priors",
+    "authors": [
+      "Douglas K. Sparks",
+      "Kshitij Khare",
+      "Malay Ghosh"
+    ],
+    "year": 2015,
+    "abstract": "We examine necessary and sufficient conditions for posterior consistency under $g$-priors, including extensions to hierarchical and empirical Bayesian models. The key features of this article are that we allow the number of regressors to grow at the same rate as the sample size and define posterior consistency under the sup vector norm instead of the more conventional Euclidean norm. We consider in particular the empirical Bayesian model of George and Foster (2000), the hyper-$g$-prior of Liang et al. (2008), and the prior considered by Zellner and Siow (1980).",
+    "url": "https://arxiv.org/pdf/1509.01060v1",
+    "query": "Bayesian updating prior posterior predictive null hypothesis"
+  },
+  {
+    "arxiv_id": "1512.01013v1",
+    "title": "Bayesian Variable Selection and Estimation for Group Lasso",
+    "authors": [
+      "Xiaofan Xu",
+      "Malay Ghosh"
+    ],
+    "year": 2015,
+    "abstract": "The paper revisits the Bayesian group lasso and uses spike and slab priors for group variable selection. In the process, the connection of our model with penalized regression is demonstrated, and the role of posterior median for thresholding is pointed out. We show that the posterior median estimator has the oracle property for group variable selection and estimation under orthogonal designs, while the group lasso has suboptimal asymptotic estimation rate when variable selection consistency is achieved. Next we consider bi-level selection problem and propose the Bayesian sparse group selection",
+    "url": "https://arxiv.org/pdf/1512.01013v1",
+    "query": "Bayesian updating prior posterior predictive null hypothesis"
+  },
+  {
+    "arxiv_id": "1504.06523v1",
+    "title": "Objective Bayesian Inference for Bilateral Data",
+    "authors": [
+      "Cyr Emile M'lan",
+      "Ming-Hui Chen"
+    ],
+    "year": 2015,
+    "abstract": "This paper presents three objective Bayesian methods for analyzing bilateral data under Dallal's model and the saturated model. Three parameters are of interest, namely, the risk difference, the risk ratio, and the odds ratio. We derive Jeffreys' prior and Bernardo's reference prior associated with the three parameters that characterize Dallal's model. We derive the functional forms of the posterior distributions of the risk difference and the risk ratio and discuss how to sample from their posterior distributions. We demonstrate the use of the proposed methodology with two real data examples.",
+    "url": "https://arxiv.org/pdf/1504.06523v1",
+    "query": "Bayesian updating prior posterior predictive null hypothesis"
+  },
+  {
+    "arxiv_id": "1402.5723v5",
+    "title": "Smoothing and mean-covariance estimation of functional data with a Bayesian hierarchical model",
+    "authors": [
+      "Jingjing Yang",
+      "Hongxiao Zhu",
+      "Taeryon Choi"
+    ],
+    "year": 2014,
+    "abstract": "Functional data, with basic observational units being functions (e.g., curves, surfaces) varying over a continuum, are frequently encountered in various applications. While many statistical tools have been developed for functional data analysis, the issue of smoothing all functional observations simultaneously is less studied. Existing methods often focus on smoothing each individual function separately, at the risk of removing important systematic patterns common across functions. We propose a nonparametric Bayesian approach to smooth all functional observations simultaneously and nonparametr",
+    "url": "https://arxiv.org/pdf/1402.5723v5",
+    "query": "Bayesian updating prior posterior predictive null hypothesis"
+  },
+  {
+    "arxiv_id": "1907.01463v1",
+    "title": "Reproducibility in Machine Learning for Health",
+    "authors": [
+      "Matthew B. A. McDermott",
+      "Shirly Wang",
+      "Nikki Marinsek"
+    ],
+    "year": 2019,
+    "abstract": "Machine learning algorithms designed to characterize, monitor, and intervene on human health (ML4H) are expected to perform safely and reliably when operating at scale, potentially outside strict human supervision. This requirement warrants a stricter attention to issues of reproducibility than other fields of machine learning.\n  In this work, we conduct a systematic evaluation of over 100 recently published ML4H research papers along several dimensions related to reproducibility. We find that the field of ML4H compares poorly to more established machine learning fields, particularly concernin",
+    "url": "https://arxiv.org/pdf/1907.01463v1",
+    "query": "reproducibility machine learning evaluation benchmark design"
+  },
+  {
+    "arxiv_id": "2306.04338v1",
+    "title": "Changing Data Sources in the Age of Machine Learning for Official Statistics",
+    "authors": [
+      "Cedric De Boom",
+      "Michael Reusens"
+    ],
+    "year": 2023,
+    "abstract": "Data science has become increasingly essential for the production of official statistics, as it enables the automated collection, processing, and analysis of large amounts of data. With such data science practices in place, it enables more timely, more insightful and more flexible reporting. However, the quality and integrity of data-science-driven statistics rely on the accuracy and reliability of the data sources and the machine learning techniques that support them. In particular, changes in data sources are inevitable to occur and pose significant risks that are crucial to address in the c",
+    "url": "https://arxiv.org/pdf/2306.04338v1",
+    "query": "reproducibility machine learning evaluation benchmark design"
+  },
+  {
+    "arxiv_id": "2006.16189v4",
+    "title": "DOME: Recommendations for supervised machine learning validation in biology",
+    "authors": [
+      "Ian Walsh",
+      "Dmytro Fishman",
+      "Dario Garcia-Gasulla"
+    ],
+    "year": 2020,
+    "abstract": "Modern biology frequently relies on machine learning to provide predictions and improve decision processes. There have been recent calls for more scrutiny on machine learning performance and possible limitations. Here we present a set of community-wide recommendations aiming to help establish standards of supervised machine learning validation in biology. Adopting a structured methods description for machine learning based on data, optimization, model, evaluation (DOME) will aim to help both reviewers and readers to better understand and assess the performance and limitations of a method or ou",
+    "url": "https://arxiv.org/pdf/2006.16189v4",
+    "query": "reproducibility machine learning evaluation benchmark design"
+  },
+  {
+    "arxiv_id": "1905.04749v2",
+    "title": "A Benchmark Study of Machine Learning Models for Online Fake News Detection",
+    "authors": [
+      "Junaed Younus Khan",
+      "Md. Tawkat Islam Khondaker",
+      "Sadia Afroz"
+    ],
+    "year": 2019,
+    "abstract": "The proliferation of fake news and its propagation on social media has become a major concern due to its ability to create devastating impacts. Different machine learning approaches have been suggested to detect fake news. However, most of those focused on a specific type of news (such as political) which leads us to the question of dataset-bias of the models used. In this research, we conducted a benchmark study to assess the performance of different applicable machine learning approaches on three different datasets where we accumulated the largest and most diversified one. We explored a numb",
+    "url": "https://arxiv.org/pdf/1905.04749v2",
+    "query": "reproducibility machine learning evaluation benchmark design"
+  },
+  {
+    "arxiv_id": "2404.12511v1",
+    "title": "Generalizing Machine Learning Evaluation through the Integration of Shannon Entropy and Rough Set Theory",
+    "authors": [
+      "Olga Cherednichenko",
+      "Dmytro Chernyshov",
+      "Dmytro Sytnikov"
+    ],
+    "year": 2024,
+    "abstract": "This research paper delves into the innovative integration of Shannon entropy and rough set theory, presenting a novel approach to generalize the evaluation approach in machine learning. The conventional application of entropy, primarily focused on information uncertainty, is extended through its combination with rough set theory to offer a deeper insight into data's intrinsic structure and the interpretability of machine learning models. We introduce a comprehensive framework that synergizes the granularity of rough set theory with the uncertainty quantification of Shannon entropy, applied ac",
+    "url": "https://arxiv.org/pdf/2404.12511v1",
+    "query": "reproducibility machine learning evaluation benchmark design"
+  },
+  {
+    "arxiv_id": "2201.12150v2",
+    "title": "Learning Curves for Decision Making in Supervised Machine Learning: A Survey",
+    "authors": [
+      "Felix Mohr",
+      "Jan N. van Rijn"
+    ],
+    "year": 2022,
+    "abstract": "Learning curves are a concept from social sciences that has been adopted in the context of machine learning to assess the performance of a learning algorithm with respect to a certain resource, e.g., the number of training examples or the number of training iterations. Learning curves have important applications in several machine learning contexts, most notably in data acquisition, early stopping of model training, and model selection. For instance, learning curves can be used to model the performance of the combination of an algorithm and its hyperparameter configuration, providing insights ",
+    "url": "https://arxiv.org/pdf/2201.12150v2",
+    "query": "reproducibility machine learning evaluation benchmark design"
+  },
+  {
+    "arxiv_id": "2602.11092v2",
+    "title": "MerLin: A Discovery Engine for Photonic and Hybrid Quantum Machine Learning",
+    "authors": [
+      "Cassandre Notton",
+      "Benjamin Stott",
+      "Philippe Schoeb"
+    ],
+    "year": 2026,
+    "abstract": "Identifying where quantum models may offer practical benefits in near term quantum machine learning (QML) requires moving beyond isolated algorithmic proposals toward systematic and empirical exploration across models, datasets, and hardware constraints. We introduce MerLin, an open-source framework designed as a discovery engine for photonic and hybrid quantum machine learning. MerLin integrates optimized strong simulation of linear optical circuits into standard PyTorch and scikit learn workflows, enabling end-to-end differentiable training of quantum layers.\n  MerLin is designed around syst",
+    "url": "https://arxiv.org/pdf/2602.11092v2",
+    "query": "reproducibility machine learning evaluation benchmark design"
+  },
+  {
+    "arxiv_id": "2302.08893v4",
+    "title": "Active learning for data streams: a survey",
+    "authors": [
+      "Davide Cacciarelli",
+      "Murat Kulahci"
+    ],
+    "year": 2023,
+    "abstract": "Online active learning is a paradigm in machine learning that aims to select the most informative data points to label from a data stream. The problem of minimizing the cost associated with collecting labeled observations has gained a lot of attention in recent years, particularly in real-world applications where data is only available in an unlabeled form. Annotating each observation can be time-consuming and costly, making it difficult to obtain large amounts of labeled data. To overcome this issue, many active learning strategies have been proposed in the last decades, aiming to select the ",
+    "url": "https://arxiv.org/pdf/2302.08893v4",
+    "query": "reproducibility machine learning evaluation benchmark design"
+  }
+]

@@ -1,0 +1,64 @@
+%%%%% PROJECT-SPECIFIC MACROS %%%%%
+% Bayesian Evidence Quantification for AI Alignment Null Results
+\usepackage{xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% METHOD NAMES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ours}{\textsc{BayesAlign}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MODEL NAMES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\llama}{\textsc{Llama-3.1-8B-Instruct}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COMMON ABBREVIATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ie}{i.e.,\xspace}
+\newcommand{\eg}{e.g.,\xspace}
+\newcommand{\cf}{cf.\xspace}
+\newcommand{\wrt}{w.r.t.\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BAYESIAN NOTATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Bayes Factor notation
+\newcommand{\BF}{\mathrm{BF}_{01}\xspace}
+\newcommand{\BFten}{\mathrm{BF}_{10}\xspace}
+
+% Hypothesis names
+\newcommand{\Hnull}{\mathcal{H}_0\xspace}
+\newcommand{\Halt}{\mathcal{H}_1\xspace}
+
+% Probability of experimental weakness
+\newcommand{\Pweak}{P(\text{weakness} \mid \text{data})\xspace}
+
+% Effect size
+\newcommand{\effectsize}{\delta\xspace}
+\newcommand{\cohensd}{Cohen's $d$\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INTERVENTION NAMES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\actadd}{\textsc{ActAdd}\xspace}
+\newcommand{\caa}{\textsc{CAA}\xspace}
+\newcommand{\repe}{\textsc{RepE}\xspace}
+\newcommand{\rlhf}{\textsc{RLHF}\xspace}
+\newcommand{\dpo}{\textsc{DPO}\xspace}
+\newcommand{\ppo}{\textsc{PPO}\xspace}
+\newcommand{\cai}{\textsc{CAI}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RESULT SHORTCUTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Percentage of null results with P(weakness) > 0.3
+\newcommand{\mainresult}{$77.8\%$\xspace}
+\newcommand{\mainrho}{$\rho = -0.675$\xspace}
+\newcommand{\mainkappa}{$\kappa = 1.000$\xspace}

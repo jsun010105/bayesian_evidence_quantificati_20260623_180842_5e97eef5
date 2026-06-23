@@ -1,0 +1,274 @@
+{
+  "2104.00639": {
+    "arxiv_id": "2104.00639",
+    "title": "HLE-UPC at SemEval-2021 Task 5: Multi-Depth DistilBERT for Toxic Spans Detection",
+    "authors": [
+      "Rafel Palliser-Sans",
+      "Albert Rial-Farr\u00e0s"
+    ],
+    "year": 2021,
+    "abstract": "This paper presents our submission to SemEval-2021 Task 5: Toxic Spans Detection. The purpose of this task is to detect the spans that make a text toxic, which is a complex labour for several reasons. Firstly, because of the intrinsic subjectivity of toxicity, and secondly, due to toxicity not always coming from single words like insults or offends, but sometimes from whole expressions formed by words that may not be toxic individually. Following this idea of focusing on both single words and multi-word expressions, we study the impact of using a multi-depth DistilBERT model, which uses embeddings from different layers to estimate the final per-token toxicity. Our quantitative results show that using information from multiple depths boosts the performance of the model. Finally, we also ana",
+    "url": "https://arxiv.org/pdf/2104.00639v3"
+  },
+  "2302.07731": {
+    "arxiv_id": "2302.07731",
+    "title": "Combat AI With AI: Counteract Machine-Generated Fake Restaurant Reviews on Social Media",
+    "authors": [
+      "Alessandro Gambetti",
+      "Qiwei Han"
+    ],
+    "year": 2023,
+    "abstract": "Recent advances in generative models such as GPT may be used to fabricate indistinguishable fake customer reviews at a much lower cost, thus posing challenges for social media platforms to detect these machine-generated fake reviews. We propose to leverage the high-quality elite restaurant reviews verified by Yelp to generate fake reviews from the OpenAI GPT review creator and ultimately fine-tune a GPT output detector to predict fake reviews that significantly outperform existing solutions. We further apply the model to predict non-elite reviews and identify the patterns across several dimensions, such as review, user and restaurant characteristics, and writing style. We show that social media platforms are continuously challenged by machine-generated fake reviews, although they may imple",
+    "url": "https://arxiv.org/pdf/2302.07731v3"
+  },
+  "2308.10248": {
+    "arxiv_id": "2308.10248",
+    "title": "Steering Language Models With Activation Engineering",
+    "authors": [
+      "Alexander Matt Turner",
+      "Lisa Thiergart",
+      "Gavin Leech"
+    ],
+    "year": 2023,
+    "abstract": "Prompt engineering and finetuning aim to maximize language model performance on a given metric (like toxicity reduction). However, these methods do not fully elicit a model's capabilities. To reduce this gap, we introduce activation engineering: the inference-time modification of activations in order to control (or steer) model outputs. Specifically, we introduce the Activation Addition (ActAdd) technique, which contrasts the intermediate activations on prompt pairs (such as \"Love\" versus \"Hate\") to compute a steering vector (Subramani et al. 2022). By tactically adding in e.g. the \"Love\" - \"Hate\" steering vector during the forward pass, we achieve SOTA on negative-to-positive sentiment shift and detoxification using models including LLaMA-3 and OPT. ActAdd yields inference-time control ov",
+    "url": "https://arxiv.org/pdf/2308.10248v5"
+  },
+  "2403.05767": {
+    "arxiv_id": "2403.05767",
+    "title": "Extending Activation Steering to Broad Skills and Multiple Behaviours",
+    "authors": [
+      "Teun van der Weij",
+      "Massimo Poesio",
+      "Nandi Schoots"
+    ],
+    "year": 2024,
+    "abstract": "Current large language models have dangerous capabilities, which are likely to become more problematic in the future. Activation steering techniques can be used to reduce risks from these capabilities. In this paper, we investigate the efficacy of activation steering for broad skills and multiple behaviours. First, by comparing the effects of reducing performance on general coding ability and Python-specific ability, we find that steering broader skills is competitive to steering narrower skills. Second, we steer models to become more or less myopic and wealth-seeking, among other behaviours. In our experiments, combining steering vectors for multiple different behaviours into one steering vector is largely unsuccessful. On the other hand, injecting individual steering vectors at different",
+    "url": "https://arxiv.org/pdf/2403.05767v1"
+  },
+  "2409.01658": {
+    "arxiv_id": "2409.01658",
+    "title": "From Yes-Men to Truth-Tellers: Addressing Sycophancy in Large Language Models with Pinpoint Tuning",
+    "authors": [
+      "Wei Chen",
+      "Zhen Huang",
+      "Liang Xie"
+    ],
+    "year": 2024,
+    "abstract": "Large Language Models (LLMs) tend to prioritize adherence to user prompts over providing veracious responses, leading to the sycophancy issue. When challenged by users, LLMs tend to admit mistakes and provide inaccurate responses even if they initially provided the correct answer. Recent works propose to employ supervised fine-tuning (SFT) to mitigate the sycophancy issue, while it typically leads to the degeneration of LLMs' general capability. To address the challenge, we propose a novel supervised pinpoint tuning (SPT), where the region-of-interest modules are tuned for a given objective. Specifically, SPT first reveals and verifies a small percentage (<5%) of the basic modules, which significantly affect a particular behavior of LLMs. i.e., sycophancy. Subsequently, SPT merely fine-tun",
+    "url": "https://arxiv.org/pdf/2409.01658v3"
+  },
+  "2602.05656": {
+    "arxiv_id": "2602.05656",
+    "title": "Alignment Verifiability in Large Language Models: Normative Indistinguishability under Behavioral Evaluation",
+    "authors": [
+      "Igor Santos-Grueiro"
+    ],
+    "year": 2026,
+    "abstract": "Behavioral evaluation is the dominant paradigm for assessing alignment in large language models (LLMs). In current practice, observed compliance under finite evaluation protocols is treated as evidence of latent alignment. However, the inference from bounded behavioral evidence to claims about global latent properties is rarely analyzed as an identifiability problem. In this paper, we study alignment evaluation through the lens of statistical identifiability under partial observability. We allow agent policies to condition their behavior on observable signals correlated with the evaluation regime, a phenomenon we term evaluation awareness. Within this framework, we formalize the Alignment Verifiability Problem and introduce Normative Indistinguishability, which arises when distinct latent ",
+    "url": "https://arxiv.org/pdf/2602.05656v2"
+  },
+  "2605.21006": {
+    "arxiv_id": "2605.21006",
+    "title": "Playing Devil's Advocate: Off-the-Shelf Persona Vectors Rival Targeted Steering for Sycophancy",
+    "authors": [
+      "Ishaan Kelkar",
+      "Nebras Alam",
+      "Vikram Kakaria"
+    ],
+    "year": 2026,
+    "abstract": "We study the effect of different persona on \\textbf{sycophancy}: model's agreement with users even when the user is incorrect. The standard mitigation, Contrastive Activation Addition (CAA), derives a steering direction from labelled pairs of sycophantic and honest responses. This study evaluates whether off-the-shelf persona steering vectors, originally developed for general role-playing and not trained on sycophancy data, can serve as an alternative. In two instruction-tuned models, steering toward personas characterised by doubt or scrutiny reduces sycophancy to approximately $68\\%$ and $98\\%$ of CAA's effect, and, unlike CAA, maintains accuracy when the user is correct. The effect is also asymmetric: steering toward agreeable personas does not produce a mirror increase in sycophancy. G",
+    "url": "https://arxiv.org/pdf/2605.21006v2"
+  },
+  "2605.10664": {
+    "arxiv_id": "2605.10664",
+    "title": "Prompt-Activation Duality: Improving Activation Steering via Attention-Level Interventions",
+    "authors": [
+      "Diancheng Kang",
+      "Zheyuan Liu",
+      "Ningshan Ma"
+    ],
+    "year": 2026,
+    "abstract": "Activation steering controls language model behavior by adding directions to internal representations at inference time, but standard residual-stream steering can fail in stateful dialogue. We identify KV-cache contamination as a key failure mode: steered token states are stored and repeatedly reused, turning a local perturbation into cumulative coherence degradation. To address this challenge, we propose Gated Cropped Attention-Delta steering (GCAD), which extracts steering signals from system-prompt contributions to self-attention and applies them with token-level gating. Across persona-steering experiments, GCAD preserves trait control while substantially improving long-horizon coherence. On the main multi-turn benchmark, GCAD improves average coherence drift from -18.6 to -1.9 and rais",
+    "url": "https://arxiv.org/pdf/2605.10664v2"
+  },
+  "2512.07667": {
+    "arxiv_id": "2512.07667",
+    "title": "Depth-Wise Activation Steering for Honest Language Models",
+    "authors": [
+      "Gracjan G\u00f3ral",
+      "Marysia Winkels",
+      "Steven Basart"
+    ],
+    "year": 2025,
+    "abstract": "Large language models sometimes assert falsehoods despite internally representing the correct answer, failures of honesty rather than accuracy, which undermines auditability and safety. Existing approaches largely optimize factual correctness or depend on retraining and brittle single-layer edits, offering limited leverage over truthful reporting. We present a training-free activation steering method that weights steering strength across network depth using a Gaussian schedule. On the MASK benchmark, which separates honesty from knowledge, we evaluate seven models spanning the LLaMA, Qwen, and Mistral families and find that Gaussian scheduling improves honesty over no-steering and single-layer baselines in six of seven models. Equal-budget ablations on LLaMA-3.1-8B-Instruct and Qwen-2.5-7B",
+    "url": "https://arxiv.org/pdf/2512.07667v1"
+  },
+  "2410.14872": {
+    "arxiv_id": "2410.14872",
+    "title": "How to Evaluate Reward Models for RLHF",
+    "authors": [
+      "Evan Frick",
+      "Tianle Li",
+      "Connor Chen"
+    ],
+    "year": 2024,
+    "abstract": "We introduce a new benchmark for reward models that quantifies their ability to produce strong language models through RLHF (Reinforcement Learning from Human Feedback). The gold-standard approach is to run a full RLHF training pipeline and directly probe downstream LLM performance. However, this process is prohibitively expensive. To address this, we build a predictive model of downstream LLM performance by evaluating the reward model on proxy tasks. These proxy tasks consist of a large-scale human preference and a verifiable correctness preference dataset, in which we measure 12 metrics across 12 domains. To investigate which reward model metrics are most correlated to gold-standard RLHF outcomes, we launch an end-to-end RLHF experiment on a large-scale crowdsourced human preference plat",
+    "url": "https://arxiv.org/pdf/2410.14872v2"
+  },
+  "2506.01937": {
+    "arxiv_id": "2506.01937",
+    "title": "RewardBench 2: Advancing Reward Model Evaluation",
+    "authors": [
+      "Saumya Malik",
+      "Valentina Pyatkin",
+      "Sander Land"
+    ],
+    "year": 2025,
+    "abstract": "Reward models are used throughout the post-training of language models to capture nuanced signals from preference data and provide a training target for optimization across instruction following, reasoning, safety, and more domains. The community has begun establishing best practices for evaluating reward models, from the development of benchmarks that test capabilities in specific skill areas to others that test agreement with human preferences. At the same time, progress in evaluation has not been mirrored by the effectiveness of reward models in downstream tasks -- simpler direct alignment algorithms are reported to work better in many cases. This paper introduces RewardBench 2, a new multi-skill reward modeling benchmark designed to bring new, challenging data for accuracy-based reward",
+    "url": "https://arxiv.org/pdf/2506.01937v2"
+  },
+  "2606.03238": {
+    "arxiv_id": "2606.03238",
+    "title": "When RLHF Fails: A Mechanistic Taxonomy of Reward Hacking, Collapse, and Evaluator Gaming",
+    "authors": [
+      "Zelalem Abahana"
+    ],
+    "year": 2026,
+    "abstract": "Reinforcement learning from human feedback (RLHF) makes large-scale post-training possible by replacing an underspecified human objective with learned and scalable proxies. The same substitution creates a structured failure surface: optimization can raise the learned reward while external quality falls, degrade both proxy and judge scores, reveal proxy under-alignment, or produce evaluator-specific disagreement. We present an empirical failure-mode study of a compact RLHF pipeline with proximal policy optimization (PPO), direct preference optimization (DPO), uncertainty-penalized PPO (UP-PPO), reward-model uncertainty, approximate policy drift, diversity and repetition diagnostics, and two external LLM judges. Rather than treating reward hacking as a single terminal event, we classify matc",
+    "url": "https://arxiv.org/pdf/2606.03238v1"
+  },
+  "2502.12445": {
+    "arxiv_id": "2502.12445",
+    "title": "Computational Safety for Generative AI: A Hypothesis Testing Perspective",
+    "authors": [
+      "Pin-Yu Chen"
+    ],
+    "year": 2025,
+    "abstract": "AI safety is a rapidly growing area of research that seeks to prevent the harm and misuse of frontier AI technology, particularly with respect to generative AI (GenAI) tools that are capable of creating realistic and high-quality content through text prompts. Examples of such tools include large language models (LLMs) and text-to-image (T2I) diffusion models. As the performance of various leading GenAI models approaches saturation due to similar training data sources and neural network architecture designs, the development of reliable safety guardrails has become a key differentiator for responsibility and sustainability. This paper presents a formalization of the concept of computational safety, which is a mathematical framework that enables the quantitative assessment, formulation, and s",
+    "url": "https://arxiv.org/pdf/2502.12445v2"
+  },
+  "2605.11209": {
+    "arxiv_id": "2605.11209",
+    "title": "Measuring Five-Nines Reliability: Sample-Efficient LLM Evaluation in Saturated Benchmarks",
+    "authors": [
+      "Eungyeup Kim",
+      "Chenchen Gu",
+      "Vashisth Tiwari"
+    ],
+    "year": 2026,
+    "abstract": "While existing benchmarks demonstrate the near-perfect performance of large language models (LLMs) on various tasks, this apparent saturation often obscures the need for rigorous evaluation of their reliability. In real-world deployment, however, achieving extremely high reliability (e.g., \"five-nines\" (99.999%) vs. \"three-nines\" (99.9%)) is fundamentally critical, as this gap results in an order-of-magnitude increase in failures, which is catastrophic in reliability-critical applications. Still, estimating such a rare failure probability with tight confidence bounds requires prohibitively large LLM inference sizes, making standard Monte Carlo evaluation infeasible under limited compute budgets. In this paper, we observe that LLM failures exhibit strong systematic patterns: across broad pa",
+    "url": "https://arxiv.org/pdf/2605.11209v1"
+  },
+  "2509.21734": {
+    "arxiv_id": "2509.21734",
+    "title": "Optimal Stopping for Sequential Bayesian Experimental Design",
+    "authors": [
+      "Chen Cheng",
+      "Xun Huan"
+    ],
+    "year": 2025,
+    "abstract": "Sequential Bayesian experimental design is often formulated as a fixed-horizon policy optimization problem, in which the number of experiments is specified before data collection begins. In practical campaigns, however, additional measurements may provide diminishing information relative to their cost, making termination an integral part of experimental design. Common threshold-based stopping rules are easy to implement but myopic, because they compare the current state with a fixed criterion rather than the expected value of future experiments. This work develops a Bayesian optimal stopping framework for sequential experimental design by treating design and stopping as coupled decisions in a finite-horizon sequential decision problem. We prove that, for any fixed design policy, the optima",
+    "url": "https://arxiv.org/pdf/2509.21734v3"
+  },
+  "2604.21596": {
+    "arxiv_id": "2604.21596",
+    "title": "Efficient Bayes Factor Sensitivity Analysis via Posterior Density Ratios",
+    "authors": [
+      "Franti\u0161ek Barto\u0161",
+      "Eric-Jan Wagenmakers",
+      "Maarten Marsman"
+    ],
+    "year": 2026,
+    "abstract": "Bayes factor sensitivity analysis examines how the evidence for one hypothesis over another depends on the prior distribution. In complex models, the standard approach refits the model at each hyper-parameter value, and the total computational cost scales linearly in the grid size. We propose a method that recovers the entire sensitivity curve from a single additional model fit. The key identity decomposes the Bayes factor at any hyper-parameter value $\u03b3_x$ into an ``anchor'' Bayes factor at a fixed reference $\u03b3_0$ and a Savage--Dickey density ratio in an extended model that places a hyper-prior on $\u03b3$. Once this extended model is fit, the Bayes factor at any $\u03b3_x$ follows from the anchor value and a ratio of two posterior density ordinates. To approximate this ratio, we employ the importa",
+    "url": "https://arxiv.org/pdf/2604.21596v1"
+  },
+  "2102.07162": {
+    "arxiv_id": "2102.07162",
+    "title": "Bayes Factors for Peri-Null Hypotheses",
+    "authors": [
+      "Alexander Ly",
+      "Eric-Jan Wagenmakers"
+    ],
+    "year": 2021,
+    "abstract": "A perennial objection against Bayes factor point-null hypothesis tests is that the point-null hypothesis is known to be false from the outset. We examine the consequences of approximating the sharp point-null hypothesis by a hazy `peri-null' hypothesis instantiated as a narrow prior distribution centered on the point of interest. The peri-null Bayes factor then equals the point-null Bayes factor multiplied by a correction term which is itself a Bayes factor. For moderate sample sizes, the correction term is relatively inconsequential; however, for large sample sizes the correction term becomes influential and causes the peri-null Bayes factor to be inconsistent and approach a limit that depends on the ratio of prior ordinates evaluated at the maximum likelihood estimate. We characterize th",
+    "url": "https://arxiv.org/pdf/2102.07162v2"
+  },
+  "2406.08022": {
+    "arxiv_id": "2406.08022",
+    "title": "How accurate are Bayes factor-based null hypothesis tests? A simulation study",
+    "authors": [
+      "Daniel J. Schad",
+      "Martin Modr\u00e1k",
+      "Shravan Vasishth"
+    ],
+    "year": 2024,
+    "abstract": "Bayes factor null hypothesis tests provide a viable alternative to frequentist measures of evidence quantification. Bayes factors for realistic data sets in areas like psychology cannot be calculated exactly and require numerical approximations to complex integrals. Crucially, the accuracy of these approximations, i.e., whether an approximate Bayes factor corresponds to the exact Bayes factor, is unknown, and may depend on data, prior, and likelihood. We have recently developed a novel statistical procedure, namely marginal simulation-based calibration (SBC) for Bayes factors, to test whether the computed Bayes factors for a given analysis are accurate. Here, we use marginal SBC for Bayes factors and calibration plots to test for some common cognitive designs, whether Bayes factors are cal",
+    "url": "https://arxiv.org/pdf/2406.08022v2"
+  },
+  "1907.05583": {
+    "arxiv_id": "1907.05583",
+    "title": "Can Bayes Factors \"Prove\" the Null Hypothesis?",
+    "authors": [
+      "Michael Smithson"
+    ],
+    "year": 2019,
+    "abstract": "It is possible to obtain a large Bayes Factor (BF) favoring the null hypothesis when both the null and alternative hypotheses have low likelihoods, and there are other hypotheses being ignored that are much more strongly supported by the data. As sample sizes become large it becomes increasingly probable that a strong BF favouring a point null against a conventional Bayesian vague alternative co-occurs with a BF favouring various specific alternatives against the null. For any BF threshold q and sample mean, there is a value n such that sample sizes larger than n guarantee that although the BF comparing H0 against a conventional (vague) alternative exceeds q, nevertheless for some range of hypothetical \u03bc, a BF comparing H0 against \u03bc in that range falls below 1/q. This paper discusses the c",
+    "url": "https://arxiv.org/pdf/1907.05583v1"
+  },
+  "2112.03333": {
+    "arxiv_id": "2112.03333",
+    "title": "The Posterior Predictive Null",
+    "authors": [
+      "Gemma E. Moran",
+      "John P. Cunningham",
+      "David M. Blei"
+    ],
+    "year": 2021,
+    "abstract": "Bayesian model criticism is an important part of the practice of Bayesian statistics. Traditionally, model criticism methods have been based on the predictive check, an adaptation of goodness-of-fit testing to Bayesian modeling and an effective method to understand how well a model captures the distribution of the data. In modern practice, however, researchers iteratively build and develop many models, exploring a space of models to help solve the problem at hand. While classical predictive checks can help assess each one, they cannot help the researcher understand how the models relate to each other. This paper introduces the posterior predictive null check (PPN), a method for Bayesian model criticism that helps characterize the relationships between models. The idea behind the PPN is to ",
+    "url": "https://arxiv.org/pdf/2112.03333v2"
+  },
+  "2405.16331": {
+    "arxiv_id": "2405.16331",
+    "title": "Confirming the Null: Remarks on Equivalence Testing and the Topology of Confirmation",
+    "authors": [
+      "Reid Dale"
+    ],
+    "year": 2024,
+    "abstract": "Null Hypothesis Statistical Testing is a dominant framework for conducting statistical analysis across the sciences. There remains considerable debate as to whether, and under what circumstances, evidence can be said to be confirmatory of a null hypothesis. This paper presents a modal logic of short-run frequentist confirmation developed by leveraging the duality between hypothesis testing and statistical estimation.\n  It is shown that a hypothesis is confirmable if and only if it satisfies the topological condition of having nonempty interior. Consequently, two-sided hypotheses are not statistically confirmable owing to defects in their topological structure. Equivalence hypotheses are, by contrast, confirmable.",
+    "url": "https://arxiv.org/pdf/2405.16331v1"
+  },
+  "2301.13783": {
+    "arxiv_id": "2301.13783",
+    "title": "An analytical approach to Bayesian evidence computation",
+    "authors": [
+      "Juan Garcia-Bellido"
+    ],
+    "year": 2023,
+    "abstract": "The Bayesian evidence is a key tool in model selection, allowing a comparison of models with different numbers of parameters. Its use in analysis of cosmological models has been limited by difficulties in calculating it, with current numerical algorithms requiring supercomputers. In this paper we give exact formulae for the Bayesian evidence in the case of Gaussian likelihoods with arbitrary correlations and top-hat priors, and approximate formulae for the case of likelihood distributions with leading non-Gaussianities (skewness and kurtosis). We apply these formulae to cosmological models with and without isocurvature components, and compare with results we previously obtained using numerical thermodynamic integration. We find that the results are of lower precision than the thermodynamic",
+    "url": "https://arxiv.org/pdf/2301.13783v1"
+  },
+  "2511.07671": {
+    "arxiv_id": "2511.07671",
+    "title": "Robust Experimental Design via Generalised Bayesian Inference",
+    "authors": [
+      "Yasir Zubayr Barlas",
+      "Sabina J. Sloman",
+      "Samuel Kaski"
+    ],
+    "year": 2025,
+    "abstract": "Bayesian optimal experimental design is a principled framework for conducting experiments that leverages Bayesian inference to quantify how much information one can expect to gain from selecting a certain design. However, accurate Bayesian inference relies on the assumption that one's statistical model of the data-generating process is correctly specified. If this assumption is violated, Bayesian methods can lead to poor inference and estimates of information gain. Generalised Bayesian (or Gibbs) inference is a more robust probabilistic inference framework that replaces the likelihood in the Bayesian update by a suitable loss function. In this work, we present Generalised Bayesian Optimal Experimental Design (GBOED), an extension of Gibbs inference to the experimental design setting which ",
+    "url": "https://arxiv.org/pdf/2511.07671v1"
+  },
+  "2103.02438": {
+    "arxiv_id": "2103.02438",
+    "title": "Deep Adaptive Design: Amortizing Sequential Bayesian Experimental Design",
+    "authors": [
+      "Adam Foster",
+      "Desi R. Ivanova",
+      "Ilyas Malik"
+    ],
+    "year": 2021,
+    "abstract": "We introduce Deep Adaptive Design (DAD), a method for amortizing the cost of adaptive Bayesian experimental design that allows experiments to be run in real-time. Traditional sequential Bayesian optimal experimental design approaches require substantial computation at each stage of the experiment. This makes them unsuitable for most real-world applications, where decisions must typically be made quickly. DAD addresses this restriction by learning an amortized design network upfront and then using this to rapidly run (multiple) adaptive experiments at deployment time. This network represents a design policy which takes as input the data from previous steps, and outputs the next design using a single forward pass; these design decisions can be made in milliseconds during the live experiment.",
+    "url": "https://arxiv.org/pdf/2103.02438v2"
+  }
+}
